@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Chris Oliver is a Saint Louis Web Developer specializing in web development with Ruby on Rails, Javascript, HTML5, and CSS3">
+    <meta name="author" content="Chris Oliver">
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href="/css/style.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://use.typekit.net/voa6eso.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    {% include nav.html %}
+
+    {{content}}
+
+
+    {% include footer.html %}
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>
