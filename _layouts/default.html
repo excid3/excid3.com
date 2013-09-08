@@ -6,10 +6,14 @@
     <meta name="author" content="Chris Oliver">
 
     <!--<link rel="shortcut icon" href="favicon.png">-->
-    <link href="/css/style.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    {% css_asset_tag global %}
+    - /_assets/bootstrap.min.css
+    - /_assets/bootstrap-responsive.min.css
+    - /_assets/style.scss
+    {% endcss_asset_tag %}
+
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://use.typekit.net/voa6eso.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
