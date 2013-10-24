@@ -3,24 +3,45 @@ layout: default
 title: "Blog | Chris Oliver | Saint Louis Ruby on Rails Web Developer"
 ---
 
-<section>
+<section id="blog">
   <div class="container">
     <div class="row">
-      <div class="span12">
+      <div class="span8 offset2">
 
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
           <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
             <div class="article-head">
               <h2 class="title"><a href="{{ post.url }}" class="js-pjax">{{ post.title }}</a></h2>
               <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
             </div><!--/.article-head-->
             <div class="article-content">
-            {{ post.long_description }}
-            <a href="{{ post.url }}" class="full-post-link js-pjax">Read more</a>
+            {{ post.excerpt }}
+            <a href="{{ post.url }}" class="full-post-link js-pjax">Continue Reading →</a>
             </div><!--/.article-content-->
           </article>
           {% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
         {% endfor %}
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>-->
+
+          <div class="pull-left">
+            {% if paginator.next_page %}
+              <a href="/blog/page-{{ paginator.next_page }}" class="btn btn-gorails btn-gorails-red next">← Older</a>
+            {% endif %}
+          </div>
+
+          <div class="pull-right">
+            {% if paginator.previous_page %}
+              {% if paginator.previous_page == 1 %}
+                <a href="/blog/" class="btn btn-gorails btn-gorails-red previous">Newer →</a>
+              {% else %}
+                <a href="/blog/page-{{ paginator.previous_page }}" class="btn btn-gorails btn-gorails-red previous">Newer →</a>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
 
       </div>
     </div>

@@ -186,6 +186,11 @@ footer {
     background-color: $red;
     &:hover { background-color: darken($red, 10%); }
   }
+
+  &.btn-large {
+    padding: 15px 30px;
+    margin: 30px 0;
+  }
 }
 
 .info h2 {
@@ -199,3 +204,36 @@ footer {
   padding: 15px;
 }
 
+#blog {
+  .separater { margin-bottom: 80px; }
+  .blog-navigation { overflow: hidden; margin: 60px 0; }
+}
+
+#archive {
+  ul {
+    list-style-type: none;
+  }
+
+  time {
+    color: #888;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    width: 65px;
+  }
+}
+
+.contact-process {
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin-top: 120px;
+  padding: 10px 20px;
+
+  ol {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
