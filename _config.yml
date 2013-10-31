@@ -1,5 +1,5 @@
 markdown: rdiscount
-paginate: 10
+paginate: 3
 paginate_path: /blog/page-:num
 permalink: /blog/:title
 pygments: true

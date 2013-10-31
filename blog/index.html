@@ -8,6 +8,8 @@ title: "Blog | Chris Oliver | Saint Louis Ruby on Rails Web Developer"
     <div class="row">
       <div class="span8 offset2">
 
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
         {% for post in paginator.posts %}
           <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
             <div class="article-head">
@@ -15,8 +17,7 @@ title: "Blog | Chris Oliver | Saint Louis Ruby on Rails Web Developer"
               <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
             </div><!--/.article-head-->
             <div class="article-content">
-            {{ post.excerpt }}
-            <a href="{{ post.url }}" class="full-post-link js-pjax">Continue Reading →</a>
+              {{ post.content }}
             </div><!--/.article-content-->
           </article>
           {% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
@@ -28,16 +29,16 @@ title: "Blog | Chris Oliver | Saint Louis Ruby on Rails Web Developer"
 
           <div class="pull-left">
             {% if paginator.next_page %}
-              <a href="/blog/page-{{ paginator.next_page }}" class="btn btn-gorails btn-gorails-red next">← Older</a>
+              <a href="/blog/page-{{ paginator.next_page }}" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
             {% endif %}
           </div>
 
           <div class="pull-right">
             {% if paginator.previous_page %}
               {% if paginator.previous_page == 1 %}
-                <a href="/blog/" class="btn btn-gorails btn-gorails-red previous">Newer →</a>
+                <a href="/blog/" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
               {% else %}
-                <a href="/blog/page-{{ paginator.previous_page }}" class="btn btn-gorails btn-gorails-red previous">Newer →</a>
+                <a href="/blog/page-{{ paginator.previous_page }}" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
               {% endif %}
             {% endif %}
           </div>

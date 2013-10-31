@@ -30,9 +30,20 @@
       <div class="container">
         <div class="row">
           <div class="span8 offset2">
-            <h1>{{ page.title }}</h1>
+            <div class="article-head">
+              <h2 class="title"><a href="{{ page.url }}" class="js-pjax">{{ page.title }}</a></h2>
+              <p class="date">{{ page.date | date: "%b %d, %Y" }}</p>
+            </div><!--/.article-head-->
 
-            {{content}}
+            <div class="article-content">
+              {{ content }}
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
 
             <div class="blog-navigation">
               <div class="pull-left">
@@ -82,6 +93,16 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
     </script>
   </body>
 </html>
