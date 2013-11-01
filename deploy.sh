@@ -1,1 +1,1 @@
-rsync -azvh _site root@72.14.187.18:/srv/www/excid3.com/
+rsync -azvh _site/* root@192.241.188.190:/home/deploy/excid3.com
