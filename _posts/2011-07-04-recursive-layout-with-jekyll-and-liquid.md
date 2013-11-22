@@ -22,18 +22,19 @@ The documentation states that you can pass variables into the include statement 
 
 My only working approach for building a recursive include was building the basic layout as such:
 
+    <ul>{% raw %}
+      {% for item in tree %}
+        <li><a href="{{ item.href }}">{{ item.title }}</a></li>
 
-
-
-  * {% for item in tree %}
-  * [{{ item.title }}][2]
-  * {% if item.subtree %} {% assign tree = item.tree %} {% include tree.html %} {% endif %} {% endfor %}
+        {% if item.subtree %}
+          {% assign tree = item.tree %}
+          {% include tree.html %}
+        {% endif %}
+      {% endfor %}
+    {% endraw %}</ul>
 
 The key things to note here are the assign statement and the include. You can take these two lines and put them into any main layout and replace `item.tree` with `page.tree` to have it use the page’s tree variable and this will recursively render the tree with liquid layouts.
 
 From every single documentation page I saw, you could pass in the variable in the include statement. That didn’t work. AND they showed multiple ways of declaring which include to use. Those didn’t work either. I haven’t delved into Jekyll too much, but it’s certainly possible a slight configuration change is all that it needs to support Liquid’s actual functionality correctly. Either way, this works for lazy old me.
 
-Here’s an example: 
-
    [1]: http://jekyllrb.com
-   [2]: %7B%7B%20item.href%20%7D%7D
