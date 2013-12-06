@@ -6,9 +6,11 @@ categories:
   - General
 ---
 
+> I finished this programming book and I still don't feel like a
+> real programmer. What's next?
+
 This is a question that I get asked a lot having been involved in [LaunchCode STL](http://launchcodestl.com). There are a million things to learn, but we all have to start somewhere. Most people start with a book that takes them so far and then drops you off in the middle of nowhere when you're finished.
 
-## I read a programming book. What's next?
 The answer to that is actually remarkably simple: **I tell people to build software they would use.**
 
 Most people seem to mistake this advice for something that it's not. I typically start hearing ideas for software they wish they had. Things that don't exist, but you don't have to build something new. That's your goal, of course, but that is not what I told you to build.
