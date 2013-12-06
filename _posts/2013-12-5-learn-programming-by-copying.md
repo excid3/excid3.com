@@ -15,7 +15,7 @@ The answer to that is actually remarkably simple: **I tell people to build softw
 
 Most people seem to mistake this advice for something that it's not. I typically start hearing ideas for software they wish they had. Things that don't exist. *But you don't have to build something new.* Of course that is your goal but that is not what I told you to build.
 
-**To clarify, I'm saying that you should build your own version of software you use every day.**
+**To clarify, I'm saying that you should build your own version of the software you use every day.**
 
 Do you use url shorteners like [bit.ly](http://bit.ly) or Twitter's [t.co](http://t.co)? Build your own.
 
