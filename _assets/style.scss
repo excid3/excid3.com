@@ -250,3 +250,16 @@ nav.share { text-align: center; }
   color: #888;
   font-size: 0.9em;
 }
+
+.article-content {
+  a {
+    color: #222;
+    border-bottom: 2px solid #e6e6e6;
+
+    &:hover {
+      color: $red;
+      border-color: $red;
+      text-decoration: none;
+    }
+  }
+}
