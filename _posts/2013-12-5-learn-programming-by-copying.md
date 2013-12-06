@@ -21,7 +21,12 @@ Do you use url shorteners like [bit.ly](http://bit.ly) or Twitter's [t.co](http:
 
 Have you ever used a pastebin like like [pastebin.com](http://pastebin.com)? Build your version.
 
-If you're an aspiring web developer you should build a web server from scratch. Listen to port 80, read incoming requests, serve up files, and close the socket. Then try making it more complex. Add threading to handle multiple requests at the same time. You could spend the next 10 years working on this project alone and still be learning things.
+It is up to you to fill the gaps. For me, I wanted to become an expert
+web developer so I sat down and built my own web server. I built a Java
+app that listened to port 80 and served up files just like Apache or
+Nginx would do. The time I spent building this app was filled with
+acquiring such deep understanding of the web that I could not have
+gained any other way so quickly.
 
 **Build something without the help of any libraries and you *will* learn programming.** You have to in order to complete the project and guess what? It is stuff you use every day so you know *exactly* how it should work.
 
