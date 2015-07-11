@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title type="text" xml:lang="en"></title>
+	<link type="application/atom+xml" href="http://excid3.com/feed/" rel="self"/>
+ 	<link type="text" href="http://excid3.com" rel="alternate"/>
+	<updated>2013-12-09T10:37:29-06:00</updated>
+	<id>http://excid3.com</id>
+	<author>
+		<name>Chris Oliver</name>
+	</author>
+	<rights>Copyright (c) 2013, Chris Oliver; all rights reserved.</rights>
+
+	
+	<entry>
+		<title>Rodney Mullen: Pop an ollie and innovate!</title>
+		<link href="http://excid3.com/blog/pop-an-ollie-and-innovate"/>
+		<updated>2013-12-08T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/pop-an-ollie-and-innovate</id>
+		<content type="html">&lt;iframe src=&quot;http://embed.ted.com/talks/rodney_mullen_pop_an_ollie_and_innovate.html&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;I really, really enjoyed this talk. There were a bunch of great quotes
+in it tying skateboarding in with computers programmers/hackers:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Take what other people do. Make it better. Give it back so we all rise
+further.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;And explaining exactly why so many people enjoy programming,
+skateboarding, making music, and any other type of creation:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;There is an intrinsic value in creating something for the sake of
+creating it.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is why we do what we do. Keep doing it, not for the success, fame,
+or money, but for the sake of creating.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Learn Programing By Copying</title>
+		<link href="http://excid3.com/blog/learn-programming-by-copying"/>
+		<updated>2013-12-05T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/learn-programming-by-copying</id>
+		<content type="html">&lt;blockquote&gt;&lt;p&gt;I finished this programming book and I still don&#39;t feel like a
+real programmer. What do I do next?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is a question that I get asked a lot having been involved in &lt;a href=&quot;http://launchcodestl.com&quot;&gt;LaunchCode STL&lt;/a&gt;. There are a million things to learn, but we all have to start somewhere. Most people start with a book that takes them so far and then drops you off in the middle of nowhere when you&#39;re finished.&lt;/p&gt;
+
+&lt;p&gt;The answer to that is actually remarkably simple: &lt;strong&gt;I tell people to build software they would use.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Most people seem to mistake this advice for something that it&#39;s not. I typically start hearing ideas for software they wish they had. Things that don&#39;t exist. &lt;em&gt;But you don&#39;t have to build something new.&lt;/em&gt; Of course that is your goal but that is not what I told you to build.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To clarify, I&#39;m saying that you should build your own version of the software you use every day.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you use url shorteners like &lt;a href=&quot;http://bit.ly&quot;&gt;bit.ly&lt;/a&gt; or Twitter&#39;s &lt;a href=&quot;http://t.co&quot;&gt;t.co&lt;/a&gt;? Build your own.&lt;/p&gt;
+
+&lt;p&gt;Have you ever used a pastebin like like &lt;a href=&quot;http://pastebin.com&quot;&gt;pastebin.com&lt;/a&gt;? Build your version.&lt;/p&gt;
+
+&lt;p&gt;It is up to you to fill the gaps. For me, I wanted to become an expert
+web developer so I sat down and built my own web server. I built a Java
+app that listened to port 80 and served up files just like Apache or
+Nginx would do. The time I spent building this app was filled with
+acquiring such deep understanding of the web that I could not have
+gained any other way so quickly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Build something without the help of any libraries and you &lt;em&gt;will&lt;/em&gt; learn programming.&lt;/strong&gt; You have to in order to complete the project and guess what? It is stuff you use every day so you know &lt;em&gt;exactly&lt;/em&gt; how it should work.&lt;/p&gt;
+
+&lt;p&gt;You have the best understanding of how this software functions so replicating it on your own means that you can understand the ins and outs of it without the overhead. There are no requirements to deal with. You get to purely focus on the art of programming and that&#39;s it. This is what you&#39;re trying to do right now.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So if you are teaching yourself programming, take a step back for a second and look at all the software you use on a daily basis. That is a whole lot of stuff to take for granted.&lt;/p&gt;
+
+&lt;p&gt;Everything from your web browser down to the operating system and boot loader. Every single piece was designed and written by a software developer that probably isn&#39;t smarter than you, they just had experience.&lt;/p&gt;
+
+&lt;p&gt;You want to learn how the best programmers in the world work right now? Copy their work and you can peer into their minds and understand exactly how they think.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>The Laziest Programmer In The Room</title>
+		<link href="http://excid3.com/blog/laziest-programmer-room"/>
+		<updated>2013-08-28T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/laziest-programmer-room</id>
+		<content type="html">&lt;p&gt;There are lot of blog posts on how laziness is a quality of a good programmer but you’ve gotta be a developer to find those blogs sometimes. I want to talk about evaluating the laziness of a programming consultant and how it can be a good or bad thing.&lt;/p&gt;
+
+&lt;p&gt;If you know anything about building software, you learn very quickly that it’s a whole lot of trial and error. You make a change, refresh the browser, and see if it worked.&lt;/p&gt;
+
+&lt;p&gt;Rinse, repeat. &lt;strong&gt;Sometimes for every. freaking. change.&lt;/strong&gt; (Those of you who’ve built software for Internet Explorer have been there.)&lt;/p&gt;
+
+&lt;p&gt;Being a software developer consists of a whole lot repetitive tasks and that’s where laziness comes in. A developer who gets frustrated quickly with repetitive tasks will be the first to build a tool to automate it. They’ll figure out how to refresh their browser automatically with every code change. They’ll make a tool to clear the database and test the file import again for them automatically. If it has a pattern, they’ll realize it and automate it.&lt;/p&gt;
+
+&lt;p&gt;A lot of times, I’ll see clients who &lt;strong&gt;&lt;em&gt;need&lt;/em&gt;&lt;/strong&gt; software built but they’ve been running this manual repetitive process for so long they have kind of forgotten that it was a problem. It’s inefficient and it’s wasting time and money.&lt;/p&gt;
+
+&lt;h2&gt;Enter the lazy programmer&lt;/h2&gt;
+
+&lt;p&gt;If you hired a software developer you could explain the process and, if you’re really lucky, he could whip up a quick solution in a couple hours. Sometimes it is more complicated, but forcing your workflow into Excel isn’t usually the best solution in the long term.&lt;/p&gt;
+
+&lt;p&gt;Ruby on Rails is the framework of choice for a lot of software developers who want to prototype solutions to business workflows like these. It’s got all the tools you need to build a quick and dirty automated process within a few hours. You can get straight to business and seeing the fog clear. Your optimized business workflow is going to make you and your customers happier people and it’s probably going to make you a whole lot of money in the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I sometimes say that the lazier a developer is, the better.&lt;/strong&gt; That’s not to say that taking shortcuts in code is the right solution. A lazy developer will know that shortcuts often don’t play out well in the long term. Planning up front will save him time in the long term. A lazy programmer plays long ball. He works towards the long term. He also knows when to take shortcuts. If an idea is not fleshed out well or is based upon assumptions, then a lazy programmer will be the one to argue that we try something new, test it, measure the feedback, and make a decision based upon the results. It’s more work and money if we build software upon assumptions that needs to be redone later. Nobody wants that.&lt;/p&gt;
+
+&lt;p&gt;When changes need to be made in the future, the lazy developer can make them with ease because he planned properly. The developer who over engineered the problem is usually the one who worked himself into a box. He built a box with a thousand features in the beginning. It was maginificent. Or so he thought. It turns out that the box he designed isn’t able to be reshaped along with the business.&lt;/p&gt;
+
+&lt;p&gt;So if you hear me say that laziness is a virtue, well now you know. Lazy is no longer a bad four letter word. It’s a blessing.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Playing The Beginning of Ruby Warrior</title>
+		<link href="http://excid3.com/blog/playing-the-beginning-of-ruby-warrior"/>
+		<updated>2013-07-12T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/playing-the-beginning-of-ruby-warrior</id>
+		<content type="html">&lt;p&gt;I’ve had some fun recently playing Ryan Bate’s &lt;a href=&quot;https://github.com/ryanb/ruby-warrior&quot;&gt;Ruby Warrior&lt;/a&gt;. It’s a little text based adventure game where you build the AI for the player. Each level gets increasingly more difficult so you start writing more and more complex code. As you go along, you can get caught in the complexity of the code, so I made this video to help give examples of how I was handling the first few levels of complexity.&lt;/p&gt;
+
+&lt;p&gt;So without further adieu, here’s the video. This was recorded off the cuff without any editing so it won’t be the greatest, but hopefully you’ll pickup a trick or two. The screen resolution is fairly high, so you may want to watch this either in fullscreen or on Youtube in HD.&lt;/p&gt;
+
+&lt;iframe width=&quot;770&quot; height=&quot;578&quot; src=&quot;//www.youtube.com/embed/5ORyOh6ph3E?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Custom Twitter Bootstrap Button Colors</title>
+		<link href="http://excid3.com/blog/custom-twitter-bootstrap-button-colors"/>
+		<updated>2013-04-27T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/custom-twitter-bootstrap-button-colors</id>
+		<content type="html">&lt;p&gt;A lot of people are using Twitter Bootstrap these days and I can’t say I blame them. It’s incredibly easy to get a decent looking website built in just a few minutes and you can go back later and customize it to your liking. The problem is, a lot of people don’t take that second step and now you see a bunch of websites that all look generally the same.&lt;/p&gt;
+
+&lt;p&gt;One of the first and easiest steps you can take is customizing the colors of the Twitter Bootstrap buttons.&lt;/p&gt;
+
+&lt;h2&gt;Modifying Existing Twitter Bootstrap Button Colors&lt;/h2&gt;
+
+&lt;p&gt;The simplest thing you can do is modify the default bootstrap button colors. Everyone is familiar with those colors and it makes it very easy to pick out a Twitter Bootstrap site because of these buttons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/3A3v2Y1i292L/Screen%20Shot%202013-04-27%20at%2010.19.10%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.19.10 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter Bootstrap uses a common set of naming schemes for the button colors in its LESS source and all we need to do is overwrite the colors like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@btnSuccessBackground: #AAD023;
+@btnSuccessBackgroundHighlight: #6CBA2C;
+
+@btnPrimaryBackground: #7dc5ee;
+@btnPrimaryBackgroundHighlight: #008cdd;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will change the &lt;code&gt;btn-success&lt;/code&gt; and &lt;code&gt;btn-primary&lt;/code&gt; button colors to give them a lighter feel and look like this:
+&lt;img src=&quot;http://cl.ly/image/0t2t2P1m0v2g/Screen%20Shot%202013-04-27%20at%2010.18.17%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.18.17 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Creating A New Twitter Bootstrap Button Color&lt;/h2&gt;
+
+&lt;p&gt;If you want to add a new button color, it’s incredibly simple for you to take Bootstrap’s internal LESS tools and generate a new class to use. Here we’ll be grabbing some colors from Facebook and creating a &lt;code&gt;btn-facebook&lt;/code&gt; class to use. You’ll need to use LESS to compile this down to CSS. I’m using the twitter-bootstrap-rails gem to handle this for me.&lt;/p&gt;
+
+&lt;p&gt;The first step is to define your colors as you normally would in LESS. Creating the class is as simple as using the buttonBackground function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@facebookBlue:              #627aad;
+@facebookBlueDark:          #3b5998;
+.btn-facebook { .buttonBackground(@facebookBlue, @facebookBlueDark); }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your resulting button will look like this, including hover and active states!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/2z06143Q030g/Screen%20Shot%202013-04-27%20at%2010.02.31%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.02.31 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Twitter Bootstrap button colors are overused, but they are easy to modify. Take some time to spruce up your site and soon enough you’ll end up with a unique site conveniently based on Twitter Bootstrap!&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Paul Graham Interview</title>
+		<link href="http://excid3.com/blog/paul-graham-interview"/>
+		<updated>2013-04-15T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/paul-graham-interview</id>
+		<content type="html">&lt;p&gt;This interview with Paul Graham has a bunch of very awesome points he makes. Give it a watch and let me know what you think.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;“The reason hackers want to get rich is not so they can buy luxury items, it’s because they want freedom.” – Paul Graham&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This really hit home for me as a developer.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;“Focus groups can only tell you what they want. Well designed software delivers more than what people know they want.” – Paul Graham&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Software development is an art on some level, so you have to treat it as such. It’s going to take &lt;a href=&quot;http://excid3.com/blog/practice-like-an-athlete/&quot;&gt;a lot of practice&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;iframe width=&quot;770&quot; height=&quot;433&quot; src=&quot;//www.youtube.com/embed/BDA0t49AaZ4?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Practice Like An Athlete</title>
+		<link href="http://excid3.com/blog/practice-like-an-athlete"/>
+		<updated>2013-04-12T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/practice-like-an-athlete</id>
+		<content type="html">&lt;p&gt;My introduction to programming started in the 7th grade. My dad was cleaning an old bookshelf when he brushed off his old Atari Basic programming book.&lt;/p&gt;
+
+&lt;p&gt;He handed it to me and mentioned I might find it interesting. We had an old Magnavox computer running DOS at the time. I took a guess that this book might help me write programs for that computer because we didn’t have an Atari.&lt;/p&gt;
+
+&lt;p&gt;I sat down and started digging around. It turned out the computer had GW-Basic installed. Being close enough to Atari Basic, it was possible for me to start writing code, one line number at a time.&lt;/p&gt;
+
+&lt;p&gt;Programming quickly became my passion after that, but everything felt unattainable. I loved video games but teaching myself programming in grade school made it hard to understand the most basic of concepts. I didn’t even understand that you could reuse variables because we were just getting into algebra at school.&lt;/p&gt;
+
+&lt;p&gt;There was so much I knew I had to learn. It was clear that I needed to practice very hard in order to become a real programmer.&lt;/p&gt;
+
+&lt;p&gt;School went on, I went to high school, started programming my TI-84 calculator and eventually went to college. Each year I was approaching the end of my formal education, learning more and more each grade.&lt;/p&gt;
+
+&lt;p&gt;When I got my first laptop, I installed Ubuntu linux on it. There was this particular application I used almost every day and it was written by a college student. His software was fantastic and I loved it so much. At that point, the only major goal I had as a college student was to run my own open source project like he did. I wanted to be proud of my software and support a group of happy users.&lt;/p&gt;
+
+&lt;p&gt;Every waking our started going into learning how to write software. It was incredible how much time I spent looking back.&lt;/p&gt;
+
+&lt;p&gt;I knew I wasn’t good enough which made it easy for me to write bad code. No matter how bad it was, I pushed it out. It was almost always better than my friends’ code, but not anywhere as good as I thought it could be. That’s why I spent 6 hours a day writing programs to do everything from homework to video games.&lt;/p&gt;
+
+&lt;p&gt;Looking back on all the time I put in practicing, it feels absolutely ridiculous. I spent 4 years working on Keryx, rewrote it about 12 times, and not only did I learn how to build software, I learned how to support my users, manage my expectations, and plan software properly. It was easily one of the biggest struggles I’ve ever battled through in my life.&lt;/p&gt;
+
+&lt;p&gt;What it lead to, though, was like a trail of dominoes. Once I finished a working version, I was brought to tears by some of the thank you emails I received. My experience building software got me into Google Summer of Code 2009. It got me multiple jobs and, to this day, reminds me that in order to do a good job, you really have to care about what you’re doing.&lt;/p&gt;
+
+&lt;p&gt;Just like the best athletes, I spent hundreds of hours practicing my craft. Michael Jordan has been known to take 100s of shots a day in practice. Anyone who is exceptional stands out because of the effort they put in.&lt;/p&gt;
+
+&lt;p&gt;It’s not the amount of time spent practicing either, it’s also about what you practice. There are so many things in an area to get good at. A basketball player can’t only practice free throws. They have to practice shooting, passing, blocking, stealing, layups, and so on. As developers, we need to be doing the same during our careers. Stretch your legs with a new language, mobile app, or new library.&lt;/p&gt;
+
+&lt;p&gt;You career should be a labor of love. At times we hit a wall, but that’s all the more reason to push your boundaries and grow.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Ruby Midwest 2013 Notes</title>
+		<link href="http://excid3.com/blog/ruby-midwest-2013-notes"/>
+		<updated>2013-04-05T00:00:00-05:00</updated>
+		<id>http://excid3.com/blog/ruby-midwest-2013-notes</id>
+		<content type="html">&lt;p&gt;The official IRC Channel for Ruby Midwest is #rubymidwest on Freenode.&lt;/p&gt;
+
+&lt;h2&gt;Ready To Code: Automate your development environment&lt;/h2&gt;
+
+&lt;p&gt;David Kerber&lt;/p&gt;
+
+&lt;p&gt;Virtualization Pros
+* Full size Virtual Box images with Ubuntu preconfigured
+* Consistency&lt;/p&gt;
+
+&lt;p&gt;Virtualization Cons
+* Upgrades are tricky
+* Difficult to share
+* Lots of disk space
+* Code is in the virtual machine&lt;/p&gt;
+
+&lt;p&gt;Vagrant
+* Lightweight, sharable
+* Works with VirtualBox and VMWare
+* Uses very little disk space
+* Cheap and easy to create new environments
+* &lt;strong&gt;Executable documentation of configuration&lt;/strong&gt;
+* No context switching while editing&lt;/p&gt;
+
+&lt;p&gt;Use Puppet to configure your packages.&lt;/p&gt;
+
+&lt;p&gt;Check out the mailcatcher gem.&lt;/p&gt;
+
+&lt;h2&gt;Service Oriented Architecture Safari In The Amazon&lt;/h2&gt;
+
+&lt;p&gt;Bryan Thompson&lt;/p&gt;
+
+&lt;p&gt;PCI Compliance means you have to update all code to the latest version no matter what. All gems need to be reviewed and it’s very time consuming and hard.&lt;/p&gt;
+
+&lt;p&gt;Patchinator scrapes CVEs related to all system updates in your production systems.&lt;/p&gt;
+
+&lt;p&gt;Deployinator:
+Continuous integration completes successfully and deploys them to production.
+Stage 0 AMI comes from Ubuntu.
+Stage 1 AMI gets security updates, and puppet manifests.
+Stage 2 AMI adds code, runs through CI, and is production ready.&lt;/p&gt;
+
+&lt;h2&gt;Object Oriented Programming and Philosophy&lt;/h2&gt;
+
+&lt;p&gt;Steve Klabnik&lt;/p&gt;
+
+&lt;p&gt;As a child, your understanding of how the world works directly maps to how you write code.&lt;/p&gt;
+
+&lt;p&gt;Do bugs come up because we’re trying to model an imperfect world with a perfect representation in code? An hand drawn circle might not be perfect, it might not connect and it might be lopsided, however we can all understand it is a circle because we know the concept of it.&lt;/p&gt;
+
+&lt;p&gt;Philosophy in a time of software mailing list: https://groups.google.com/forum/#!forum/philosophy-in-a-time-of-software&lt;/p&gt;
+
+&lt;p&gt;There’s no reason for launching your project by tearing down another project. It’s not wrong to criticize, but we should be building new stuff and sharing the joy of open source with each other.&lt;/p&gt;
+
+&lt;h2&gt;Failure for Fun and Profit!&lt;/h2&gt;
+
+&lt;p&gt;Kerri Miller&lt;/p&gt;
+
+&lt;p&gt;If you’re not making mistakes and breaking things on purpose, how can you really know why or how it works? “Experience comes from bad ideas.” Having all the answers means you’re only trying the achievable.&lt;/p&gt;
+
+&lt;p&gt;Why is something new stressful? We don’t want to look foolish in front of ourselves or other people. If you want to sharpen a skill or talent, try reducing the risk of failure. Turn failure into just a data point.&lt;/p&gt;
+
+&lt;p&gt;If you don’t run into things that you don’t know when you’re practicing, then you’re not really practicing. Learning is the discovery of truth, not the acquisition of knowledge.&lt;/p&gt;
+
+&lt;h2&gt;Making Testing Fun With Test Reporters&lt;/h2&gt;
+
+&lt;p&gt;Matt Sears&lt;/p&gt;
+
+&lt;p&gt;Test Reporters are ways to print out the results from a test suite in a different way. Emoji and nyan cat are two examples of ways you could make the test output a lot more fun.&lt;/p&gt;
+
+&lt;h2&gt;Frustration Driven Development&lt;/h2&gt;
+
+&lt;p&gt;Evan Light&lt;/p&gt;
+
+&lt;p&gt;Test all the f*cking time.
+ActiveRecord callbacks are bad.
+Stop to refactor code, even if you’re in a rush. Extract out code into simple methods with meaningful names. Example “notify_collections_about_overdue_bills” could be extracted from a complicated User method.
+Moving code into modules looks better, but it’s pretty awful. You’re just moving the logic around.
+Use presenters instead of helpers when you have 3 or more methods that you need to extract so that you can take logic out of the helper.
+Monkey patching is bad. It’s better to go participate in open source than open source. Don’t monkey patch a feature when you could extend the open source library instead. You won’t be the only one that it could help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Law of Demeter&lt;/strong&gt;
+You can play with your friends.
+You can play with your privates.
+You shouldn’t play with your friends’ privates.&lt;/p&gt;
+
+&lt;p&gt;Predictable and boring is good because it makes code understandable.&lt;/p&gt;
+
+&lt;p&gt;Ask yourself “what’s wrong here?” instead of continuing to chug along.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Happiness matters more than anything. It’s determined by the relationships you have and by doing things that you care about.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;Must Have 10 Years People Experience&lt;/h2&gt;
+
+&lt;p&gt;Ashe Dryden&lt;/p&gt;
+
+&lt;p&gt;Solve actual problems, it’s easier to have excuses.&lt;/p&gt;
+
+&lt;p&gt;We forget what it’s like to be a beginner. The answer isn’t always apparent, but assuming we know the correct answer because we see ourselves as an expert is the wrong approach. Don’t offer information unless asked because it allows you to potentially learn things and get a new perspective.&lt;/p&gt;
+
+&lt;h2&gt;Rails Application Security in Practice&lt;/h2&gt;
+
+&lt;p&gt;Bryan Helmkamp&lt;/p&gt;
+
+&lt;p&gt;Github’s public key security vulnerability was a huge security issue, followed by Rubygems.org forcing verification of all the gems hosted on the site.&lt;/p&gt;
+
+&lt;h4&gt;7 attacks and countermeasures&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Session Hijacking&lt;/strong&gt; – Attacker observes the session ID and then makes requests to the server as the user.
+Firesheep lets you easily hijack sessions on popular websites.&lt;/p&gt;
+
+&lt;p&gt;Counter measures:
+- Force SSL everywhere&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config.force_ssl = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;- Secure and HttpOnly cookies
+- Strict-Transport-Security
+Closes a hole in the SSL implementation of websites and tells browser that all communication is supposed to be over SSL.
+- Require password for sensitive actions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Brute Forcing Passwords&lt;/strong&gt; – How many passwords can we guess per second?
+Use bcrypt or scrypt so that guessing a password hash can only be done a small amount of times per second.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Insecure Direct Object Reference&lt;/strong&gt;
+Allows you to construct a URL that can retrieve any data from the server.&lt;/p&gt;
+
+&lt;p&gt;Solutions:
+Use proper scoping&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def show
+  @user = User.find(params[:user_id])
+  @post = @user.posts.find(params[:id])
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Authorization (gems like CanCan)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Mass Assignment&lt;/strong&gt; – Specify the attributes that are allowed to be changed by a user.
+Safe attributes like a username should be allowed for the user to edit, but a user should not be able to set themselves as an admin.&lt;/p&gt;
+
+&lt;p&gt;Solution:
+strong_parameters&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Cross Site Request Forgery&lt;/strong&gt; CSRF&lt;/p&gt;
+
+&lt;p&gt;Solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class ApplicationController &amp;lt; ActionController::Base
+  protect_from_forgery
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure GET requests are safe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. SQL Injection&lt;/strong&gt;
+Make sure you understand the ActiveRecord APIs well.
+Review&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Cross Site Scripting (XSS)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Be extremely careful with &lt;code&gt;raw&lt;/code&gt; and &lt;code&gt;html_safe&lt;/code&gt;.
+&lt;code&gt;link_to&lt;/code&gt; href attributes aren&#39;t escaped.&lt;/p&gt;
+
+&lt;p&gt;Solutions:
+rails_xss feature is on by default in Rails 3 . It escapes everything by default.
+Sanitize user-generated HTML - Use the Loofah gem
+Content Security Policies (CSP)&lt;/p&gt;
+
+&lt;h3&gt;Brakeman&lt;/h3&gt;
+
+&lt;p&gt;Gem for doing static analysis on security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://RailsSecurity.com&quot;&gt;RailsSecurity.com&lt;/a&gt; is going to be a free Ebook about threats and countermeasures for Rails applications.&lt;/p&gt;
+
+&lt;h2&gt;Ruby Groups: Act Locally - Think Globally&lt;/h2&gt;
+
+&lt;p&gt;PJ Hagerty&lt;/p&gt;
+
+&lt;p&gt;Give everyone in your Ruby group a job. Don&#39;t let the leaders do all the work. Communities should collaborate with each other, including other groups. Don&#39;t be too focused, anything that&#39;s interesting should be encouraged. Reach out to larger audiences.&lt;/p&gt;
+
+&lt;h2&gt;Standards&lt;/h2&gt;
+
+&lt;p&gt;Michael Feathers&lt;/p&gt;
+
+&lt;p&gt;Ubiquitous but painful. Standards are great ideas, so we want to follow them. Uniform methods across the system don&#39;t always apply. Coding standards are similar to performance enhancements in that it&#39;s highly contextual.&lt;/p&gt;
+
+&lt;h2&gt;Computer, Program Thyself!&lt;/h2&gt;
+
+&lt;p&gt;Zee Spencer&lt;/p&gt;
+
+&lt;p&gt;Knowledge moves from mystery to algorithm over time. Creativity is how we move along that funnel.&lt;/p&gt;
+
+&lt;h2&gt;More time for Open Source work with the help of the Pomodoro Technique&lt;/h2&gt;
+
+&lt;p&gt;Matthias Günther&lt;/p&gt;
+
+&lt;p&gt;Getting into open source is as simple as picking something you love, working on it, and then talking about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pomodoro Technique&lt;/strong&gt;
+1. Choose a task to work on
+2. Set a timer for 25 minutes
+3. Work without stopping until the timer goes off
+4. Have a 5 minute break&lt;/p&gt;
+
+&lt;h2&gt;Nobody will Train You But You&lt;/h2&gt;
+
+&lt;p&gt;Zachary Briggs&lt;/p&gt;
+
+&lt;p&gt;When you have the answer, it&#39;s easy to say &quot;Oh yeah, I understand it.&quot; On the other hand, when you&#39;re working on something, it&#39;s a lot harder to know the answer.&lt;/p&gt;
+
+&lt;p&gt;The stuff you know is the smallest, the stuff you know you don&#39;t know is larger, and the stuff you don&#39;t know that you don&#39;t know about is the largest group.&lt;/p&gt;
+
+&lt;p&gt;The people are best at something do it because it&#39;s fun.&lt;/p&gt;
+
+&lt;h2&gt;Functional Principals for Object-Oriented Development&lt;/h2&gt;
+
+&lt;p&gt;Jessica Kerr&lt;/p&gt;
+
+&lt;p&gt;Ruby developers have a lot of discipline compared to .Net and Java developers. We choose to impose that on our code and ourselves.&lt;/p&gt;
+
+&lt;p&gt;Our job is not to write software. Our job is to convert data into information.&lt;/p&gt;
+
+&lt;h2&gt;Lightweight Business Intelligence&lt;/h2&gt;
+
+&lt;p&gt;Corey Ehmke&lt;/p&gt;
+
+&lt;p&gt;A naive approach is reporting data from a transactional database because it&#39;s slow and awful.&lt;/p&gt;
+
+&lt;p&gt;Figure out key performance indicators and what sort of questions you&#39;re asking on a daily basis. Learn how to tell a story with your data.&lt;/p&gt;
+
+&lt;p&gt;MongoDB gives you flexible schemas. Use SQL for transactions, NoSQL for reporting. Business logic belongs in your applications, not in your database.&lt;/p&gt;
+
+&lt;h2&gt;The Most Important Optimization: Happiness&lt;/h2&gt;
+
+&lt;p&gt;Ernie Miller&lt;/p&gt;
+
+&lt;p&gt;When you have a certain level of familiarity, you can do some pretty stupid things.&lt;/p&gt;
+
+&lt;p&gt;You should put a lot of time to determine what&#39;s right for you. Job, work, relationships, everything applies to happiness.&lt;/p&gt;
+
+&lt;p&gt;Programming is written communication.&lt;/p&gt;
+
+&lt;h2&gt;Keynote&lt;/h2&gt;
+
+&lt;p&gt;James Edward Gray II&lt;/p&gt;
+
+&lt;p&gt;It&#39;s a great programmer who applies the correct amount of process and architecture design to each situation. There are always times when a &quot;cowboy coder&quot; who gets things done quickly makes more sense than an &quot;architecture astronaut&quot; who spends a lot of time planning.&lt;/p&gt;
+
+&lt;p&gt;You shouldn&#39;t over-engineer something based upon what you think you might need later on. It doesn&#39;t mean you should avoid building flexibility into your code.&lt;/p&gt;
+
+&lt;p&gt;Write a comment to get stuff out of your head, and then rewrite the code to make the comment superfluous.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Pebble Watch: Reducing My Distractions</title>
+		<link href="http://excid3.com/blog/pebble-watch-reducing-my-distractions"/>
+		<updated>2013-02-26T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/pebble-watch-reducing-my-distractions</id>
+		<content type="html">&lt;p&gt;I’m sure I’m not the only one, but when my phone vibrates in my pocket, I have this insatiable urge to interrupt anything I’m doing, pull my phone out, and check my notifications. It’s pointless, rude, and just an awful habit.&lt;/p&gt;
+
+&lt;p&gt;This all stems from the “realtime web” we live in today. We use email expecting responses within a couple of hours, our phones are constantly connected to Twitter, Facebook, and all the other social networks we use. Each and every service is trying to shove more information down our throats 24/7 and it’s hard to escape if you work online.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/-O3kiRr-Fx_I/USzd0u-uzaI/AAAAAAAACk0/UDlODSjD7sU/s972/IMG_20130226_095950.jpg&quot; alt=&quot;Pebble Watch&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But that’s something the Pebble watch surprisingly helps with. While a bit distracting at times, I can comfortably glance at my watch when something new comes in and I’m not sitting there distracted by the thought that an important notification like a server outage just hit my phone. I know immediately and can put my mind at ease.&lt;/p&gt;
+
+&lt;p&gt;When it isn’t important, I don’t have to go through the motions of: halting what I’m doing, reaching into my pocket, swiping to unlock the screen, opening notifications bar, reading the useless excerpt of the message, clicking on the notification, reading the real message and then finding out it wasn’t important after all.&lt;/p&gt;
+
+&lt;p&gt;Reducing distractions and notifications is hard these days and it’s hard to separate the important from the unimportant. This lets me sift through them, find the watch face that fits me, and eventually start building things for it that benefit me personally.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Reframing Goals</title>
+		<link href="http://excid3.com/blog/reframing-goals"/>
+		<updated>2013-02-25T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/reframing-goals</id>
+		<content type="html">&lt;p&gt;Back when I was in high school, I had some grand ideas. One of them was to build a system for installing software on offline Linux computers called Keryx. It was ridiculously ambitious and looking back I probably never would have started it if I knew how much work it would be.&lt;/p&gt;
+
+&lt;p&gt;My goal was to use Keryx to teach myself to become a real programmer. As a high school kid, I looked up to the college students building software for Ubuntu Linux and that’s exactly what I wanted to be.&lt;/p&gt;
+
+&lt;p&gt;Every evening I would get home from school and spend hours on end building this system. Absolutely everything I was doing was new to me. I knew nothing about Linux, Python, GTK, or even building software. It took me 4 years to build a decent version of Keryx but I finished it.&lt;/p&gt;
+
+&lt;p&gt;In the end, I probably learned more about the self-improvement process than about building software.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The project was a huge struggle because there was so much I didn’t know and the thing that kept me going was my naivety.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Every time I hit a problem, I reframed my goals. If I spent 8 hours trying to solve an error it didn’t mean I’m stupid, it just meant I’m not looking in the right place. The answer might be a new approach or fixing a typo.&lt;/p&gt;
+
+&lt;p&gt;Most of the time when I watch other people work, I see them google the problem, get frustrated when solutions don’t work and ultimately give up. With me, the difference was that I approached solutions with the mindset of learning. I wanted to know &lt;em&gt;why&lt;/em&gt; this was a solution and &lt;em&gt;how&lt;/em&gt; it worked.&lt;/p&gt;
+
+&lt;p&gt;Learning is a mindset you need to stick with because frustration comes quicker the older you are. You look around and people know things you don’t and it’s embarrassing to admit you’re behind.&lt;/p&gt;
+
+&lt;p&gt;Kids are always in the mindset of learning, but that changes as you get older because you don’t have as much formal education. Life changes and you get a job doing similar things over and over again. It’s even culturally acceptable to continue doing the same thing for 40 years without learning new things.&lt;/p&gt;
+
+&lt;p&gt;The struggle is when you want to make a change in your life; it’s easy to give up. When you take on something new, keep in mind that you’re putting yourself in a learning environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remember that &lt;em&gt;why&lt;/em&gt; is often more important than &lt;em&gt;what&lt;/em&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Why&lt;/em&gt; you want to learn Ruby is more important than &lt;em&gt;what&lt;/em&gt; you want to learn about Ruby. &lt;em&gt;Why&lt;/em&gt; you want to lose weight, will always drive you further than &lt;em&gt;what&lt;/em&gt; weight you want to lose.&lt;/p&gt;
+
+&lt;p&gt;So as we approach the end of February, I want you to think about your new year’s resolutions and your goals in life. Are you still chugging along? Are you frustrated with your progress?&lt;/p&gt;
+
+&lt;p&gt;Maybe all you need is a nudge in the right direction.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Too Engrained</title>
+		<link href="http://excid3.com/blog/too-engrained"/>
+		<updated>2013-02-14T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/too-engrained</id>
+		<content type="html">&lt;p&gt;Each week, I get together with my friends &lt;a href=&quot;http://archetyp.al/&quot;&gt;Rob&lt;/a&gt; and &lt;a href=&quot;http://www.articulateventures.com&quot;&gt;Vance&lt;/a&gt;. We all share the same fascination with technology and science. What is even more fascinating is how it affects my productivity.&lt;/p&gt;
+
+&lt;p&gt;If you’re reading my blog, chances are you are a developer and you probably have a lot of friends who are also developers. And every week there is a new framework introduced to the world.&lt;/p&gt;
+
+&lt;p&gt;Every week you’re a step further behind the curve. Another step away from being “cool” and impressing those friends of yours. In order to impress them, you must always be fiddling with new technologies whether you’re really accomplishing anything or not.&lt;/p&gt;
+
+&lt;p&gt;This works for anything. If most of your friends are into cars, then you need to be learning how to crank out more horsepower than your friends’ cars. If your friends play video games, then you need to spend your time learning obscure facts about video games.&lt;/p&gt;
+
+&lt;p&gt;This is where things get interesting though. Rob and Vance come from different backgrounds. Rob is interested in bioinformatics and robotics. Vance is a communications guy and has worked at the World Bank.&lt;/p&gt;
+
+&lt;p&gt;The tides changed when I started hanging out with these guys each week. Being “cool and productive” no longer meant speeding up my blog to respond 100ms faster than my friends’. It meant that I need to be solving real problems with software.&lt;/p&gt;
+
+&lt;p&gt;When we get together, we talk about things at a higher level. We want to make an impact on people’s lives. That is incredibly hard to do if the only thing you ever think about is the implementation details of a project. Of course those are important, but they can also always be changed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.dropmark.com/19112/e60393b4b337aa95f9a140a13bf4c0a7d3da3a1d/tumblr_lwvnj32unB1r95ui7o1_500.jpg&quot; alt=&quot;tumblr_lwvnj32unB1r95ui7o1_500.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I can’t half-finish a project and impress Rob and Vance. I can’t half-fix a customer’s website and expect them to be happy with it. It’s exactly the same thing as half-curing cancer. People might be intrigued for a few minutes, but that’s it.&lt;/p&gt;
+
+&lt;p&gt;You should deliberately step outside your bubble to improve yourself. I’m not saying you should ditch your friends in your career field, but you should certainly value ones from different backgrounds. Friends can be the people who catapult you ahead in life or hold you back and it’s your decision who those people are.&lt;/p&gt;
+
+&lt;p&gt;So today, I want you to dig through your list of projects and find the ones you never finished. Each and every one of those started with the idea of an awesome solution to a problem. The reason you never finished them was because you got too caught up in the details.&lt;/p&gt;
+
+&lt;p&gt;What problem were you solving? “Oh yeah, I was going to build this awesome solution to solve ________!” Now write that down. Don’t forget it. And finish that project.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Setting Up A Minimal Ubuntu Rails Development Environment</title>
+		<link href="http://excid3.com/blog/gorails-episode-1-setting-up-a-minimal-ubuntu-rails-development-environment"/>
+		<updated>2013-02-12T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/gorails-episode-1-setting-up-a-minimal-ubuntu-rails-development-environment</id>
+		<content type="html">&lt;p&gt;A while back I covered &lt;a href=&quot;http://excid3.com/blog/setting-up-ubuntu-12-04-with-ruby-1-9-3-nginx-passenger-and-postgresql-or-mysql/&quot;&gt;Setting Up Ubuntu 12.04 with Ruby 1.9.3, Rails, Nginx, Passenger, and PostgreSQL or MySQL&lt;/a&gt; and it’s gotten quite a lot of traffic. This video doesn’t cover the exact same setup process as the blog since the blog post is geared a little more towards a production server. Setting up a dev environment for the first time can take a lot of trial and error so I’ve kept this video to the minimum required steps to get your first Rails application setup.&lt;/p&gt;
+
+&lt;p&gt;I thought it would be nice to start a screencast series called GoRails (full site coming soon) to cover Rails a lot more in depth, but keeping the videos fairly short. So if you’re interested in GoRails, join my email newsletter on the sidebar at the top!&lt;/p&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/59366882?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff&quot; width=&quot;770&quot; height=&quot;433&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Logrotate Rails Production Logs</title>
+		<link href="http://excid3.com/blog/logrotate-rails-production-logs"/>
+		<updated>2013-02-08T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/logrotate-rails-production-logs</id>
+		<content type="html">&lt;p&gt;You might be just like me and really enjoy building software and web applications but strongly dislike the server maintenance that comes with it. One of those things you have to pay attention to is the size of the log files that your Rails application produces. I’ll be showing you how to logrotate Rails production logs each day to archive a copy of your logs and then compress them to save space and make them much more manageable.&lt;/p&gt;
+
+&lt;p&gt;Your log files can grow fast, especially if you have a lot of traffic. For example, after about 1 month, my log files are 300MB in size. Forget about that for a while and you could run out of disk space on your server and that would be bad.&lt;/p&gt;
+
+&lt;h2&gt;Configuring Logrotate Rails 3 Production Logs&lt;/h2&gt;
+
+&lt;p&gt;You might be surprised at just how easy to setup logrotate Rails logs is. The reason it is so handy is that a bunch of your operating system software is already using it. We just have to plug in our configuration and we’re set!&lt;/p&gt;
+
+&lt;p&gt;The first step is to open up &lt;code&gt;/etc/logrotate.conf&lt;/code&gt; using &lt;code&gt;vim&lt;/code&gt; or &lt;code&gt;nano&lt;/code&gt;. Jump to the bottom of the file an add the following block of code. You’ll want to change the first line to match the location where your Rails app is deployed. Mine is under the &lt;code&gt;deploy&lt;/code&gt; user’s home directory. Make sure to point to the log directory with the &lt;code&gt;*.log&lt;/code&gt; bit on the end so that we rotate all the log files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/home/deploy/APPNAME/current/log/*.log {
+  daily
+  missingok
+  rotate 7
+  compress
+  delaycompress
+  notifempty
+  copytruncate
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;How It Works&lt;/h2&gt;
+
+&lt;p&gt;This is fantastically easy. Each bit of the configuration does the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;daily&lt;/strong&gt; – Rotate the log files each day. You can also use weekly or monthly here instead.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;missingok&lt;/strong&gt; – If the log file doesn’t exist, ignore it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rotate 7&lt;/strong&gt; – Only keep 7 days of logs around&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;compress&lt;/strong&gt; – GZip the log file on rotation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delaycompress&lt;/strong&gt; – Rotate the file one day, then compress it the next day so we can be sure that it won’t interfere with the Rails server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;notifempty&lt;/strong&gt; – Don’t rotate the file if the logs are empty&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;copytruncate&lt;/strong&gt; – Copy the log file and then empties it. This makes sure that the log file Rails is writing to always exists so you won’t get problems because the file does not actually change. If you don’t use this, you would need to restart your Rails application each time.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Running Logrotate&lt;/h2&gt;
+
+&lt;p&gt;Since we just wrote this configuration, you’ll want to test it.&lt;/p&gt;
+
+&lt;p&gt;To run logrotate manually, we just do: &lt;code&gt;sudo /usr/sbin/logrotate -f /etc/logrotate.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You’re going to want to run it a second time to make sure the &lt;code&gt;delaycompress&lt;/code&gt; option is working and to actually compress the log. Here’s an example of what you’ll see if you &lt;code&gt;ls&lt;/code&gt; the log folder after running &lt;code&gt;logrotate&lt;/code&gt; twice:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/1h3F1H3e2V1a/Screen%20Shot%202013-02-08%20at%2010.10.49%20AM.png&quot; alt=&quot;Logrotate Rails 3 Production Log&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see that the &lt;code&gt;production.log&lt;/code&gt; still exists, &lt;code&gt;production.log.1&lt;/code&gt; is a copy of the logs between the first and second run of logrotate, and &lt;code&gt;production.log.2.gz&lt;/code&gt; is the 300MB behemoth of a log file that we had before compressed nicely with Gzip. Once we get up to 7 log files, the next time logrotate runs, it will delete the oldest one so that we only have 7 days worth of logs. If you want to keep all the logs around, you can remove the &lt;code&gt;rotate&lt;/code&gt; line from the configuration.&lt;/p&gt;
+
+&lt;p&gt;Plus, since we just edited the main &lt;code&gt;logrotate.conf&lt;/code&gt; file, the cron job will automatically execute the logrotate Rails logs daily!&lt;/p&gt;
+
+&lt;h2&gt;Setting Up LogRotate Rails Logs Isn’t So Bad After All!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations, you’re set! I’ve had a few cases where the filesystem filled up on a server before and believe me, that is no fun. &lt;a href=&quot;http://stackoverflow.com/questions/4883891/ruby-on-rails-production-log-rotation&quot; title=&quot;Ruby on Rails production log rotation&quot;&gt;This stackoverflow post&lt;/a&gt; also has a nice configuration for a weekly rotate that keeps a year’s worth of logs that you might find helpful.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>What if money was no object?</title>
+		<link href="http://excid3.com/blog/what-if-money-was-no-object"/>
+		<updated>2013-01-31T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/what-if-money-was-no-object</id>
+		<content type="html">&lt;p&gt;I can’t help but sharing this. It makes me so happy and I need to watch this every morning before work.&lt;/p&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/63961985?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff&quot; width=&quot;770&quot; height=&quot;433&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Essentials of Product Development</title>
+		<link href="http://excid3.com/blog/essentials-of-product-development"/>
+		<updated>2013-01-28T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/essentials-of-product-development</id>
+		<content type="html">&lt;p&gt;Another fantastic talk by Ryan Signer.&lt;/p&gt;
+
+&lt;iframe src=&quot;//player.vimeo.com/video/49523952?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff&quot; width=&quot;770&quot; height=&quot;578&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>Open the iPhone / iOS Simulator with Alfred</title>
+		<link href="http://excid3.com/blog/open-the-iphone-ios-simulator-with-alfred"/>
+		<updated>2013-01-22T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/open-the-iphone-ios-simulator-with-alfred</id>
+		<content type="html">&lt;p&gt;It’s annoying that, by default with the latest XCode, the iOS Simulator doesn’t automatically get detected by Alfred. The reason is that it’s hidden away inside the XCode app now and you need to add it to the Alfred application search scope. Let’s do that now.&lt;/p&gt;
+
+&lt;h2&gt;Open the iPhone / iOS Simulator Directory&lt;/h2&gt;
+
+&lt;p&gt;The location of the iPhone / iOS Simulator is now:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First, you’re going to want to open up Finder to that directory. I just did the following in a Terminal, but you could also &lt;code&gt;Show Package Contents&lt;/code&gt; on the Xcode.app and navigate to the same directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/0X221u170K2I/Screen%20Shot%202013-01-22%20at%2010.16.17%20AM.png&quot; alt=&quot;Open iPhone Simulator Directory&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finder will open up the directory containing the &lt;code&gt;iOS Simulator.app&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/440Y3k2m0w1x/Screen%20Shot%202013-01-22%20at%2010.35.45%20AM.png&quot; alt=&quot;Applications Directory&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Adding the iPhone / iOS Simulator to Alfred’s Search Scope&lt;/h2&gt;
+
+&lt;p&gt;Now that you’ve got the folder handy, open up Alfred’s preferences and navigate to the Features &gt; Default Results pane.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/0R1f183T3l0o/Screen%20Shot%202013-01-22%20at%2010.25.54%20AM.png&quot; alt=&quot;Alfred Preferences&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next step is to drag the &lt;code&gt;Applications&lt;/code&gt; directory that we just found into the Search Scope box here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.evernote.com/shard/s20/sh/d3be6da2-2a17-4d5c-8c35-fbd9f3ffe347/4edb1e41f227a99644a8108c971d100c/res/fa2b7592-05ef-4da4-9b5c-78d573dd2727/skitch.png?resizeSmall&amp;amp;width=832&quot; alt=&quot;skitch.png?resizeSmall&amp;amp;width=832&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see the third line there is the directory we just opened in Finder.&lt;/p&gt;
+
+&lt;h2&gt;Yay!&lt;/h2&gt;
+
+&lt;p&gt;Now you can search for “Simulator” in Alfred and launch the app without Xcode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/3Q2E2L0v1e3R/Screen%20Shot%202013-01-22%20at%2010.40.54%20AM.png&quot; alt=&quot;Alfred&quot; /&gt;&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>How To Design Software Users Love</title>
+		<link href="http://excid3.com/blog/how-to-design-software-users-love"/>
+		<updated>2013-01-21T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/how-to-design-software-users-love</id>
+		<content type="html">&lt;p&gt;This is a great example of things we often take for granted as developers. This just goes to show that a small team of people who care about doing things right can do far more than a large team of people who don’t.&lt;/p&gt;
+
+&lt;iframe width=&quot;770&quot; height=&quot;433&quot; src=&quot;//www.youtube.com/embed/tBWFfxE2658?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>How Fast Can I Learn?</title>
+		<link href="http://excid3.com/blog/how-fast-can-i-learn"/>
+		<updated>2013-01-14T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/how-fast-can-i-learn</id>
+		<content type="html">&lt;p&gt;You might feel like you’re an old and the young kids these days are just better than you. You might feel like the young person trying to play in a mature man’s world. I want to dispel this notion right now and say that you can compete with anyone if you approach it correctly. Asking yourself “how fast can I learn?” and honing your ability to learn quickly can change everything.&lt;/p&gt;
+
+&lt;h2&gt;Asking myself how fast can I learn?&lt;/h2&gt;
+
+&lt;p&gt;In grade school science class we had this teacher who would let us use notecards on our exams. At the time I was fascinated by this. The teacher is going to let us basically cheat on the exam by bringing in a notecard. Perfect!&lt;/p&gt;
+
+&lt;p&gt;As grade schoolers, we dove on every opportunity to “cheat the system”. I can use a notecard? Perfect, I don’t have to study. What I didn’t realize was that I spent 2 days typing up a notecard on the computer in size 8 font. Digging up every imaginable piece of information that could potentially be on this exam and squeezing it into that tiny little space really tricked my brain as a 7th grader.&lt;/p&gt;
+
+&lt;p&gt;Instead of “cheating” on anything, he cheated me. As I sat down for the exam, I busted out this beautiful notecard full of equations and notes from the entire semester. Every last drop of knowledge was on there. The exam got handed out and with our heads down we began pouring over the questions.&lt;/p&gt;
+
+&lt;p&gt;The crazy part? I didn’t look at my notecard once. I inadvertently studied so hard making my notecard that I learned absolutely everything the night before the exam.&lt;/p&gt;
+
+&lt;p&gt;This blew me away. At that moment, I realized that I could learn anything I wanted extremely quickly if I tried. I might have to trick my brain into thinking it wasn’t “work”, but I could do it. There was a level of excitement I had while making this notecard that I hadn’t experienced before.&lt;/p&gt;
+
+&lt;h2&gt;What If You Could Learn Any Skill On-Demand?&lt;/h2&gt;
+
+&lt;p&gt;If you knew that you could teach yourself anything very quickly, how much would that change your life? You might learn how to roll with the punches better. You might stop worrying about things.&lt;/p&gt;
+
+&lt;p&gt;You would no longer be scared about applying for a job that’s out of reach. You might even quit your job today if you knew you could learn the related skills for starting your own business.&lt;/p&gt;
+
+&lt;p&gt;If you think about things with the mindest of “How fast can I learn?”, you quickly become unstoppable. The barriers to success are no longer dependent on other people. It’s just you holding yourself back. You can learn things as needed. There is no longer the feeling or need to know things before you start. And feeling like you need to know what you’re doing before you start is usually the reason why people don’t even try at all. Teach yourself to learn things as fast as possible and you will not be afraid to fail anymore.&lt;/p&gt;
+
+&lt;h2&gt;But isn’t that just procrastination?&lt;/h2&gt;
+
+&lt;p&gt;I think procrastination is putting things off because you don’t want to do them. If I’m confident I can handle everything the night before a project is due, I don’t think putting it off is procrastination, just poor time estimating. I could have squeezed in more projects instead. Putting something off because you’re not confident or afraid is bad.&lt;/p&gt;
+
+&lt;p&gt;Introducing some sort of excitement to your work can change everything. If you’re writing software, figure out how you can open source it. Just the fact that you’re able to share some of your work on Github can make you write better code than if it was never going to be shared.&lt;/p&gt;
+
+&lt;p&gt;For me, this is all about external motivators. I have a hard time justifying my time when it only affects me. Everything I do should have a higher purpose. It should help teach other programmers. It should help make people’s lives easier. It should put smiles on people’s faces.&lt;/p&gt;
+
+&lt;p&gt;In college, I lost sight of that. After all the years of schooling, I began to think that everything was just for grades. For a GPA that employers probably will not care about. It became hard for me to justify spending 18 hours perfecting a solution for something I knew the teacher would barely look at while grading.&lt;/p&gt;
+
+&lt;p&gt;When you find yourself in a situation where the excitement has warn off, start challenging yourself to learn things faster. I began to start making up challenges for myself in programming classes. How quickly can I write a solution? Being confident, I’d never give myself more than a couple days to tackle assignments.&lt;/p&gt;
+
+&lt;p&gt;I learned more in college because of the challenges I made up than I did because of the assignments in general.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you step back and truly look at things, nothing is that hard. Sure, certain things are harder than others, but if you’re smart about the way you learn then you have nothing to worry about.&lt;/p&gt;
+
+&lt;p&gt;Just remember to think “how fast can I learn?”.&lt;/p&gt;
+
+&lt;p&gt;Keep this in mind and you can shed all kinds of wasted hours and frustration. It’s amazing.&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>3 Rules For Becoming A Better Developer In 2013</title>
+		<link href="http://excid3.com/blog/3-rules-for-becoming-a-better-developer-in-2013"/>
+		<updated>2012-12-28T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/3-rules-for-becoming-a-better-developer-in-2013</id>
+		<content type="html">&lt;p&gt;Every year I try to be retrospective about what I’m planning to do next year to improve myself as a developer. Becoming a better developer is something I strive for every day, whether it’s working on new projects or cleaning up old ones. This year, I want to be more deliberate about everything.&lt;/p&gt;
+
+&lt;h2&gt;Just Start&lt;/h2&gt;
+
+&lt;p&gt;This is probably one of the most common piece of advice you’ll hear at this time of year. Things like “I’m going to start going to the gym every day and lose weight in 2013.” If you’re a developer, maybe it is “I’m going to start writing test cases for all my code this year.&lt;/p&gt;
+
+&lt;p&gt;The truth of the matter is you’re probably taking on too much. You’ve set the bar too high. You jump for it at first, but you quickly realize you’re not strong enough to continue for 12 months. And that’s okay, but you need to be aware of this and be deliberate about your approach.&lt;/p&gt;
+
+&lt;p&gt;You want to be better at testing your code? Start slow. Watch Destroy All Software if you’re a Ruby or Python developer. Start writing tests for each bug, and slowly build a test suite for your application. Becoming a better developer by writing tests is not an easy process. You have to learn how to start with bite-sized tests before you can really understand what you’re doing.&lt;/p&gt;
+
+&lt;p&gt;For losing weight, start with exercising for 5 minutes every day instead of an hour. You can do that and you have no excuse to spare 5 minutes anyways. Each thing grows, you begin to enjoy it, and soon you realize you’ve improved yourself.&lt;/p&gt;
+
+&lt;p&gt;Don’t take on too much at once so you can make it a habit.&lt;/p&gt;
+
+&lt;h2&gt;Be vocal&lt;/h2&gt;
+
+&lt;p&gt;I probably never would have realized how important my blog would become to me when I started it. Just discussing problems, solutions, and the battles I face as a developer is helpful for more people than just me. We all face the same problems.&lt;/p&gt;
+
+&lt;p&gt;It turns out that over the years my blog has grown from 5 visitors a day to over 400 visitors a day on average. That’s awesome, and I’ve met a lot of wonderful people because of it. Not only will you be able to help other people, but readers will be able to help you as well.&lt;/p&gt;
+
+&lt;p&gt;Start writing more about your work and your struggles publicly. It will help in ways you never could have imagined.&lt;/p&gt;
+
+&lt;h2&gt;Be deliberate&lt;/h2&gt;
+
+&lt;p&gt;Think about all the times you’ve attempted something casually and failed. Maybe you thought you’d start a blog or a book, so you wrote a few words and there it sits on your harddrive. You started but you never finished. You didn’t know what you wanted to get out of it.&lt;/p&gt;
+
+&lt;p&gt;Start being deliberate about things. You’re starting a blog to do _______. Fill in the blank. You’re starting a blog to “build a name for yourself.” You’re starting a book to “share your life experiences with other people and reflect on everything you have learned.”&lt;/p&gt;
+
+&lt;p&gt;Whatever you’re doing or you want to do stop and think about it for a second. What do you want to get out of it? Set some goals and work towards them. Ask yourself “if I’m starting a blog, what qualifies as success to me?” If that’s getting 1,000 visitors a month, there you go. Install analytics and start measuring.&lt;/p&gt;
+
+&lt;p&gt;Compare yourself to yesterday’s version of you and make sure you’re trying harder than before.&lt;/p&gt;
+
+&lt;h2&gt;How are you becoming a better developer?&lt;/h2&gt;
+
+&lt;p&gt;For me, I have to continuously remind myself to look at the bigger picture. I program because I want to use software to change people’s lives. I want to make a difference.&lt;/p&gt;
+
+&lt;p&gt;What are your goals for becoming a better developer? What things are you doing to achieve them?&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+	<entry>
+		<title>My Most Useful Trick For Learning Quickly</title>
+		<link href="http://excid3.com/blog/my-most-useful-trick-for-learning-quickly"/>
+		<updated>2012-12-20T00:00:00-06:00</updated>
+		<id>http://excid3.com/blog/my-most-useful-trick-for-learning-quickly</id>
+		<content type="html">&lt;p&gt;Having been a self-taught programmer since the 7th grade, I’ve picked up some decent skills on how i can teach myself new things. Hands down the best thing I ever learned? I wrote things down.&lt;/p&gt;
+
+&lt;p&gt;The most important thing that I took away from grade school science class was the note cards we were allowed to use on exams. There were no rules to what we could put on them, they just had to fit on a standard 3×5 card. Of course, I took it to the extreme. Size 8 font, printed, no margins, taped to a 3×5 card.&lt;/p&gt;
+
+&lt;p&gt;I crammed all my knowledge into that thing. And that’s all I did to prepare for the exam.&lt;/p&gt;
+
+&lt;p&gt;Then a weird thing happened. It began with me sitting down for the exam, incredibly nervous that I just spent the last 6 hours typing things onto this card that I could barely read, worrying about what things I might have missed. Tests are being handed out. Heads down. The classroom is quiet with the only noise of people sniffling and scribbling of pencils on paper.&lt;/p&gt;
+
+&lt;p&gt;The exam slides onto my desk. Good lord, this is like 15 pages. I start and get through page 1 no problems. Page 2. Page 4. Page 8. Each time dreading that the next question will be worth 25% of the grade and I won’t know the answer. I finally get to that dreaded question. Crap. I don’t remember, so I reach for my 3×5 card and before I can pick it up I’ve visualized where the answer was on the card in my head. I spent so much time working on that note card last night that I remember almost the whole thing. And then the answer springs into my head and I didn’t even have to use that card the whole exam.&lt;/p&gt;
+
+&lt;p&gt;Getting my grade back on that exam really made it dawn on me. I got a 98% without looking at the note card once.&lt;/p&gt;
+
+&lt;p&gt;I was so absorbed in the mindset that this note card was going to let me cheat on the exam. And yet the only thing it did was cheat my mind and its desire to procrastinate.&lt;/p&gt;
+
+&lt;p&gt;I’m a natural procrastinator. Reading notes doesn’t help me. Reading the book really doesn’t help me that much either. I can feel like I learned something by doing both of those things, but I’ll find it darn near impossible to recall specifics if I haven’t actually written something down.&lt;/p&gt;
+
+&lt;p&gt;It goes for programming, cooking, math, science, tons of things. You can read a book on programming, cooking, math, science, whatever and be almost no better off than you were before. It will feel like you learned something, but then the moment you sit down without that book? Nothing. You don’t know how to start. You forgot already.&lt;/p&gt;
+
+&lt;p&gt;This has become so natural to me that I do it without thinking anymore. For programming, I’ll write code before reading a book or I will write each command as I read a tutorial. It can be much harder to follow through this way when you run into a problem, but when you get through it, you’ve at least learned a lot. Reading a book from cover to cover and then sitting down at my computer to try what I just read is impossible. I simply won’t remember.&lt;/p&gt;
+
+&lt;p&gt;For things that aren’t programming, I carry around a Moleskin notebook with me everywhere. If I want to remember it, I write it down. I may never ever visit that page again in that notebook, but I will have filed it away in my mind visually. I’ll be able to recall the layout of the page that I drew in if I can’t remember what I wrote down exactly. And that will be the stepping stone that either triggers my memory to recall what I wanted or I will remember enough to find the page in the notebook again.&lt;/p&gt;
+
+&lt;p&gt;Sometimes it feels like a waste of time and I won’t do it. I know I won’t look at that page again, so why bother? And then I think back a few days and I remember thinking about writing it down but I didn’t and that memory is all I have left because I did nothing with it.&lt;/p&gt;
+
+&lt;p&gt;Try it. See if it helps you. It works incredibly well for me. What other techniques do you use to learn quickly?&lt;/p&gt;
+Included file rss_footer.html not found in _includes directory</content>
+	</entry>
+	
+</feed>

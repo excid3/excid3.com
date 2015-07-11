@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/stepping-stones" class="js-pjax">Stepping Stones</a></h2>
+              <p class="date">Oct 03, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>I moved to St. Louis a short 4 months ago. During that time I spent a small stint working on Perl code, met some amazing people, founded my own company on the side, and joined <a href="http://theablefew.com">a great group of guys at a Rails shop</a> in town. It has been an absolutely breathtaking experience.</p>
+
+<p>One of the most incredible moments so far though was a couple nights ago. My friend <a href="http://www.israelvicars.com/">Israel Vicars</a> has been on the path towards becoming a developer since I met him several months ago. It is tough when you see everyone else lightyears ahead of you.</p>
+
+<p>Things race through your head like: “Okay, I read another book on programming, but how do I apply it? When do I get to build something real?” You can quickly become distraught and lose faith. Last night he <a href="http://news.ycombinator.com/item?id=3032943">deployed his first real web application</a>.</p>
+
+<p>Israel is a hustler. He started a meetup here for programmers who want to <a href="http://www.meetup.com/allnightlong/">come out on a Friday night and code until the sun rises</a>. He knew that surrounding himself with the right people would provide the mentorship and encouragement needed to accomplish his goals.</p>
+
+<p>No matter what you’re trying to accomplish, whether you want to become a developer, a banker, an artist, or a doctor, find the right people to surround yourself. Jim Collin’s amazing book <a href="http://www.amazon.com/gp/product/0066620996/ref=as_li_ss_tl?ie=UTF8&amp;tag=chrioliv-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=0066620996">Good To Great</a> notes that getting the right people on board is the first step to success. Not only does this apply to business, but your personal life. Surround yourself with the right people and you can’t help but succeed.</p>
+
+<p>That’s the first stepping stone to becoming great. Afterwards it’s all downhill from there, the next stepping stones feel much closer. Not sure what your next goal should be? Just ask one of your friends.</p>
+
+<p>It’s also good to keep a group of friends who are both more experienced and less experienced than you are. Not only will you have a great group of mentors, but the chance to become a mentor yourself. You look at some of the most famous people in the many industries and they’re famous because they want to share this knowledge to help other people succeed.</p>
+
+<p>So head over to <a href="http://meetup.com">meetup.com</a>, go find meetups in your area, make new friends, and go succeed. Tangible goals are the stepping stones to success.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/heroku-actionviewtemplateerror-css-isnt-precompiled" class="js-pjax">Heroku: ActionView::Template::Error (.css isn&#8217;t precompiled)</a></h2>
+              <p class="date">Sep 29, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>As I was deploying an application recently, I ran into this error:</p>
+
+<pre><code>ActionView::Template::Error (gmaps4rails.css isn't precompiled):
+</code></pre>
+
+<p>This, of course, is caused by the new asset pipeline and the Rails 3.1 defaults. If you have the same trouble, it’s a quick solution. Production needs to be told to compile assets. Open up <code>config/environments/production.rb</code> and change the following line from false to true:</p>
+
+<pre><code>  # Don't fallback to assets pipeline if a precompiled asset is missed
+  config.assets.compile = true
+</code></pre>
+
+<p>And voila! Commit, push to Heroku, and you should be good to go!</p>
+
+<h2>Update:</h2>
+
+<p>This solution isn’t ideal. It will compile the assets each request which is very slow. The best solution is add <code>config.assets.precompile = %w( *.js *.css )</code> to <code>config/application.rb</code> and then run the <code>rake assets:precompile</code> and commit the compiled assets to your repository before pushing to Heroku. You’ll also want to modify the <code>config/development.rb</code> to change serve public assets to false otherwise you will get duplicate assets in development. Please check out this article on Heroku for more information:</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/how-to-use-a-facebook-access-token-in-rake-task" class="js-pjax">How To Use A Facebook Access Token In Rake Task</a></h2>
+              <p class="date">Sep 26, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Recently I was working on a Rake task that was going to cache updates from Facebook locally. Of course, the permission for what I was doing meant that I needed an <code>access_token</code> to access the Graph API. This is definitely beneficial if you’re wanting to create a cron job or rake task that hits the API periodically.</p>
+
+<p>The access_token you get normally only works while you’re logged in. That doesn’t do you much good in a Rake task. Oh yeah, and the docs don’t do much good either. 14 gray hairs later, I had a working solution that works pretty well.</p>
+
+<p>In order to obtain a “permanent” access_token you need to request permission for <code>offline_access</code> along with any of the permissions you need normally. You’ll also need to setup a Facebook app so that you can use the API key and secret to obtain said token.</p>
+
+<p>Once you’ve got that information it’s pretty simple steps to get what you need. I just fired up a local Rails app so that I could retrieve the postbacks from Facebook OAuth.</p>
+
+<p>First you navigate to this url, replacing it with your API key:</p>
+
+<pre><code>https://graph.facebook.com/oauth/authorize?client_id=YOUR_API_KEY_GOES_HERE&amp;redirect_uri=http://localhost:3000/&amp;scope=read_insights,offline_access
+</code></pre>
+
+<p>That will make a request to localhost:3000 with a code parameter. Then you visit the following url that contains this code and your api key and secrets.</p>
+
+<pre><code>https://graph.facebook.com/oauth/access_token?client_id=YOUR_API_KEY_GOES_HERE&amp;client_secret=YOUR_API_SECRET_KEY&amp;redirect_uri=http://localhost:3000/&amp;code=THE_CODE_WE_JUST_GOT
+</code></pre>
+
+<p>And voila, you should get back an <code>access_token</code>. Just save this key and use it in your rake tasks! If you know of a better method of doing this let me know, it certainly doesn’t seem optimum, but it does the trick for now.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 36 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-37" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-35" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

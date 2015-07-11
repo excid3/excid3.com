@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PyGTK and Threads Part 2</title>
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-09e65ed72b4f08933d57dbbe6ee22514.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/prism.js"></script>
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/pygtk-and-threads-part-2" class="js-pjax">PyGTK and Threads Part 2</a></h2>
+              <p class="date">Jun 14, 2010</p>
+            </div><!--/.article-head-->
+
+            <div class="article-content">
+              <p>If you’re just coming to this post, you may want to check out my introduction to threads in my previous post <a href="http://excid3.com/blog/2010/06/pygtk-and-threads-part-1/">PyGTK and Threads Part 1.</a></p>
+
+<p>Now that we have a better understanding of threads, let’s start learning with an example. You will need Python and PyGTK installed in order to run these.</p>
+
+<p>The following code is the framework for the application we will be using. It’s very simple and consists of a window and a button. This code prints “Hello” into the terminal when the button is clicked so immediately after you click the button you can click it again and it works. This is because printing “Hello” is a very quick process.</p>
+
+<pre><code>#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+# By Chris Oliver
+# Adapted from http://www.pygtk.org/pygtk2tutorial/examples/helloworld.py
+
+import pygtk
+pygtk.require("2.0")
+
+import gtk
+
+class HelloWorld:
+    def __init__(self):
+        """
+            Initializes the GTK application, in our case, create the window
+            and other widgets
+        """
+
+        # Create a window
+        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.window.set_border_width(10)
+
+        # Setup the application to exit GTK when the window is closed
+        self.window.connect("destroy", self.destroy)
+
+        # Create a button
+        self.button = gtk.Button("Hello World")
+
+        # Make the button call self.hello() when it is clicked
+        self.button.connect("clicked", self.hello)
+
+        # Add the button into the window
+        self.window.add(self.button)
+
+        # Display the button and the window
+        self.button.show()
+        self.window.show()
+
+    def hello(self, widget, data=None):
+        print "Hello"
+
+    def main(self):
+        """
+            This function starts GTK drawing the GUI and responding to events
+            like button clicks
+        """
+
+        gtk.main()
+
+    def destroy(self, widget, data=None):
+        """
+            This function exits the application when the window is closed.
+            Without this the GTK main thread would continue running while no
+            interface would be displayed. We want the application to exit when
+            the window is closed, so we tell the GTK loop to stop so we can
+            quit.
+        """
+
+        gtk.main_quit()
+
+if __name__ == "__main__":
+    # Create an instance of our GTK application
+    app = HelloWorld()
+    app.main()
+</code></pre>
+
+<p>Go ahead and try it for yourself. You should get an application similar looking to this: <img src="http://excid3.com/blog/wp-content/uploads/2010/06/example.png" title="example" alt="" />
+Clicking the button prints “Hello” in the terminal and the interface is still usable.</p>
+
+<p>Now what if we wanted to do something more? Maybe we wanted to…wait 20 seconds and THEN print “Hello”? Now that might cause some problems. Well let’s try it first. Just change the code to look like the following:</p>
+
+<pre><code>    def hello(self, widget, data=None):
+        import time
+        time.sleep(20)
+        print "Hello"
+</code></pre>
+
+<p>Now execute it. What happens? When you click the button, it goes down like it was pressed, but does not come backup. The GUI stopped drawing as soon as the button was clicked. Resizing the window was no longer smooth, and dragging around the window erased the button and make it look something like this: <img src="http://excid3.com/blog/wp-content/uploads/2010/06/example_busy.png" title="example_busy" alt="" /></p>
+
+<p>Well, GTK was waiting to take control of your application again. You were busy forcing GTK to wait by sitting around fiddling your thumbs doing nothing for 20 seconds and then printing some text to the screen. Since you don’t take care of the drawing, you forced GTK to wait and made your application become unresponsive for a while. Users might think that your application has crashed, or at the very least they think its poorly written. And well…if you’re not using threads for long running tasks like this…then yes. It is poorly written.</p>
+
+<p>So how do we do some simple threading? Doing two tasks at the same time sounds crazy complicated! Well, in reality, it certainly can be. However, as you begin to get the hang of things, it’s really not so bad.</p>
+
+<p>First off, you need to initialize GTK Threads. I won’t go into detail on why this is necessary other than it’s required to setup GTK to use threads. You simply need to call “gtk.gdk.threads_init()” before the gtk.main() loop is called, so that’s pretty easy. There is a lot of things regarding threads that you need to be aware of, however this is just an introduction so I’m only going to mention what’s necessary. First off, when you have threads, they have access to all the variables in the program. This makes things easier, but unsafe. Think about this scenario: Two separate threads are running, but wish to modify the same variable, what happens? It’s impossible to tell. For this reason, you want to make sure that you NEVER update GTK from a secondary thread. This means you cannot make changes to ANYTHING related to the GUI in those separate threads.</p>
+
+<p>Wait a minute, well then how am I going to do something like a progress bar? Won’t I have to update the GUI from that thread? Yes you will, but GTK provides you tools to do this in a safe manner. The gobject.idle_add() function does this for you. Woah woah woah, now what is gobject? Well, its the underlying architecture of GTK. The gtk.idle_add function has been deprecated in favor of using the direct gobject call. It’s best if you work with this directly but you don’t really need to know much about it for now other than it adds something to GTK’s todo list when it gets the chance. This lets you tell GTK to do things from external threads. GTK will be sitting around waiting to do something while your thread is hard at work. The thread can then tell it to update the progress bar occasionally and GTK will gladly do so safely.</p>
+
+<p>So how do we apply these concepts to our existing application? Pretty simple as follows:</p>
+
+<pre><code>#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+# By Chris Oliver
+# Adapted from http://www.pygtk.org/pygtk2tutorial/examples/helloworld.py
+
+import pygtk
+pygtk.require("2.0")
+
+import gobject
+import gtk
+gtk.gdk.threads_init()
+
+import threading
+
+class HelloWorld:
+    def __init__(self):
+        """
+            Initializes the GTK application, in our case, create the window
+            and other widgets
+        """
+
+        # Create a window
+        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.window.set_border_width(10)
+
+        # Setup the application to exit GTK when the window is closed
+        self.window.connect("destroy", self.destroy)
+
+        # Create a button
+        self.button = gtk.Button("Hello World")
+
+        # Make the button call self.hello() when it is clicked
+        self.button.connect("clicked", self.hello_helper)
+
+        # Add the button into the window
+        self.window.add(self.button)
+
+        # Display the button and the window
+        self.button.show()
+        self.window.show()
+
+    def hello(self, widget, data=None):
+        import time
+        time.sleep(5)
+        print "Hello"
+
+    def hello_helper(self, widget, data=None):
+        print "starting new thread"
+        threading.Thread(target=self.hello, args=(widget, data)).start()
+
+    def main(self):
+        """
+            This function starts GTK drawing the GUI and responding to events
+            like button clicks
+        """
+
+        gtk.main()
+
+    def destroy(self, widget, data=None):
+        """
+            This function exits the application when the window is closed.
+            Without this the GTK main thread would continue running while no
+            interface would be displayed. We want the application to exit when
+            the window is closed, so we tell the GTK loop to stop so we can
+            quit.
+        """
+
+        gtk.main_quit()
+
+if __name__ == "__main__":
+    # Create an instance of our GTK application
+    app = HelloWorld()
+    gtk.gdk.threads_enter()
+    app.main()
+    gtk.gdk.threads_leave()
+</code></pre>
+
+<p>As you can see, there were only small modifications. In this case we created a new function called hello_helper which executes our old hello function inside of a thread. When you click the button now, the thread is spawned quickly and execution continues back to the GTK loop almost immediately. You can click the button several times and many threads will be created and will execute simultaneously. We initialized GTK Threads at the very beginning at import just to make sure that it wasn’t forgotten, but standard practice is to put it just before gtk.main().</p>
+
+<p>That’s about it. It’s a pretty introductory example, but I think it sufficiently explains the basics of threading. There are many more things to it and so I suggest reading up on it some more. Let me know if you have any questions or comments!</p>
+
+
+              <p><strong>P.S.</strong> <a href="https://twitter.com/excid3/">You might enjoy following me on Twitter.</a></p>
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
+
+            <div class="blog-navigation">
+              <div class="pull-left">
+                
+                <a href="/blog/pygtk-and-threads-part-1" title="PyGTK and Threads Part 1" class="btn btn-gorails btn-gorails-red">&laquo; PyGTK and Threads Part 1</a>
+                
+              </div>
+
+              <div class="pull-right">
+                
+                <a href="/blog/getting-started-with-quickly" title="Getting Started With Quickly" class="btn btn-gorails btn-gorails-red">Getting Started With Quickly &raquo; </a>
+                
+              </div>
+            </div>
+
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="light-well about">
+              <a href="http://excid3.com">
+                <div class="pull-left">
+                  <img src="http://www.gravatar.com/avatar/ce795239ba5dd2384fc2f88ffaff5451.png" alt="Chris Oliver" />
+                </div>
+                <p>Chris Oliver specializes in web development and user experience design with Ruby on Rails, Javascript, HTML5, and CSS3 in St. Louis, MO</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- SubHub.io -->
+    <script>
+      (function(s,u,b,hh,uu,bb){
+        uu=document.createElement(u);
+        uu.setAttribute('data-subhub',hh);
+        uu.setAttribute('data-panel',true);
+        uu.async=1;uu.src=b;
+        bb=s.getElementsByTagName(u)[0];
+        bb.parentNode.insertBefore(uu,bb);
+      })(document, 'script',
+        'https://assets.subhub.io/v1/subhub.js',
+        'a48820f5-a170-4e4c-97cf-ced8d190679e');
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excid3'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+  </body>
+</html>
+

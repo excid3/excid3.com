@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/a-couple-things-i-learned-at-ruby-midwest-2011" class="js-pjax">A Couple Things I Learned At Ruby Midwest 2011</a></h2>
+              <p class="date">Nov 10, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>This past weekend I attended the <a href="http://rubymidwest.com">Ruby Midwest</a> conference in Kansas City, MO. This was it’s second year and it’s only gotten better. There were some great talks and a few specific things I wanted to point out.</p>
+
+<h4>Learn The Ruby Debugger</h4>
+
+<p>I’m certainly at fault for this like most developers. Something wrong? My first response is to toss in a <code>puts</code> and print out some information. That’s not always doable and you’ll find yourself banging your head against the wall for a while. As it turns out, the Ruby debugger isn’t hard, it’s awesome. Especially when you have tools to combine with it like <a href="http://pry.github.com/">Pry</a>.</p>
+
+<h4>Command Line Apps are Awesome</h4>
+
+<p>The biggest takeaway here is good output. We have been using Linux for years. Every tool outputs clean, consistent results. Do the same with your Ruby CLI apps. Even if they are rake scripts, make sure each line is one result so that you can use grep and cut to parse the outputs.</p>
+
+<h4>Confident Code</h4>
+
+<p>This was probably my favorite, and I’ve always loved what Avdi Grimm has had to say. His main point here was that we write code that is often unsure of itself. You have if statements everywhere checking for nils. Why? If you know the response will be an array, throw the results into an Array. So what if it’s nil? You’ll get an empty array:</p>
+
+<pre><code># Instead of this
+result = SomeApi.request()
+if result.nil?
+  do something
+end
+
+# You can do something cleaner
+result = SomeApi.request().to_a
+# or
+result = Array(SomeApi.request())
+</code></pre>
+
+<p>This allows you to always be sure that you’ll have an array result that you can iterate over. No need to check for nils. The API is broken returning nils, so if you can’t fix it, use something like the above suggestion to get around that.</p>
+
+<h4>Notes</h4>
+
+<p>There was an incredible amount of good stuff at this conference, most of which I haven’t even begun to touch on. We have a big shared doc of notes from the second day of the conference if you’d like to check them out:</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/the-design-process-at-37-signals" class="js-pjax">The Design Process At 37 Signals</a></h2>
+              <p class="date">Nov 07, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>I’ve watched this video many times and wanted to share it. The reason I like this so much is that it takes me into the mind of a designer. As a backend developer, I don’t typically think of the frontend design aspects as a designer would. This always means that my designs are clunky, but given a full walkthrough like this helps considerably.</p>
+
+<p><a href="http://vimeo.com/15772341">Ryan Singer at Future of Web Apps, London 2010</a> from <a href="http://vimeo.com/rjs">Ryan Singer</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/finishing-is-all-that-matters" class="js-pjax">Finishing Is All That Matters</a></h2>
+              <p class="date">Nov 03, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p><img src="http://shipitsquirrel.github.com/images/ship%20it%20squirrel.png" alt="" /></p>
+
+<p>I’ll be one of the first to admit that I am bad at finishing things. There are a million things I’d like to do and while I start plenty, very rarely do I finish things. Typically, I’ve already finished the hard part and am no longer interested in doing that last easy 10%.</p>
+
+<p>Now when I say “finish” I don’t mean to completion. Nothing is ever complete and you should make sure you realize that as well. There are always a handful of things you’d like to improve given the time or money. <strong>But that’s not important.</strong></p>
+
+<p>The image above is the Ship It Squirrel that has been a big part of the culture at <a href="http://github.com">Github</a>. People love Github and you want to know why? They’re constantly shipping things. I mean, hell, I’ve seen <a href="https://twitter.com/#!/kneath">Kyle Neath</a> go from suggestion via Twitter to shipping that feature in 30 minutes. That’s seriously awesome.</p>
+
+<p>You can be that awesome too. Here are some things I find helps considerably:</p>
+
+<h4>Realize nothing is ever perfect</h4>
+
+<p>If you’re not consciously aware of this fact, you’re bound to become lose motivation eventually. You’ll buckle down so hard trying to make things perfect that you burn out. Pick those couple things you’d have to have, and everything else goes on the backburner. If you get some new idea, write it down on a piece of paper and get back to the important bits.</p>
+
+<h4>Be persistent</h4>
+
+<p>No matter how badly things are going, think of your blessings. Hell, you have a computer and the internet. That’s enough to be thankful for right there. Plenty of other people in the world are trying to find food for day. Your troubles are probably not as bad as you think.</p>
+
+<p>Don’t give up. Ever.</p>
+
+<h4>Limit yourself</h4>
+
+<p>Deadlines can be incredibly motivating. Use them to make sure you work twice as hard. When we have deadlines at work, I am almost four times as productive those days because I know things <strong>have</strong> to be done. Set deadlines on your calendar. Take them seriously.</p>
+
+<h4>No distractions</h4>
+
+<p>If you’re a habitual email checker, block it. If you find yourself easily distracted with something, block it or remove it. Put on headphones and find a quiet corner to work in and forget about the world around you.</p>
+
+<h4>Surround yourself with likeminded people</h4>
+
+<p>Find someone to support you. Sometimes this is as easy as a friendly reminder from someone on twitter. Maybe it’s a reminder from your spouse or significant other. Whomever it is, find someone that you look up to. It will make you want to impress them. They will be excited about what you are doing and you will be excited that they are excited. Before you know it you’ve built an endless loop of motivation.</p>
+
+<h4>Work on side projects in the morning</h4>
+
+<p>Some days at work are worse than others. Every job is like that. If you find yourself coming home and unmotivated, try working on your idea in the morning. Get up 2 hours earlier and work then. You’ll have a fresh mind and be able to accomplish more than 4 hours with a clouded mind in the evening.</p>
+
+<blockquote><p><strong>Remember that guy that gave up? Neither does anybody else.</strong></p></blockquote>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 32 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-33" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-31" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

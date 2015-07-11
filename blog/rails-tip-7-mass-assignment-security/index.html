@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Tip #7: Mass Assignment Security</title>
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-09e65ed72b4f08933d57dbbe6ee22514.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/prism.js"></script>
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/rails-tip-7-mass-assignment-security" class="js-pjax">Rails Tip #7: Mass Assignment Security</a></h2>
+              <p class="date">Mar 09, 2012</p>
+            </div><!--/.article-head-->
+
+            <div class="article-content">
+              <p>I know everyone has been writing about this lately, so pardon yet another article on the pile, but this is a serious issue that people need to take into consideration daily.</p>
+
+<p>Since the recent Github fiasco, there has been a lot of talk about security on the web. This was an <a href="https://github.com/blog/1068-public-key-security-vulnerability-and-mitigation">exceptional response</a> on their part, and something that every single one of us needs to take seriously instead of pointing fingers at people, companies, and frameworks.</p>
+
+<p>Let’s dive into the vulnerability.</p>
+
+<h2>Mass Assignment</h2>
+
+<p>When you create a form in Rails, you’re effectively mapping form values to a hash:</p>
+
+<p>This hash’s values get assigned to the attributes of the Rails model you’re creating:</p>
+
+<pre><code>Parameters:
+{
+  "commit"=&gt;"Submit",
+  "post"=&gt;{
+    "title"=&gt;;"First Post",
+    "content"=&gt;;"This is the content for the first post."
+  }
+}
+</code></pre>
+
+<p>We access that in our controller’s create action:</p>
+
+<pre><code>def create
+  @post = Post.new params[:post]        # THIS IS THE IMPORTANT LINE
+
+  if @post.save
+    redirect_to @post, :notice =&gt; "Successfully created."
+  else
+    render :action =&gt; :new
+  end
+end
+
+# Update is affected as well
+
+def update
+  @post = Post.find params[:id]
+
+  if @post.update_attributes params[:post]      # ALSO USES THE PARAMS HASH
+    redirect_to @post, :notice =&gt; "Successfully updated."
+  else
+    render :action =&gt; :edit
+  end
+end
+</code></pre>
+
+<p>On line 2 here, the params are passed into the new Post object. That is where the submitted form data is assigned to the model and then saved to the database.</p>
+
+<p><strong>And that’s where the problem lies.</strong></p>
+
+<p>By default, a user can update any attributes. So if you decide to allow users to be “admins”, then removing a field in the form that is for admins only is not good enough. A user can still submit the admin only param without permission.</p>
+
+<h2>The solution: <code>attr_accessible</code></h2>
+
+<p>The solution for this is <code>attr_accessible</code>. This method tells your model which attributes can be assigned via hash like in the <code>create</code> action we saw earlier.</p>
+
+<p>Let’s do this by example. Pretend we don’t want people updating the <code>:important</code> attribute on a Post. What do we do?</p>
+
+<p>The first thing, is that we should require <code>attr_accessible</code> be on all of our models. In <code>application.rb</code>, uncomment this line:</p>
+
+<pre><code>config.active_record.whitelist_attributes = true
+</code></pre>
+
+<p>This no longer allows any of the attributes on any models to be set through mass assignment. That’s good.</p>
+
+<p>Now we have to update the model to allow certain attributes:</p>
+
+<pre><code>class Post &lt; ActiveRecord::Base
+  attr_accessible :title, :content
+end
+</code></pre>
+
+<p>When you try to attack the site by sending over a <code>:important</code> attribute, it will simply be ignored now. This is exactly what we want.</p>
+
+<p>Rails will throw an exception in development if a protected attribute is attempted to be set. In production, no exception will be raised, the attribute will juts be ignored. That's a good start.</p>
+
+<h2>What if we want some users to be able to set a protected attribute though?</h2>
+
+<p>In our case, let's say that we want admin users to be able to update the <code>:important</code> attribute. If attr_accessible doesn't allow us to save <code>:important</code>, then how do we actually set it??</p>
+
+<p>Let's fix up the controller to allow this for users who are admins. We'll be using Devise with a boolean <code>:admin</code> column on the user so that is where <code>current_user</code> will be coming from.</p>
+
+<p>Let's hop back in our controller and fix things up:</p>
+
+<pre><code>def create
+  # Remove the insecure item(s) so we don't throw an exception in development
+  important = params[:post].delete :important
+
+  # Create the new post as normal
+  @post = Post.new(params[:post])
+
+  # If the user is allowed update this attribute, explicitly set it
+  @post.important = important if current_user.admin?
+
+  if @post.save
+    redirect_to @post, :notice =&gt; "Successfully created."
+  else
+    render :action =&gt; :new
+  end
+end
+
+# Update is affected as well
+
+def update
+  # Strip out the protected params so we don't throw exceptions in development
+  important = params[:post].delete :important
+
+  # Grab the post as usual
+  @post = Post.find(params[:id])
+
+  # Set the attributes like we do in create
+  @post.attributes = params[:post]
+
+  # Explicitly update the important attribute only if the user is an admin
+  @post.important = important if current_user.admin?
+
+  if @post.save
+    redirect_to @post, :notice =&gt; "Successfully updated."
+  else
+    render :action =&gt; :edit
+  end
+end
+</code></pre>
+
+<p>And this will allow any type of user to update the title and content attributes, but only admins are safely allowed to update the important field.</p>
+
+<p>The important part to take note of here is that we are explicitly setting the protected attributes. We know <strong>exactly</strong> what we are doing when we want to set those attributes, so this (aside from logic problems) makes updating these attributes protected from mass assignment while still being usable.</p>
+
+<p>Another important benefit of <code>attr_accessible</code> is that any new fields we add to the model are immediately protected. This whitelist approach makes sure that we have to declare fields as "safe" which leads to much fewer security holes when changing this code in the future because it forces you to not be forgetful.</p>
+
+<h2>Conclusion</h2>
+
+<p>This is certainly a feature that will be updated in the future versions of Rails. The current solutions aren't exceptionally graceful, so I'm sure that we'll see some nice improvements soon.</p>
+
+<p>In the mean time, keep with whitelisting attributes, and if have a lot of dynamic attributes that depend on the user roles, check out dynamic <code>attr_accessible</code> on <a href="http://railscasts.com/episodes/237-dynamic-attr-accessible">Railscast 237</a>.</p>
+
+
+              <p><strong>P.S.</strong> <a href="https://twitter.com/excid3/">You might enjoy following me on Twitter.</a></p>
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
+
+            <div class="blog-navigation">
+              <div class="pull-left">
+                
+                <a href="/blog/ntfs-support-on-osx-lion-10-7" title="NTFS Support On OSX Lion 10.7" class="btn btn-gorails btn-gorails-red">&laquo; NTFS Support On OSX Lion 10.7</a>
+                
+              </div>
+
+              <div class="pull-right">
+                
+                <a href="/blog/dont-tell-me-you-want-to-change-the-world-show-me" title="Don&#8217;t tell me you want to change the world. Show me." class="btn btn-gorails btn-gorails-red">Don&#8217;t tell me you want to change the world. Show me. &raquo; </a>
+                
+              </div>
+            </div>
+
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="light-well about">
+              <a href="http://excid3.com">
+                <div class="pull-left">
+                  <img src="http://www.gravatar.com/avatar/ce795239ba5dd2384fc2f88ffaff5451.png" alt="Chris Oliver" />
+                </div>
+                <p>Chris Oliver specializes in web development and user experience design with Ruby on Rails, Javascript, HTML5, and CSS3 in St. Louis, MO</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- SubHub.io -->
+    <script>
+      (function(s,u,b,hh,uu,bb){
+        uu=document.createElement(u);
+        uu.setAttribute('data-subhub',hh);
+        uu.setAttribute('data-panel',true);
+        uu.async=1;uu.src=b;
+        bb=s.getElementsByTagName(u)[0];
+        bb.parentNode.insertBefore(uu,bb);
+      })(document, 'script',
+        'https://assets.subhub.io/v1/subhub.js',
+        'a48820f5-a170-4e4c-97cf-ced8d190679e');
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excid3'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+  </body>
+</html>
+

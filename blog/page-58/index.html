@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/fun-with-the-github-api-and-yaml" class="js-pjax">Fun with the Github API and Yaml!</a></h2>
+              <p class="date">Oct 18, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Alright, so it’s not so much “fun” as learning how to use it. First off, we have the site we all know and love, <a href="http://github.com">Github</a>. My projects page has become increasingly out of date and I wanted a way to keep this updated, as well as showing statuses for the current projects. If I haven’t touched the project in a long time (say 4 months) it’s probably on hold.</p>
+
+<p>My idea was to aggregate this into a rails app using the Github API and that’s exactly how  came about.</p>
+
+<p>Now the Github API is very simple to use. It’s just a simple url that you append your username to and it returns you some YAML based on your request. Simple right? Yeah, pretty much.</p>
+
+<pre><code>list = Net::HTTP.get URI.parse('http://github.com/api/v2/yaml/repos/show/excid3')
+@repos = YAML::load(list)["repositories"].sort { |a, b| a[:pushed_at]  b[:pushed_at] }
+</code></pre>
+
+<p>These two lines grab the content from the Github API, parse it into YAML, and sort the repositories to an array of “most recently pushed” repositories. You can iterate through them now putting them into a list like the github page has for your username now!</p>
+
+<p>Checkout  if you are interested in reading more of the source how the current projects list works. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":-)" /></p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/using-gravatar-on-your-site" class="js-pjax">Using Gravatar on Your Site!</a></h2>
+              <p class="date">Oct 17, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>You might have noticed a lot of sites these days are offloading their avatar hosting elsewhere. Where might they be doing this? Probably <a href="http://gravatar.com">Gravatar</a>. The site is run by Automattic who runs WordPress.com. Sites can simply use the email address you registered with to fetch an appropriate sized avatar really easily. Take <a href="http://github.com/excid3">my Github </a>avatar for example: right click on it and open up the image in a new tab. The URL points to Gravatar.com so it’s not actually being hosted on Github at all.</p>
+
+<p>Sounds pretty cool right? Sure is, and it’s extremely easy to get running on your own application. I’m going to be pretty vague about implementations, as you could use this in desktop or mobile applications as well, you’re certainly not limited to using Gravatar with web apps.</p>
+
+<p>The implementation is really quite simple. You generate a link to http://gravatar.com/avatar/WITHYOURMD5HASH?s=48. Your MD5 hash is just the user’s email address hashed using MD5. You can also grab other profile information as well, the “?s=48″ passes in the “s” parameter to Gravatar telling it we want a 48×48 size image. You can use any size from 1px to 512px. For more information on this, check out .</p>
+
+<p>So now that we understand how to grab the proper URL, let’s implement some URL generation in a couple languages. After you’ve got the URL, you can embed it in Django or Rails however you like. If you’re developing a non-web app, you can download the image using the URL instead. Take not here, I’m not testing for invalid inputs, that’s up to you.</p>
+
+<p><strong>Using Python</strong></p>
+
+<pre><code>import hashlib
+def gravatar_url_for(email, size=48)
+    hash = hashlib.md5(email).hexdigest()
+    return "http://gravatar.com/avatar/%s?s=%i" % (hash, size)
+</code></pre>
+
+<p><strong>Using Ruby</strong></p>
+
+<pre><code>require 'digest/md5'
+def gravatar_url_for(email, size=48)
+  hash = Digest::MD5.hexdigest(email)
+  "http://gravatar.com/avatar/#{hash}?s=#{size}"
+end
+</code></pre>
+
+<p>Simple as that! Now your applications can have nice avatar graphics with hardly any work!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/ruby-on-rails-3-and-mysql-on-ubuntu-10-10" class="js-pjax">Ruby on Rails 3 and MySQL on Ubuntu 10.10</a></h2>
+              <p class="date">Oct 16, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Ruby on Rails has become my favorite web framework recently. The sheer speed factor of development is incredible, and once you get past the learning curve, you can build anything in a short matter of time.</p>
+
+<p>Recently my Asus laptop’s graphics card has become supported in the Ubuntu kernel so I now have a dual booting machine running both Windows 7 and Ubuntu. This is particularly handy now as I can use this laptop for development in Rails.</p>
+
+<p>The steps aren’t hard to figure out on your own if you’re familiar with the tools, but this is what I did to get Rails 3 with MySQL on Ubuntu 10.10.</p>
+
+<p><strong>Installing Rails from Terminal</strong></p>
+
+<blockquote><p>sudo apt-get install ruby-full</p>
+
+<p>wget production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz</p>
+
+<p>tar -xvf rubygems-1.3.7.tgz</p>
+
+<p>cd rubygems-1.3.7/</p>
+
+<p>sudo ruby setup.rb</p>
+
+<p>sudo ln -s /usr/bin/gem1.8 /usr/bin/gem</p>
+
+<p>sudo gem install rdoc</p>
+
+<p>sudo gem install rails</p></blockquote>
+
+<p><strong>Installing MySQL Server from Terminal</strong></p>
+
+<blockquote><p>sudo apt-get install mysql-server libmysqlclient-dev libmysql-ruby</p></blockquote>
+
+<p><strong>Setting up your first Rails project</strong></p>
+
+<p>It seems that Rails 3 depends on sqlite3 even if you don’t intend to use it as the backend for your application. We’ll create an example rails app to make sure everything is working.</p>
+
+<blockquote><p>sudo apt-get install libsqlite3-dev build-essential</p>
+
+<p>rails new example</p>
+
+<p>cd example/</p>
+
+<p>bundle install</p>
+
+<p>rake db:create</p>
+
+<p>rails s</p></blockquote>
+
+<p>Now fire up your browser, and go to  and you should be greeted with a nice little rails homepage. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" /></p>
+
+<p><strong>UPDATE: </strong>I recently just ran these commands over again and ran into a “File not found: lib” error. After a bit of googling, I found this and appended the solution into the instructions above:</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 58 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-59" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-57" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

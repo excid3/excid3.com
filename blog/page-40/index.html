@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/making-omnisocial-rails-3-1-compatible" class="js-pjax">Making Omnisocial Rails 3.1 Compatible</a></h2>
+              <p class="date">Aug 01, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Rails 3.1 final is just around the corner. As I’m eagerly awaiting the release of this version, I’ve begun writing a lot new Rails projects in 3.1. The problem with this is that quite a few libraries are only really built for Rails 3.0 at the very latest.</p>
+
+<p>Tonight I wanted to try Omnisocial. I know that Omniauth isn’t that hard to setup on its own, but hey, might as well try new things right? Well, I ran into some problems. After setting up the Omnisocial gem in my Gemfile I fired away at <code>bundle install</code> but ran into this problem:</p>
+
+<pre><code>omnisocial depends on multi_json (~&gt;0.0.2)
+</code></pre>
+
+<p>Nice. Something in Rails 3.1 was conflicting with the version of multi_json that one of the Omnisocial dependencies. <a href="https://github.com/excid3/omnisocial/commit/fbc9fe00d1dd41bc3d7896caf506b5841ddc7450">That fix</a> was easy enough.</p>
+
+<p>Now, Omnisocial works, but login with twitter no longer works. After some fiddling, I came to the conclusion that it wasn’t a problem with my configuration, or at least not likely.</p>
+
+<p>I came across an issue on Github for Omniauth (Unforunately I don’t remember which one). A bunch of people were also having failed logins with Omniauth as well. It certainly didn’t seem to be a standalone issue with Omnisocial at this point. One of the comments mentioned that <code>rack.auth</code> had been changed to <code>omniauth.auth</code> and then it clicked. This was the reason, it was probably just getting a nil instead of throwing an exception and causing everything to fail. Sure enough, that’s what it was.</p>
+
+<p>While we wait to get the official Omnisocial repo updated, you can go ahead and use <a href="https://github.com/excid3/omnisocial">my version</a>.</p>
+
+<p>Updating libraries to Rails 3.1 compatibility is fun, important, and lots of people will thank you for doing so. It’s a great way to learn. If you have a plugin that you need help converting, let me know! I’d love to help.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/success-is-just-a-series-of-small-wins" class="js-pjax">Success Is Just A Series Of Small Wins</a></h2>
+              <p class="date">Jul 25, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>As I’ve written about a few times, college certainly was not my favorite experience. It wasn’t that late nights, the huge amounts of work, or the unhealthy food choices. It was about the unmotivated students and (some) faculty that just could care less.</p>
+
+<p>I was reading <a href="http://adamconrad.posterous.com/do-what-you-love-or-it-will-destroy-you-or-ho#">this blog post</a> and talking with one of my friends recently about this. My quarter life crisis was depressing, seemingly unending, and just plain awful. Looking back on it, I realized that I came up with a decent way to cope with things even though I didn’t know it at the time.</p>
+
+<p>Like Adam mentions in his blog post, doing what you love will keep you afloat. Every single night and weekend I would spend time writing open source software, learning Rails better, or playing a video game. I love these things and it all helps.</p>
+
+<p>But you know what is also very important? Completing things. After all, success is just a series of small wins. Nobody really pays attention to the hardships you wen through, they just see the things you completed.</p>
+
+<p>I realized this after going through this hard time in my life. Those things I loved? Yeah, they were just a bunch of small projects. I was going through something that felt like it would never end, I’d never be able to make it 6 more months till graduation. Having completed a bunch of little projects along the way it felt like I was doing things with my time that were stepping stones to the end.</p>
+
+<p>Creating a small web app one day, finishing it that next day, and then telling my friends about it gave me a sense of accomplishment. Sometimes they would think it was cool and fork it on github so they could contribute back. That’s even more important. You think to yourself “I did something that people thought was kind of cool so this is definitely not a waste of my time.”</p>
+
+<p>The problem with these ongoing things is that you may not feel that you’re getting anywhere. Maybe you need to zoom in a little and focus on the smaller tasks. It’s rare to be an overnight success, but with a lot of little success behind you, it certainly makes everything else seem less daunting.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/git-status-in-your-command-prompt" class="js-pjax">Git Status In Your Command Prompt</a></h2>
+              <p class="date">Jul 18, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>The more you start working with Git, the more you’ll want to become a Git Grand Master and join the ranks of Linus Torvalds. Typing <code>git status</code> all the time not only wastes away the precious hours of your life, but its certainly no way to impress your coworkers, convince your boss that you came from another universe, and certainly won’t impress the cute secretary.</p>
+
+<p>But what if…just what if…you could integrate it into your command prompt? That might be the final straw so you can get a raise AND a girlfriend right?? Hell yeah! Let’s do this!</p>
+
+<pre><code># http://henrik.nyh.se/2008/12/git-dirty-prompt
+# http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/
+# username@Machine ~/dev/dir[master]$ # clean working directory
+# username@Machine ~/dev/dir[master*]$ # dirty working directory
+
+function parse_git_deleted {
+  [[ $(git status 2&gt; /dev/null | grep deleted:) != "" ]] &amp;&amp; echo "-"
+}
+function parse_git_added {
+  [[ $(git status 2&gt; /dev/null | grep "Untracked files:") != "" ]] &amp;&amp; echo ' '
+}
+function parse_git_modified {
+  [[ $(git status 2&gt; /dev/null | grep modified:) != "" ]] &amp;&amp; echo "*"
+}
+function parse_git_dirty {
+  # [[ $(git status 2&gt; /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] &amp;&amp; echo "☠"
+  echo "$(parse_git_added)$(parse_git_modified)$(parse_git_deleted)"
+}
+function parse_git_branch {
+  git branch --no-color 2&gt; /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+export PS1='\w$(parse_git_branch)$ '
+</code></pre>
+
+<p>What is this I don’t even? Okay, well, you need to put this in your .bash_profile or .bashrc file. Re-open your terminal and you’ll have your new sweet prompt all ready to go. When you’re in a git directory this code will execute and you’ll get a neat little addition that shows your current branch, additions, deletions, and modifications.</p>
+
+<p><img src="http://excid3.com/blog/wp-content/uploads/2011/07/Screen-shot-2011-07-03-at-10.20.46-PM.png" title="Screen shot 2011-07-03 at 10.20.46 PM" alt="" /></p>
+
+<p>How sweet is that? Here we’ve got a screenshot of my prompt in the <a href="http://fluttrly.com">Fluttrly</a> <a href="http://github.com/excid3/fluttrly">source</a> directory. (Subtle advertisement here for contributions to Fluttrly)</p>
+
+<p>Provided you actually use git to a tiny bit of its potential, this is really awesome. If you don’t, well, why don’t you go use Visual Studio, we don’t want you here I guess now is the time to learn. Works on any bash prompt with colors enabled.</p>
+
+<p>Of course you could just use <a href="http://zsh.sourceforge.net/">zsh</a> for all this, but that’s for another time.</p>
+
+<p>Okay, so maybe this isn’t the coolest thing in the world, but it is pretty freakin handy. Comment if you have a cool prompt you’d like to share. I need to get my nerd cred up at work.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 40 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-41" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-39" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

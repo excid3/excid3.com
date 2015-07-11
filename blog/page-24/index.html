@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/how-bad-do-you-want-it" class="js-pjax">How Bad Do You Want It</a></h2>
+              <p class="date">Feb 12, 2012</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>There are a lot of times I hear people talk about wanting to do things. I talk about things like this all the time myself. The problem is most of the time we want success, but we don’t want to go through the hard work to get there.</p>
+
+<p>As a high school student, I spent a lot of time naively working on Keryx. It was WAY above my knowledge level, and so I invested tons and tons of hours into building it. This ignorance allowed me to push my boundaries because I was completely unaware of the investment it would take to achieve my goal.</p>
+
+<p>When you’re older, that problem flips sides. You realize how much time it will take, so you don’t even start. Instead of being able to charge head cluelessly, you have to face the problem of gauging whether or not you want to actually spend time on this idea.</p>
+
+<p>This can be devastating to your ability to push yourself sometimes. If you deal with this feeling ever, watch this video:</p>
+
+<p><a href="http://vimeo.com/27933991">How Bad Do You Want It</a> from <a href="http://vimeo.com/greyskalegsk">Greyskale Multimedia LLC</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+<p>Does this kind of content encourage you to get back in the saddle?</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/rails-tip-5-authenticated-root-and-dashboard-routes-with-devise" class="js-pjax">Rails Tip #5: Authenticated Root and Dashboard Routes With Devise</a></h2>
+              <p class="date">Feb 07, 2012</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Something that isn’t necessarily that well documented in Devise, is authenticated routes. Take, for example, most websites that allow you to login. When you visit the root url without being logged in, you get the homepage as normal. When you login however, the root url is now rendering your dashboard.</p>
+
+<p>Sure we could do this with logic inside of the controller like so:</p>
+
+<pre><code>class MainController &lt; ApplicationController
+  def index
+    if user_signed_in?
+      render "dashboard"
+    else
+      render "index"
+    end
+  end
+end
+</code></pre>
+
+<p>But guess what? <strong>That's ugly.</strong> And if you're querying the database in here, it gets even MORE ugly. Wouldn't it be nice if we could dynamically set the routes to change where the root url points when a user is logged in?</p>
+
+<p>Devise's <code>authenticated</code> route allows you to do this nicely.</p>
+
+<pre><code>  authenticated :user do
+    root :to =&gt; "main#dashboard"
+    # Rails 4 users must specify the 'as' option to give it a unique name
+    # root :to =&gt; "main#dashboard", :as =&gt; "authenticated_root"
+  end
+</code></pre>
+
+<p>This feature has been around since Devise 1.4, but was never very apparent when searching through the docs and Stack Overflow. You can find the original pull request here:</p>
+
+<p>Bonus: There is also an <code>authenticate</code> route that you can use to force authentication. Warning though, if you use these, they'll redirect to login whenever they're matched which can cause problems. I recommend you stick to using <code>before_filter :authenticate_user!</code>.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/devise-username-authentication-with-multiple-models-and-subdomains" class="js-pjax">Devise Username Authentication With Multiple Models And Subdomains</a></h2>
+              <p class="date">Jan 24, 2012</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Devise is an awesome library for authentication with Rails. Things are extremely simple to setup for most cases but when you begin implementing slightly trickier business logic, it can become a pain. And the real reason is mainly just because the wiki needs a little love. They iterate quickly, and documenting everything in a newbie friendly wiki page is often hard to do. So I’m going to take a quick stab at documenting my implementation:</p>
+
+<h2>The Problem</h2>
+
+<p>I’m working on an application that runs on multiple domains and subdomains. Each domain has it’s own set of admins and users. The admins are tied to a domain, and users are tied to a subdomain of that domain. Both of these need to allow authentication via a username field as opposed to the standard email field.</p>
+
+<p>Starting out, we implemented the models just like normal with Devise. Generate custom views for each, and follow <a href="https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign_in-using-their-username-or-email-address">this tutorial for adding username authentication</a>.</p>
+
+<p>After I got everything setup, admin users could login just fine, but users could not. What was worse, was the Devise Sessions controller was executing but never calling <code>find_for_database_authentication</code> on the model. I had no idea what was going on, and all I could get Devise to do was return a <strong><code>Completed 401 Unauthorized</code></strong> error and immediately re-render the login form.</p>
+
+<p>This is where we differentiate a bit. In that tutorial, they suggest that you set the <code>authentication_keys</code> in <code>devise.rb</code> like this:</p>
+
+<pre><code>  config.authentication_keys = [ :login ]
+</code></pre>
+
+<p>Well this is actually going to be the source of our problems. In order to authenticate admins based upon a specific domain, we’re going to include the <code>domain_id</code> inside of the login form as a hidden field. In order to use the <code>domain_id</code> inside the model for authentication, we added it to the authentication_keys array:</p>
+
+<pre><code>  config.authentication_keys = [ :login, :domain_id ]
+</code></pre>
+
+<p>But wait! That works for admins because they are based upon the domain. Users authenticate against a subdomain, not a <code>domain_id</code>. The users need authentication_keys like this:</p>
+
+<pre><code>  config.authentication_keys = [ :login, :subdomain_id ]
+</code></pre>
+
+<p>And we put the <code>subdomain_id</code> as a hidden field in their new session form. This is a problem, because the initializer only runs once. We need some way to change this at runtime based upon which type of user is authenticating.</p>
+
+<h2>The solution</h2>
+
+<p>After a long time searching for a solution to the 401 Unauthorized, I found out that the authentication_keys was the cause of the problem (after having a hunch). The bad part was that I wasn’t able to find a method for debugging the issue.</p>
+
+<p>I found the solution on <a href="http://stackoverflow.com/questions/3298506/about-user-authentication-with-username-and-subdomain">Stack Overflow</a> that pointed out that you’re actually able to set authentication_keys on the model itself in the devise call like so:</p>
+
+<pre><code>  devise :database_authenticatable, :registerable, ..., :authentication_keys =&gt; [:login, :domain_id]
+</code></pre>
+
+<p>Nifty! We can set these dynamically without touching the initializer. This lets us cleanly customize the authentication without much work. I’ll be updating the wiki to add this functionality because I certainly can’t be the only one who searched long and hard for a solution!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 24 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-25" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-23" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

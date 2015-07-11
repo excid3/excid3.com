@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/beautifying-gedit" class="js-pjax">Beautifying Gedit</a></h2>
+              <p class="date">Jun 13, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>So I do a lot of work in Gedit when I’m not using Vim. Lately I’ve been using it a considerable amount over Vim and wanted a better color scheme that was vibrant. I came across <a href="http://grigio.org/pimp_my_gedit_was_textmate_linux">this article</a> and was pleased to have found something I thought I would like. I have to say, I absolutely love it. All the colors are bright enough and different enough that when you want to look for one specific thing, nothing else stands about better. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" /> Included in the link are a lot of other things for making Gedit more TextMate like. From the sounds of it, TextMate seems to be an incredible editor, so I might have to check out some of those plugins soon.</p>
+
+<p><img src="http://excid3.com/blog/wp-content/uploads/2010/06/gedit_darkmate.png" title="gedit_darkmate" alt="" /></p>
+
+<p>You can download the darkmate theme for Gedit here:</p>
+
+<p>If you’ve got any other theme or plugin suggestions for Vim or Gedit let me know. I need to build a perfect environment to develop in and I’m sure there are some life savers I haven’t come across yet.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/resume-downloads-with-pycurl-resume_from" class="js-pjax">Resume downloads with PycURL RESUME_FROM</a></h2>
+              <p class="date">Jun 12, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>If you’ve ever played with urllib, you might have noticed its reasonably slow download speeds and wanted something a little bit more. That’s where cURL comes into play. It’s a very powerful library and is used in applications such as Gwibber. Seeing that this ships with Ubuntu, it is a good fit for Keryx’s new backend library Unwrapt.</p>
+
+<p>I spent yesterday working on this new downloading code and wanted to share my code as I found the documentation (in reality, the entire library too) is primarily in C style and confusing examples. This is an easy to use class that helps to take care of some of the mundane details like following redirects (which is important! if you don’t enable this you won’t be able to reach a lot of files). I plan on extending this to support proxies soon as well as a GTK progress function.</p>
+
+<pre><code>#    Unwrapt - cross-platform package system emulator
+#    Copyright (C) 2010 Chris Oliver
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see .
+
+
+import math
+import pycurl
+import os
+import time
+import sys
+
+
+class EasyCurl:
+
+
+    def __init__(self, proxy=None):
+
+        self.pco = pycurl.Curl()
+        self.pco.setopt(pycurl.FOLLOWLOCATION, 1)
+        self.pco.setopt(pycurl.MAXREDIRS,      5)
+        #self.pco.setopt(pycurl.TIMEOUT,       5*3600)
+        self.pco.setopt(pycurl.CONNECTTIMEOUT, 30)
+        self.pco.setopt(pycurl.AUTOREFERER,    1)
+
+        #TODO: Proxy!
+
+
+    def perform(self, url, filename=None, resume=True, progress=None):
+
+        # Generate filename if not given
+        if not filename:
+            filename = url.strip("/").split("/")[-1].strip()
+        self.filename = filename
+
+        # Get resume information
+        self.existing = self.start_existing = 0
+        if resume and os.path.exists(filename):
+            self.existing = self.start_existing = os.path.getsize(filename)
+            self.pco.setopt(pycurl.RESUME_FROM, self.existing)
+
+        # Configure progress hook
+        if progress:
+            self.pco.setopt(pycurl.NOPROGRESS,       0)
+            self.pco.setopt(pycurl.PROGRESSFUNCTION, progress)
+
+        # Configure url and destination
+        self.pco.setopt(pycurl.URL, url)
+        self.pco.setopt(pycurl.WRITEDATA, open(filename, "ab"))
+
+        # Start
+        self.pco.perform()
+
+        sys.stdout.write("n")
+
+
+    def textprogress(self, download_t, download_d, upload_t, upload_d):
+
+        downloaded = download_d   self.existing
+        total      = download_t   self.start_existing
+        try:    frac = float(downloaded)/float(total)
+        except: frac = 0
+
+        bar = "=" * int(25*frac)
+
+        sys.stdout.write("r%-25.25s %3i%% |%-25.25s| %5sB of %5sB" %
+            (self.filename,
+             frac*100,
+             bar,
+             format_number(downloaded),
+             format_number(total)))
+
+
+# Borrowed from the urlgrabber source
+def format_number(number, SI=0, space=' '):
+    """Turn numbers into human-readable metric-like numbers"""
+    symbols = ['',  # (none)
+               'k', # kilo
+               'M', # mega
+               'G', # giga
+               'T', # tera
+               'P', # peta
+               'E', # exa
+               'Z', # zetta
+               'Y'] # yotta
+
+    if SI: step = 1000.0
+    else: step = 1024.0
+
+    thresh = 999
+    depth = 0
+    max_depth = len(symbols) - 1
+
+    # we want numbers between 0 and thresh, but don't exceed the length
+    # of our list.  In that event, the formatting will be screwed up,
+    # but it'll still show the right number.
+    while number &gt; thresh and depth &lt; max_depth:
+        depth  = depth   1
+        number = number / step
+
+    if type(number) == type(1) or type(number) == type(1L):
+        # it's an int or a long, which means it didn't get divided,
+        # which means it's already short enough
+        format = '%i%s%s'
+    elif number &lt; 9.95:
+        # must use 9.95 for proper sizing.  For example, 9.99 will be
+        # rounded to 10.0 with the .1f format string (which is too long)
+        format = '%.1f%s%s'
+    else:
+        format = '%.0f%s%s'
+
+    return(format % (float(number or 0), space, symbols[depth]))
+
+
+if __name__ == "__main__":
+    url = "http://launchpad.net/keryx/stable/0.92/ download/keryx_0.92.4.zip"
+    ec = EasyCurl()
+    ec.perform(url, progress=ec.textprogress)
+</code></pre>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/unable-to-open-file-unknown-opcode" class="js-pjax">Unable to open file: unknown opcode</a></h2>
+              <p class="date">Jun 10, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Well, this certainly isn’t too common of a problem it appears. I have been searching for a bit today trying to work out a recent Keryx bug that has crept up on our current stable release. Took me a little bit but I seem to have figured it out.</p>
+
+<p>Now this all is all based around our Pyinstaller Linux binary. We packaged this with 1.4 (pre-release) and didn’t think much of it until now. It seemed that the release we had built ran fine on Ubuntu 32 and 64bit releases. That has proved to be an incorrect assumption now. Something must have changed in the latest Ubuntu release that caused this to break. Maybe it’s libraries that have changed, maybe it’s something else. I’m not sure.</p>
+
+<p>What happens is when you run the Pyinstaller Linux binary of Keryx on a 64bit machine, you receive the following errors:</p>
+
+<pre><code>/usr/lib/gio/modules/libgvfsdbus.so: wrong ELF class: ELFCLASS64
+Failed to load module: /usr/lib/gio/modules/libgvfsdbus.so
+/usr/lib/gio/modules/libgioremote-volume-monitor.so: wrong ELF class: ELFCLASS64
+Failed to load module: /usr/lib/gio/modules/libgioremote-volume-monitor.so
+/usr/lib/gio/modules/libgiogconf.so: wrong ELF class: ELFCLASS64
+Failed to load module: /usr/lib/gio/modules/libgiogconf.so
+XXX lineno: 320, opcode: 54
+Unable to open file: unknown opcode
+</code></pre>
+
+<p>This appears to happen when opening the gzip files which we downloaded just before the error occurred. The rest of the application seems to have normal execution. Testing this exact same release on my Eee PC running 32 bit Ubuntu 10.04, you can imagine that it worked perfectly fine. So it appears that something in the Python gzip libraries that was dynamically linked (and not bundled into the executable) has changed and is no longer compatible.</p>
+
+<p>I’m working on building a 64bit copy of the Linux executable using Pyinstaller for those users. I’ll post an announcement on the Keryx website when it is available.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 63 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-64" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-62" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/python-irc-logbot-rewritten" class="js-pjax">Python IRC Logbot Rewritten</a></h2>
+              <p class="date">Oct 10, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Lately I’ve been extremely busy with work, school, and life in general. It’s hard to find time to just sit down and work on a project for fun. I decide this weekend I would, and after a few comments of my IRC bot having some issues. Sounds like a good place to start.</p>
+
+<p>Surprisingly it’s been several months since I have written anything in Python. I’ve been working primarily in Ruby and Rails lately and have started to become quite a fan. Sitting down trying to look at my messy, repetitive code from when I first wrote this bot was useless. Most of it didn’t make sense, and the logic behind most things was just plain messy. I sat down yesterday and looking at the old code, began to rewrite it entirely from scratch. Deadmau5 blaring in the background, caffeine running through my veins, I got a rewrite out quickly, and with more features than before. Configs are still missing, but everything is working in tip top shape, with a much more elegant but similar approach compared to before.</p>
+
+<p><img src="http://excid3.com/blog/wp-content/uploads/2010/10/Screen-shot-2010-10-10-at-4.05.10-PM-300x71.png" title="Screen shot 2010-10-10 at 4.05.10 PM" alt="" /></p>
+
+<p>Above is a screenshot of <a href="http://excid3.com/logs">some example logs.</a> It uses the <a href="http://www.irssi.org">IRSSI</a> style with custom coloring. Timestamps on the left are linkable, and it also creates indexes for channels and dates logged. It’s a single file, using the python-irclib library and nothing else. Hopefully it’ll be useful to someone as a logbot, or inspiration for improving their coding practices. You can download the bot over at .</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/android-cant-mount-devblockmmcblk0" class="js-pjax">Android: Can’t Mount /dev/block/mmcblk0</a></h2>
+              <p class="date">Oct 10, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Since I’ve got 3 Android phones, I might as well root them right? I’ve been happily running Bugless Beast 0.4 on my Verizon Droid for several months now and it is faster than my Nexus One running CM6 by a long shot. This rom is awesome, so I wanted to install BB0.5 when it was released.</p>
+
+<p>Well, it wasn’t as easy as I had planned. Using Rom Manager, I used the clockwork recovery to try to install it. No dice. Some weird “Can’t Mount /dev/block/mmcblk0″ error. Same thing with CM6. What gives?</p>
+
+<p>I tried this a month back, but I only got it working now. Maybe it was an update in Rom Manager that fixed it or something. I read removing the SD card to make sure it is in place might help. BB0.4 could mount it, so I knew the card was fine. It was something with the recovery. I came across this before and tried Doctor’s suggestion:  The first time it didn’t work for me, but it did this time around.</p>
+
+<p><strong>The steps to fix this are as follows:</strong></p>
+
+<ol>
+<li> Open Rom Manager</li>
+<li> Menu -> Clear Download Cache</li>
+<li> Flash Alternate Recovery</li>
+<li> Reboot phone</li>
+<li> Open Rom Manager again</li>
+<li> Install your new rom (and Wipe Data and Cache)</li>
+</ol>
+
+
+<p>Cross your fingers and hopefully it should work for you. I’m happily running Bugless Beast 0.5 now. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" /></p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/keryx-on-omgubuntu" class="js-pjax">Keryx on OMG!Ubuntu!</a></h2>
+              <p class="date">Sep 24, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>It’s been a while since I’ve posted anything on here. Life has been hectic, senior year of college has begun, and I’m working quite a few hours each week. Little free time means I’m usually too exhausted during those hours to actually accomplish something productive. That’s going to change and I needed a little boost to get motivation. I submitted Keryx as a tip for OMG!Ubuntu! yesterday to help spread the word.</p>
+
+<p>I certainly did not expect such an overwhelming and encouraging response from the community. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":-)" /> It really touched me, as this blossomed out of an itch I had, and I never expected to have contributed to so many users along the way. It’s been a rough 4 years learning Python, version control, proper programming styles, and managing a decent sized project for a college student with no experience. I never dreamed I’d have over 32,000 downloads.</p>
+
+<p>I just wanted to stop for a moment and thank each and every one of you. Each download sparks another ounce of motivation, and the contributions of code, translations, and bug reports has been unbelievably helpful in teaching me and helping to build a better product. Again, thanks for being such a wonderful community, I’m just happy that I could be of help to at least one other Linux user. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" /></p>
+
+<p>For those of you that haven’t read the article or the comments, here is the link: <a href="http://omgubuntu.co.uk/2010/09/keryx-offline-package-installation-made-easy-in-ubuntu/">omgubuntu.co.uk/2010/09/keryx-offline-package-installation-made-easy-in-ubuntu/</a></p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 59 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-60" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-58" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>So You Want To Be A Developer &#8211; Ideas For Beginner Programmers</title>
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-09e65ed72b4f08933d57dbbe6ee22514.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/prism.js"></script>
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/so-you-want-to-be-a-developer-ideas-for-beginner-programmers" class="js-pjax">So You Want To Be A Developer &#8211; Ideas For Beginner Programmers</a></h2>
+              <p class="date">Aug 08, 2011</p>
+            </div><!--/.article-head-->
+
+            <div class="article-content">
+              <p>My recent blog post on <a href="http://excid3.com/blog/10-ideas-for-beginner-web-developers/">ideas for beginner web developers</a> generated a bit of a buzz. It’s interesting to see that so many people want to learn how to program yet don’t know where to start. Some people would assume that if you want to learn how to program you already have something in mind that you want to accomplish. Sometimes that’s right, I always kind of wanted to build a computer game. Other times it’s just because you want to learn a valuable skill. This logic was what brought me to becoming a web developer fulltime.</p>
+
+<p>If your focus is on desktop applications there are many different approaches you can take. You’ll initially want to build command-line applications to get a handle on managing data and manipulating it. As you progress, you’re going to start to want to make this data visible and begin doing user interfaces. After that, integration with web services is always fun.</p>
+
+<p>Here’s an approach that I would recommend to someone starting out as a desktop application developer. Focus on recreating the basic tools you would take for granted in the future. I would suggest doing all of this in a scripting language like Ruby or Python. You will have a considerably harder time learning the concepts in C as you will be learning at a much lower level. If that’s your thing, go for it, the real goal is to work on something you enjoy.</p>
+
+<p>So without further adieu:</p>
+
+<ol>
+<li> Almost every application has configuration settings somewhere, so build a configuration parser from scratch.</li>
+<li> It’s pretty imperative that you start simple, so take that configuration parser you just built and make a command line todo list. Load and save the todo items using your config parser.</li>
+<li> Now that you’ve got some basic input/output done, let’s sophisticate it a bit and instead save the data to an SQLite database. Lots of desktop applications use these, and it’s just good practice to know how to work with databases anyways. Just use raw SQL statements to write your data.</li>
+<li> Let’s take a step back and clean up the database code this time. It’s not really good to write raw SQL. What you typically want to do is create classes in your code that represent objects in the database. This is called an <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a>. Build a basic one of these so that you can set properties on the object and it will automatically update the database without the program needing to understand that it is being saved to an SQL db. Bonus points if you make it support multiple database types.</li>
+<li> Now that you’ve gotten your hands dirty with a lot of different backend things, it’s time to put a pretty face on what you’ve built. Check out Cocoa if you’re a Mac user, GTK or Qt if you’re on Linux or Windows. Compare the <a href="http://en.wikipedia.org/wiki/Widget_toolkit">GUI toolkit</a> options and figure out what is best for your application. Do you want it to run on any OS? Do you hate how a certain one looks and feels? Experiment, even how writing code for a toolkit feels will have serious effects on how your application turns out.</li>
+<li> Very cool, now most applications are becoming web friendly. Nobody wants their data stored on a single machine, they want it everywhere. Look at any of the websites you use on a daily basis, maybe you use Twitter. Instead of using the official Twitter client, try to build your own that works with the Twitter API. Don’t just build it, but actively use it, open source it, try to get your friends using it. You’ll quickly realize that there is a lot to GUI programming, especially the little tweaks that make an experience go from mediocre and annoying to smooth and exhilarating. The most important part is that you use your own software. Things that bug you most certainly will bug other people. Having other people use your software will make things that you overlook come to the forefront so that you become aware of them. Remember that you’re looking through developer’s eyes, not a user’s.</li>
+</ol>
+
+
+<p>I feel that if you take an approach like this, you get an appreciation for the underlying libraries that most seasoned developers take for granted. Yes they don’t think about the libraries they use too often, but if anything goes wrong they can already have a good understanding of how it works. This is what you want, enough knowledge to be deadly but not too much that it’s overwhelming.</p>
+
+<p>I took this approach with <a href="http://keryxproject.org">Keryx</a>. For 4 years, I spent an incredible amount of time trying to build everything from scratch in Python and essentially recreate Synaptic on Ubuntu on my own while simultaneously adding offline support. It’s a huge undertaking and I don’t feel like I ever got it truly finished. At the same time, it has landed me a magazine interview in Linux Journal, humbled me by the incredible heartfelt thank you’s that people have written, and given me huge respect for the community.</p>
+
+<p>This might be just a personal note to myself, but don’t ever become afraid to put your work out there, it is the only way to truly learn. The more you learn, the more you might become afraid that you’re doing seems wrong. It feels like someone might criticize your approach and call your code crappy, but guess what? You built something real and got feedback. If you never showed it to anyone, you’d never know that you could have been doing a better job. Open source your projects on github and get people involved even if it’s just friends. You’ll learn leaps and bounds faster than on your own.</p>
+
+
+              <p><strong>P.S.</strong> <a href="https://twitter.com/excid3/">You might enjoy following me on Twitter.</a></p>
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
+
+            <div class="blog-navigation">
+              <div class="pull-left">
+                
+                <a href="/blog/making-omnisocial-rails-3-1-compatible" title="Making Omnisocial Rails 3.1 Compatible" class="btn btn-gorails btn-gorails-red">&laquo; Making Omnisocial Rails 3.1 Compatible</a>
+                
+              </div>
+
+              <div class="pull-right">
+                
+                <a href="/blog/you-dont-truly-understand-it-until-you-think-its-obvious" title="You Don&#8217;t Truly Understand It Until You Think It&#8217;s Obvious" class="btn btn-gorails btn-gorails-red">You Don&#8217;t Truly Understand It Until You Think It&#8217;s Obvious &raquo; </a>
+                
+              </div>
+            </div>
+
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="light-well about">
+              <a href="http://excid3.com">
+                <div class="pull-left">
+                  <img src="http://www.gravatar.com/avatar/ce795239ba5dd2384fc2f88ffaff5451.png" alt="Chris Oliver" />
+                </div>
+                <p>Chris Oliver specializes in web development and user experience design with Ruby on Rails, Javascript, HTML5, and CSS3 in St. Louis, MO</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- SubHub.io -->
+    <script>
+      (function(s,u,b,hh,uu,bb){
+        uu=document.createElement(u);
+        uu.setAttribute('data-subhub',hh);
+        uu.setAttribute('data-panel',true);
+        uu.async=1;uu.src=b;
+        bb=s.getElementsByTagName(u)[0];
+        bb.parentNode.insertBefore(uu,bb);
+      })(document, 'script',
+        'https://assets.subhub.io/v1/subhub.js',
+        'a48820f5-a170-4e4c-97cf-ced8d190679e');
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excid3'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+  </body>
+</html>
+

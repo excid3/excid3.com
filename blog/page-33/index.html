@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/psychsyntaxerror-couldnt-parse-yaml-at-line" class="js-pjax">Psych::SyntaxError: couldn&#8217;t parse YAML at line</a></h2>
+              <p class="date">Oct 31, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Working today I ran into an interesting bug. I was using the <a href="http://zencoder.com">Zencoder</a> gem to work with their API (I’d protect in the prison showers good) and ran into this error</p>
+
+<pre><code>Psych::SyntaxError: couldn't parse YAML at line 1 column 37
+</code></pre>
+
+<p>What was odd is that this error came from a JSON parsing line of code inside the zencoder gem. I’m still not 100% sure why the ActiveSupport::JSON.decode call uses a YAML parser but I’m sure I’ll find out later.</p>
+
+<p>So anyways, back to getting your crap running again. From what I <a href="http://blog.modsaid.com/2011/03/rails-3-couldnt-parse-yaml-error.html">gathered</a>, the JSON being returned likely included a special character that Psych freaks out on.</p>
+
+<p>Ruby has a couple YAML parsers, and typically uses Psych. The link above mentions that putting the special characters in double quotes fixes that error for him. In my case, I wasn’t controlling the JSON so that solution was out the window.</p>
+
+<p>The fix for this is to use a different YAML interpreter like so in your <code>config/boot.rb</code> if you are using Rails, or anywhere at the beginning of your ruby project:</p>
+
+<pre><code>require 'yaml'
+YAML::ENGINE.yamler = 'syck'
+</code></pre>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/give-things-away" class="js-pjax">Give Things Away</a></h2>
+              <p class="date">Oct 27, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p><strong>Giving services, software, or anything else of significant value away is good for you business.</strong></p>
+
+<p>That seems counterintuitive. You say you’re just giving away your business and that you can’t make money because it’s free.</p>
+
+<p>You don’t realize it, but the same thing an individual does by open sourcing his work in his free time actually makes him more valuable as a hire. He could keep all of his accomplishments from side projects a secret and try to convince businesses to hire him. Or he could give it away openly.</p>
+
+<p>If he does the latter, a business will be able to see his work, judge it’s quality, estimate its worth. You’ll be damn sure that it’s worth more than some guy in his basement with trade secrets that he won’t show to anyone. Nobody wants that guy because they don’t have any clue if he’s really worth what he says he is.</p>
+
+<p>Do the same with business. It’s the same trust relationship with customers and other businesses. If you give away something of value, customers will trust you. They know you’re there for more than just their wallet, you want to make a difference. Companies and consumers will see you and want to be you. They’ll have respect for you.</p>
+
+<p>37signals did this with Ruby on Rails. They built this sweet framework and instead of keeping it as a trade secret, they open sourced it. They didn’t use it as a bullet on their website saying why you should hire them as a consultant, they shared it. Look where it got them. They now speak at conferences, teach classes, all kinds of things. They’re now world renowned, and looked up to by many business owners. <strong>Businesses want to be like them.</strong> None of this would have happened if they decided to hold Rails tight and be selfish.</p>
+
+<p>Freemium and 30 day free trials are the new hotness for pricing schemes. Why? Because you are willing to stand behind your product and let consumers try before they buy. It’s as simple as that.</p>
+
+<p><strong>People don’t buy what you do, they buy why you do it.</strong></p>
+
+<p>Last week I watched Simon Sinek’s TED talk. His main point is that people want the “why” before the “what”. Take video chat for example. Everyone knows that Skype has done video chat for a while. Nobody cares, but then Apple releases FaceTime and shows deaf people using it to communicate remotely and everyone is impressed. Why? Because people buy why you do it.</p>
+
+<p>It might feel unorthodox, but that’s because it is. People want honesty and openness these days. They have been burned far too many times to place trust in a company that claims they’re good. People want proof. Prove it to them.</p>
+
+<p>You’re either out there to make money for yourself or you’re out there to make the world a better place by doing what you do. Customers will quickly pick up on your real motivations. Be honest and show them that you care.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/start-something-that-matters" class="js-pjax">Start Something That Matters</a></h2>
+              <p class="date">Oct 24, 2011</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>If you’ve never heard of TOMS shoes or read his book, <a href="http://www.amazon.com/Start-Something-Matters-Blake-Mycoskie/dp/1400069181">Start Something That Matters</a>, you’ll learn the story of how TOMS shoes got its start. Through a small little idea he put into practice, he was able to change the lives of many, many people.</p>
+
+<p>Looking back, <a href="http://keryxproject.org">Keryx</a> ended up in a similar (much less successful) state. While Keryx may not have grown to the scale of TOMS Shoes, it’s been very amazing experience. I’ve been in tears reading thank you letters from users who have little to no alternatives using computers in the respective areas of the world.</p>
+
+<p>A project that changes someone’s life gives you many things. First, you’re able to achieve the highest level of happiness knowing that you made a difference. The lives you’ve improved and the people you’ve inspired will never be the same. Who knows what they will achieve given the boost you helped them gain.</p>
+
+<p>Secondly, working on a project that makes a difference gives you motivation and optimism. I was lucky to have had this experience at a young age. My open source experience stemmed from the beginning of high school where I was a part of the <a href="http://PortableApps.com">PortableApps.com</a> community. Following that, I began to use Linux and the community helped me through every trouble. This inspired me to give back. I wanted a way to help others in my situation.</p>
+
+<p>Having dialup is not fun. I had it at home until one year ago. Downloading software can take weeks on a slow connection like that, so I came up with the idea for Keryx with some help friends in the community. They helped me along and with some ridiculous determination I finished the first version. It was crap, people used it, liked the idea, wanted more. Throughout the past 4 years I’ve maintained Keryx, improving as I can while trying to get through the other hurdles of life.</p>
+
+<p>I strongly encourage everyone to give something away and support it. Write open source software, donate your time at a charity, get involved. Not only will it reinvigorate you, it will have a direct impact on someone else’s life. It builds character, unbelievably strong friendships, and a satisfaction you cannot get from anything else.</p>
+
+<p>If you aren’t living to make the world a better place, what’s the point?</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 33 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-34" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-32" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

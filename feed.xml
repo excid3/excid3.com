@@ -1,21 +1,548 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
-                <title>{{ site.name | xml_escape }}</title>
-                <description>{{ site.description | xml_escape }}</description>
-                <link>{{ site.url }}</link>
-                <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-                {% for post in site.posts limit:10 %}
+                <title>Chris Oliver</title>
+                <description>Chris Oliver is a St. Louis Web Developer specializing in web development with Ruby on Rails, Javascript, HTML5, and CSS3</description>
+                <link>http://excid3.com</link>
+                <atom:link href="http://excid3.com/feed.xml" rel="self" type="application/rss+xml" />
+                
                         <item>
-                                <title>{{ post.title | xml_escape }}</title>
-                                <description>{{ post.content | xml_escape }}</description>
-                                <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-                                <link>{{ site.url }}/{{ post.url }}</link>
-                                <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
+                                <title>A Future of Dynamically Priced Everything</title>
+                                <description>&lt;p&gt;I read &lt;a href=&quot;http://www.baekdal.com/opinion/how-inapp-purchases-has-destroyed-the-industry/&quot;&gt;an article&lt;/a&gt; the other day talking about how mobile apps are becoming flooded with in-app purchases. He claimed that in-app purchases were a bad thing. He said they ruin the experience and target you when you in your weakest moment. Well, he’s right...for now.&lt;/p&gt;
+
+&lt;p&gt;Today’s implementation of in-app purchases in many games are similar to the urge of gambling. &lt;em&gt;I need to do just one more thing.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;However, there’s something bigger going on behind the scenes. Let’s set our current reality aside for a moment and imagine what the possibilities could be in the next 10-20 years if we continue innovating.&lt;/p&gt;
+
+&lt;p&gt;We’re all familiar with the dynamic prices on Amazon.com and airlines websites. The prices fluctuate based upon the day, hour, week, and month.&lt;/p&gt;
+
+&lt;p&gt;Sometimes the price goes up if you visit the page two or three times.&lt;/p&gt;
+
+&lt;p&gt;Why does this happen? They know the more times you visit a page, the more tempted to buy the product. If you can’t make a decision, price goes up. It is a play upon your emotions to either get you to buy. In your mind you are thinking “Oh crap, I better get it now before it goes higher!”&lt;/p&gt;
+
+&lt;p&gt;Our minds are irrational about prices but that&#39;s not necessarily a bad thing.&lt;/p&gt;
+
+&lt;p&gt;The entire practice of finding the right price is simple: As a business, we want the price to be as high as possible to maximize the amount of revenue we make. That means that some goods make the most money by selling to fewer people but at a much higher price. Other things sell to lots of people but at a low price. These win on volume.&lt;/p&gt;
+
+&lt;p&gt;The problem right now is that everything is generally one flat price. You’re setting a single price for ALL of your customers and they’re aware of it. The thing is, some people are willing to pay more than what you’re asking. Some people a little less.&lt;/p&gt;
+
+&lt;p&gt;In an ideal world, the way to truly maximize your revenue is to price dynamically based upon the person. You’d know their wants, needs, and purchasing history to determine what they might be willing to spend.&lt;/p&gt;
+
+&lt;p&gt;Imagine going out to dinner at a steak restaurant. You love steak. I mean absolutely love it.&lt;/p&gt;
+
+&lt;p&gt;Today, the price of your steak would be the same for you as it is with every other customer in the restaurant. Every single steak dinner they sell is $20. The primary way for them to make more money is to sell more steak dinners.&lt;/p&gt;
+
+&lt;p&gt;But imagine what this could be like 20 years from now. The restaurant knows that you absolutely love steak and that you’ve bought it regularly over the past 10 years based upon the data they know about you. They know you’re very likely to order the steak dinner tonight. To you this might be worth $40 to have a steak and they’re going to price it as such.&lt;/p&gt;
+
+&lt;p&gt;The person you’re eating out doesn’t like steak as much, then the price of their steak dinner will be less. Instead, they might really really love shrimp. Well guess what? The price of the shrimp basket just went up.&lt;/p&gt;
+
+&lt;p&gt;It’s clear that we are already headed this direction as a civilization.&lt;/p&gt;
+
+&lt;p&gt;The only major hurdle to get to this point will be overcoming the social stigma of not pricing fairly for everyone.&lt;/p&gt;
+
+&lt;p&gt;Once that is overcome, pricing dynamics will change rapidly. You will no longer see prices on the menu. There will just be items and they will be priced dynamically based upon the customer when they purchase.&lt;/p&gt;
+
+&lt;p&gt;It’s already beginning to happen with in-app purchases where there is really no specific price to play.&lt;/p&gt;
+
+&lt;p&gt;Games like Clash of Clans and Candy Crush have been &lt;a href=&quot;http://thinkgaming.com/app-sales-data/1/clash-of-clans/&quot;&gt;reported&lt;/a&gt; to be making &lt;strong&gt;over $750,000 A DAY&lt;/strong&gt;. That’s just insane to think about compared to everything else on the market right now.&lt;/p&gt;
+
+&lt;p&gt;The reason they can do that though is because they’re one step ahead of the game. Users who truly value the game are willing to fork over lots of money to continue playing. Those who aren’t simply don’t and that’s okay too. The companies don’t need (and shouldn’t try) to make money off of those users.&lt;/p&gt;
+
+&lt;p&gt;A lot of people are up in arms about this and related things like &lt;a href=&quot;http://en.wikipedia.org/wiki/Behavioral_retargeting&quot;&gt;Retargeting&lt;/a&gt;. It’s simply a sign of change towards a smarter future.&lt;/p&gt;
+
+&lt;p&gt;It sounds like a scary proposition for our wallets and it could be. But remember, this isn’t price gouging. Customers will stop buying if the price isn’t right. Businesses will be able gauge &lt;em&gt;exactly&lt;/em&gt; what the value and demand of their products is worth. If the return on investment isn’t good enough, they will be able to adapt quicker into producing something that people actually want.&lt;/p&gt;
+
+&lt;p&gt;This is good news because it means that in the future society will adapt to change faster and faster. Who knows what will come of this data-driven future we are pursuing, but it certainly will be interesting.&lt;/p&gt;
+</description>
+                                <pubDate>Mon, 06 Jan 2014 00:00:00 -0600</pubDate>
+                                <link>http://excid3.com//blog/a-future-of-dynamically-priced-everything</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/a-future-of-dynamically-priced-everything</guid>
                         </item>
-                {% endfor %}
+                
+                        <item>
+                                <title>Simon Sinek: Why Leaders Eat Last</title>
+                                <description>&lt;iframe src=&quot;//player.vimeo.com/video/79899786?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=e91c6b&quot; width=&quot;620&quot; height=&quot;349&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+
+
+</description>
+                                <pubDate>Sun, 22 Dec 2013 00:00:00 -0600</pubDate>
+                                <link>http://excid3.com//blog/why-leaders-eat-last</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/why-leaders-eat-last</guid>
+                        </item>
+                
+                        <item>
+                                <title>Rodney Mullen: Pop an ollie and innovate!</title>
+                                <description>&lt;iframe src=&quot;http://embed.ted.com/talks/rodney_mullen_pop_an_ollie_and_innovate.html&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;I really, really enjoyed this talk. There were a bunch of great quotes
+in it tying skateboarding in with computers programmers/hackers:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Take what other people do. Make it better. Give it back so we all rise
+further.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;And explaining exactly why so many people enjoy programming,
+skateboarding, making music, and any other type of creation:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;There is an intrinsic value in creating something for the sake of
+creating it.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is why we do what we do. Keep doing it, not for the success, fame,
+or money, but for the sake of creating.&lt;/p&gt;
+</description>
+                                <pubDate>Sun, 08 Dec 2013 00:00:00 -0600</pubDate>
+                                <link>http://excid3.com//blog/pop-an-ollie-and-innovate</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/pop-an-ollie-and-innovate</guid>
+                        </item>
+                
+                        <item>
+                                <title>Learn Programing By Copying</title>
+                                <description>&lt;blockquote&gt;&lt;p&gt;I finished this programming book and I still don&#39;t feel like a
+real programmer. What do I do next?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is a question that I get asked a lot having been involved in &lt;a href=&quot;http://launchcodestl.com&quot;&gt;LaunchCode STL&lt;/a&gt;. There are a million things to learn, but we all have to start somewhere. Most people start with a book that takes them so far and then drops you off in the middle of nowhere when you&#39;re finished.&lt;/p&gt;
+
+&lt;p&gt;The answer to that is actually remarkably simple: &lt;strong&gt;I tell people to build software they would use.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Most people seem to mistake this advice for something that it&#39;s not. I typically start hearing ideas for software they wish they had. Things that don&#39;t exist. &lt;em&gt;But you don&#39;t have to build something new.&lt;/em&gt; Of course that is your goal but that is not what I told you to build.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To clarify, I&#39;m saying that you should build your own version of the software you use every day.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you use url shorteners like &lt;a href=&quot;http://bit.ly&quot;&gt;bit.ly&lt;/a&gt; or Twitter&#39;s &lt;a href=&quot;http://t.co&quot;&gt;t.co&lt;/a&gt;? Build your own.&lt;/p&gt;
+
+&lt;p&gt;Have you ever used a pastebin like like &lt;a href=&quot;http://pastebin.com&quot;&gt;pastebin.com&lt;/a&gt;? Build your version.&lt;/p&gt;
+
+&lt;p&gt;It is up to you to fill the gaps. For me, I wanted to become an expert
+web developer so I sat down and built my own web server. I built a Java
+app that listened to port 80 and served up files just like Apache or
+Nginx would do. The time I spent building this app was filled with
+acquiring such deep understanding of the web that I could not have
+gained any other way so quickly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Build something without the help of any libraries and you &lt;em&gt;will&lt;/em&gt; learn programming.&lt;/strong&gt; You have to in order to complete the project and guess what? It is stuff you use every day so you know &lt;em&gt;exactly&lt;/em&gt; how it should work.&lt;/p&gt;
+
+&lt;p&gt;You have the best understanding of how this software functions so replicating it on your own means that you can understand the ins and outs of it without the overhead. There are no requirements to deal with. You get to purely focus on the art of programming and that&#39;s it. This is what you&#39;re trying to do right now.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So if you are teaching yourself programming, take a step back for a second and look at all the software you use on a daily basis. That is a whole lot of stuff to take for granted.&lt;/p&gt;
+
+&lt;p&gt;Everything from your web browser down to the operating system and boot loader. Every single piece was designed and written by a software developer that probably isn&#39;t smarter than you, they just had experience.&lt;/p&gt;
+
+&lt;p&gt;You want to learn how the best programmers in the world work right now? Copy their work and you can peer into their minds and understand exactly how they think.&lt;/p&gt;
+</description>
+                                <pubDate>Thu, 05 Dec 2013 00:00:00 -0600</pubDate>
+                                <link>http://excid3.com//blog/learn-programming-by-copying</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/learn-programming-by-copying</guid>
+                        </item>
+                
+                        <item>
+                                <title>The Laziest Programmer In The Room</title>
+                                <description>&lt;p&gt;There are lot of blog posts on how laziness is a quality of a good programmer but you’ve gotta be a developer to find those blogs sometimes. I want to talk about evaluating the laziness of a programming consultant and how it can be a good or bad thing.&lt;/p&gt;
+
+&lt;p&gt;If you know anything about building software, you learn very quickly that it’s a whole lot of trial and error. You make a change, refresh the browser, and see if it worked.&lt;/p&gt;
+
+&lt;p&gt;Rinse, repeat. &lt;strong&gt;Sometimes for every. freaking. change.&lt;/strong&gt; (Those of you who’ve built software for Internet Explorer have been there.)&lt;/p&gt;
+
+&lt;p&gt;Being a software developer consists of a whole lot repetitive tasks and that’s where laziness comes in. A developer who gets frustrated quickly with repetitive tasks will be the first to build a tool to automate it. They’ll figure out how to refresh their browser automatically with every code change. They’ll make a tool to clear the database and test the file import again for them automatically. If it has a pattern, they’ll realize it and automate it.&lt;/p&gt;
+
+&lt;p&gt;A lot of times, I’ll see clients who &lt;strong&gt;&lt;em&gt;need&lt;/em&gt;&lt;/strong&gt; software built but they’ve been running this manual repetitive process for so long they have kind of forgotten that it was a problem. It’s inefficient and it’s wasting time and money.&lt;/p&gt;
+
+&lt;h2&gt;Enter the lazy programmer&lt;/h2&gt;
+
+&lt;p&gt;If you hired a software developer you could explain the process and, if you’re really lucky, he could whip up a quick solution in a couple hours. Sometimes it is more complicated, but forcing your workflow into Excel isn’t usually the best solution in the long term.&lt;/p&gt;
+
+&lt;p&gt;Ruby on Rails is the framework of choice for a lot of software developers who want to prototype solutions to business workflows like these. It’s got all the tools you need to build a quick and dirty automated process within a few hours. You can get straight to business and seeing the fog clear. Your optimized business workflow is going to make you and your customers happier people and it’s probably going to make you a whole lot of money in the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I sometimes say that the lazier a developer is, the better.&lt;/strong&gt; That’s not to say that taking shortcuts in code is the right solution. A lazy developer will know that shortcuts often don’t play out well in the long term. Planning up front will save him time in the long term. A lazy programmer plays long ball. He works towards the long term. He also knows when to take shortcuts. If an idea is not fleshed out well or is based upon assumptions, then a lazy programmer will be the one to argue that we try something new, test it, measure the feedback, and make a decision based upon the results. It’s more work and money if we build software upon assumptions that needs to be redone later. Nobody wants that.&lt;/p&gt;
+
+&lt;p&gt;When changes need to be made in the future, the lazy developer can make them with ease because he planned properly. The developer who over engineered the problem is usually the one who worked himself into a box. He built a box with a thousand features in the beginning. It was maginificent. Or so he thought. It turns out that the box he designed isn’t able to be reshaped along with the business.&lt;/p&gt;
+
+&lt;p&gt;So if you hear me say that laziness is a virtue, well now you know. Lazy is no longer a bad four letter word. It’s a blessing.&lt;/p&gt;
+</description>
+                                <pubDate>Wed, 28 Aug 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/laziest-programmer-room</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/laziest-programmer-room</guid>
+                        </item>
+                
+                        <item>
+                                <title>Playing The Beginning of Ruby Warrior</title>
+                                <description>&lt;p&gt;I’ve had some fun recently playing Ryan Bate’s &lt;a href=&quot;https://github.com/ryanb/ruby-warrior&quot;&gt;Ruby Warrior&lt;/a&gt;. It’s a little text based adventure game where you build the AI for the player. Each level gets increasingly more difficult so you start writing more and more complex code. As you go along, you can get caught in the complexity of the code, so I made this video to help give examples of how I was handling the first few levels of complexity.&lt;/p&gt;
+
+&lt;p&gt;So without further adieu, here’s the video. This was recorded off the cuff without any editing so it won’t be the greatest, but hopefully you’ll pickup a trick or two. The screen resolution is fairly high, so you may want to watch this either in fullscreen or on Youtube in HD.&lt;/p&gt;
+
+&lt;iframe width=&quot;770&quot; height=&quot;578&quot; src=&quot;//www.youtube.com/embed/5ORyOh6ph3E?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</description>
+                                <pubDate>Fri, 12 Jul 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/playing-the-beginning-of-ruby-warrior</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/playing-the-beginning-of-ruby-warrior</guid>
+                        </item>
+                
+                        <item>
+                                <title>Custom Twitter Bootstrap Button Colors</title>
+                                <description>&lt;p&gt;A lot of people are using Twitter Bootstrap these days and I can’t say I blame them. It’s incredibly easy to get a decent looking website built in just a few minutes and you can go back later and customize it to your liking. The problem is, a lot of people don’t take that second step and now you see a bunch of websites that all look generally the same.&lt;/p&gt;
+
+&lt;p&gt;One of the first and easiest steps you can take is customizing the colors of the Twitter Bootstrap buttons.&lt;/p&gt;
+
+&lt;h2&gt;Modifying Existing Twitter Bootstrap Button Colors&lt;/h2&gt;
+
+&lt;p&gt;The simplest thing you can do is modify the default bootstrap button colors. Everyone is familiar with those colors and it makes it very easy to pick out a Twitter Bootstrap site because of these buttons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/3A3v2Y1i292L/Screen%20Shot%202013-04-27%20at%2010.19.10%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.19.10 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter Bootstrap uses a common set of naming schemes for the button colors in its LESS source and all we need to do is overwrite the colors like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@btnSuccessBackground: #AAD023;
+@btnSuccessBackgroundHighlight: #6CBA2C;
+
+@btnPrimaryBackground: #7dc5ee;
+@btnPrimaryBackgroundHighlight: #008cdd;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will change the &lt;code&gt;btn-success&lt;/code&gt; and &lt;code&gt;btn-primary&lt;/code&gt; button colors to give them a lighter feel and look like this:
+&lt;img src=&quot;http://cl.ly/image/0t2t2P1m0v2g/Screen%20Shot%202013-04-27%20at%2010.18.17%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.18.17 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Creating A New Twitter Bootstrap Button Color&lt;/h2&gt;
+
+&lt;p&gt;If you want to add a new button color, it’s incredibly simple for you to take Bootstrap’s internal LESS tools and generate a new class to use. Here we’ll be grabbing some colors from Facebook and creating a &lt;code&gt;btn-facebook&lt;/code&gt; class to use. You’ll need to use LESS to compile this down to CSS. I’m using the twitter-bootstrap-rails gem to handle this for me.&lt;/p&gt;
+
+&lt;p&gt;The first step is to define your colors as you normally would in LESS. Creating the class is as simple as using the buttonBackground function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@facebookBlue:              #627aad;
+@facebookBlueDark:          #3b5998;
+.btn-facebook { .buttonBackground(@facebookBlue, @facebookBlueDark); }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your resulting button will look like this, including hover and active states!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cl.ly/image/2z06143Q030g/Screen%20Shot%202013-04-27%20at%2010.02.31%20AM.png&quot; alt=&quot;Screen Shot 2013-04-27 at 10.02.31 AM.pn&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Twitter Bootstrap button colors are overused, but they are easy to modify. Take some time to spruce up your site and soon enough you’ll end up with a unique site conveniently based on Twitter Bootstrap!&lt;/p&gt;
+</description>
+                                <pubDate>Sat, 27 Apr 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/custom-twitter-bootstrap-button-colors</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/custom-twitter-bootstrap-button-colors</guid>
+                        </item>
+                
+                        <item>
+                                <title>Paul Graham Interview</title>
+                                <description>&lt;p&gt;This interview with Paul Graham has a bunch of very awesome points he makes. Give it a watch and let me know what you think.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;“The reason hackers want to get rich is not so they can buy luxury items, it’s because they want freedom.” – Paul Graham&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This really hit home for me as a developer.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;“Focus groups can only tell you what they want. Well designed software delivers more than what people know they want.” – Paul Graham&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Software development is an art on some level, so you have to treat it as such. It’s going to take &lt;a href=&quot;http://excid3.com/blog/practice-like-an-athlete/&quot;&gt;a lot of practice&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;iframe width=&quot;770&quot; height=&quot;433&quot; src=&quot;//www.youtube.com/embed/BDA0t49AaZ4?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</description>
+                                <pubDate>Mon, 15 Apr 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/paul-graham-interview</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/paul-graham-interview</guid>
+                        </item>
+                
+                        <item>
+                                <title>Practice Like An Athlete</title>
+                                <description>&lt;p&gt;My introduction to programming started in the 7th grade. My dad was cleaning an old bookshelf when he brushed off his old Atari Basic programming book.&lt;/p&gt;
+
+&lt;p&gt;He handed it to me and mentioned I might find it interesting. We had an old Magnavox computer running DOS at the time. I took a guess that this book might help me write programs for that computer because we didn’t have an Atari.&lt;/p&gt;
+
+&lt;p&gt;I sat down and started digging around. It turned out the computer had GW-Basic installed. Being close enough to Atari Basic, it was possible for me to start writing code, one line number at a time.&lt;/p&gt;
+
+&lt;p&gt;Programming quickly became my passion after that, but everything felt unattainable. I loved video games but teaching myself programming in grade school made it hard to understand the most basic of concepts. I didn’t even understand that you could reuse variables because we were just getting into algebra at school.&lt;/p&gt;
+
+&lt;p&gt;There was so much I knew I had to learn. It was clear that I needed to practice very hard in order to become a real programmer.&lt;/p&gt;
+
+&lt;p&gt;School went on, I went to high school, started programming my TI-84 calculator and eventually went to college. Each year I was approaching the end of my formal education, learning more and more each grade.&lt;/p&gt;
+
+&lt;p&gt;When I got my first laptop, I installed Ubuntu linux on it. There was this particular application I used almost every day and it was written by a college student. His software was fantastic and I loved it so much. At that point, the only major goal I had as a college student was to run my own open source project like he did. I wanted to be proud of my software and support a group of happy users.&lt;/p&gt;
+
+&lt;p&gt;Every waking our started going into learning how to write software. It was incredible how much time I spent looking back.&lt;/p&gt;
+
+&lt;p&gt;I knew I wasn’t good enough which made it easy for me to write bad code. No matter how bad it was, I pushed it out. It was almost always better than my friends’ code, but not anywhere as good as I thought it could be. That’s why I spent 6 hours a day writing programs to do everything from homework to video games.&lt;/p&gt;
+
+&lt;p&gt;Looking back on all the time I put in practicing, it feels absolutely ridiculous. I spent 4 years working on Keryx, rewrote it about 12 times, and not only did I learn how to build software, I learned how to support my users, manage my expectations, and plan software properly. It was easily one of the biggest struggles I’ve ever battled through in my life.&lt;/p&gt;
+
+&lt;p&gt;What it lead to, though, was like a trail of dominoes. Once I finished a working version, I was brought to tears by some of the thank you emails I received. My experience building software got me into Google Summer of Code 2009. It got me multiple jobs and, to this day, reminds me that in order to do a good job, you really have to care about what you’re doing.&lt;/p&gt;
+
+&lt;p&gt;Just like the best athletes, I spent hundreds of hours practicing my craft. Michael Jordan has been known to take 100s of shots a day in practice. Anyone who is exceptional stands out because of the effort they put in.&lt;/p&gt;
+
+&lt;p&gt;It’s not the amount of time spent practicing either, it’s also about what you practice. There are so many things in an area to get good at. A basketball player can’t only practice free throws. They have to practice shooting, passing, blocking, stealing, layups, and so on. As developers, we need to be doing the same during our careers. Stretch your legs with a new language, mobile app, or new library.&lt;/p&gt;
+
+&lt;p&gt;You career should be a labor of love. At times we hit a wall, but that’s all the more reason to push your boundaries and grow.&lt;/p&gt;
+</description>
+                                <pubDate>Fri, 12 Apr 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/practice-like-an-athlete</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/practice-like-an-athlete</guid>
+                        </item>
+                
+                        <item>
+                                <title>Ruby Midwest 2013 Notes</title>
+                                <description>&lt;p&gt;The official IRC Channel for Ruby Midwest is #rubymidwest on Freenode.&lt;/p&gt;
+
+&lt;h2&gt;Ready To Code: Automate your development environment&lt;/h2&gt;
+
+&lt;p&gt;David Kerber&lt;/p&gt;
+
+&lt;p&gt;Virtualization Pros
+* Full size Virtual Box images with Ubuntu preconfigured
+* Consistency&lt;/p&gt;
+
+&lt;p&gt;Virtualization Cons
+* Upgrades are tricky
+* Difficult to share
+* Lots of disk space
+* Code is in the virtual machine&lt;/p&gt;
+
+&lt;p&gt;Vagrant
+* Lightweight, sharable
+* Works with VirtualBox and VMWare
+* Uses very little disk space
+* Cheap and easy to create new environments
+* &lt;strong&gt;Executable documentation of configuration&lt;/strong&gt;
+* No context switching while editing&lt;/p&gt;
+
+&lt;p&gt;Use Puppet to configure your packages.&lt;/p&gt;
+
+&lt;p&gt;Check out the mailcatcher gem.&lt;/p&gt;
+
+&lt;h2&gt;Service Oriented Architecture Safari In The Amazon&lt;/h2&gt;
+
+&lt;p&gt;Bryan Thompson&lt;/p&gt;
+
+&lt;p&gt;PCI Compliance means you have to update all code to the latest version no matter what. All gems need to be reviewed and it’s very time consuming and hard.&lt;/p&gt;
+
+&lt;p&gt;Patchinator scrapes CVEs related to all system updates in your production systems.&lt;/p&gt;
+
+&lt;p&gt;Deployinator:
+Continuous integration completes successfully and deploys them to production.
+Stage 0 AMI comes from Ubuntu.
+Stage 1 AMI gets security updates, and puppet manifests.
+Stage 2 AMI adds code, runs through CI, and is production ready.&lt;/p&gt;
+
+&lt;h2&gt;Object Oriented Programming and Philosophy&lt;/h2&gt;
+
+&lt;p&gt;Steve Klabnik&lt;/p&gt;
+
+&lt;p&gt;As a child, your understanding of how the world works directly maps to how you write code.&lt;/p&gt;
+
+&lt;p&gt;Do bugs come up because we’re trying to model an imperfect world with a perfect representation in code? An hand drawn circle might not be perfect, it might not connect and it might be lopsided, however we can all understand it is a circle because we know the concept of it.&lt;/p&gt;
+
+&lt;p&gt;Philosophy in a time of software mailing list: https://groups.google.com/forum/#!forum/philosophy-in-a-time-of-software&lt;/p&gt;
+
+&lt;p&gt;There’s no reason for launching your project by tearing down another project. It’s not wrong to criticize, but we should be building new stuff and sharing the joy of open source with each other.&lt;/p&gt;
+
+&lt;h2&gt;Failure for Fun and Profit!&lt;/h2&gt;
+
+&lt;p&gt;Kerri Miller&lt;/p&gt;
+
+&lt;p&gt;If you’re not making mistakes and breaking things on purpose, how can you really know why or how it works? “Experience comes from bad ideas.” Having all the answers means you’re only trying the achievable.&lt;/p&gt;
+
+&lt;p&gt;Why is something new stressful? We don’t want to look foolish in front of ourselves or other people. If you want to sharpen a skill or talent, try reducing the risk of failure. Turn failure into just a data point.&lt;/p&gt;
+
+&lt;p&gt;If you don’t run into things that you don’t know when you’re practicing, then you’re not really practicing. Learning is the discovery of truth, not the acquisition of knowledge.&lt;/p&gt;
+
+&lt;h2&gt;Making Testing Fun With Test Reporters&lt;/h2&gt;
+
+&lt;p&gt;Matt Sears&lt;/p&gt;
+
+&lt;p&gt;Test Reporters are ways to print out the results from a test suite in a different way. Emoji and nyan cat are two examples of ways you could make the test output a lot more fun.&lt;/p&gt;
+
+&lt;h2&gt;Frustration Driven Development&lt;/h2&gt;
+
+&lt;p&gt;Evan Light&lt;/p&gt;
+
+&lt;p&gt;Test all the f*cking time.
+ActiveRecord callbacks are bad.
+Stop to refactor code, even if you’re in a rush. Extract out code into simple methods with meaningful names. Example “notify_collections_about_overdue_bills” could be extracted from a complicated User method.
+Moving code into modules looks better, but it’s pretty awful. You’re just moving the logic around.
+Use presenters instead of helpers when you have 3 or more methods that you need to extract so that you can take logic out of the helper.
+Monkey patching is bad. It’s better to go participate in open source than open source. Don’t monkey patch a feature when you could extend the open source library instead. You won’t be the only one that it could help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Law of Demeter&lt;/strong&gt;
+You can play with your friends.
+You can play with your privates.
+You shouldn’t play with your friends’ privates.&lt;/p&gt;
+
+&lt;p&gt;Predictable and boring is good because it makes code understandable.&lt;/p&gt;
+
+&lt;p&gt;Ask yourself “what’s wrong here?” instead of continuing to chug along.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Happiness matters more than anything. It’s determined by the relationships you have and by doing things that you care about.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;Must Have 10 Years People Experience&lt;/h2&gt;
+
+&lt;p&gt;Ashe Dryden&lt;/p&gt;
+
+&lt;p&gt;Solve actual problems, it’s easier to have excuses.&lt;/p&gt;
+
+&lt;p&gt;We forget what it’s like to be a beginner. The answer isn’t always apparent, but assuming we know the correct answer because we see ourselves as an expert is the wrong approach. Don’t offer information unless asked because it allows you to potentially learn things and get a new perspective.&lt;/p&gt;
+
+&lt;h2&gt;Rails Application Security in Practice&lt;/h2&gt;
+
+&lt;p&gt;Bryan Helmkamp&lt;/p&gt;
+
+&lt;p&gt;Github’s public key security vulnerability was a huge security issue, followed by Rubygems.org forcing verification of all the gems hosted on the site.&lt;/p&gt;
+
+&lt;h4&gt;7 attacks and countermeasures&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Session Hijacking&lt;/strong&gt; – Attacker observes the session ID and then makes requests to the server as the user.
+Firesheep lets you easily hijack sessions on popular websites.&lt;/p&gt;
+
+&lt;p&gt;Counter measures:
+- Force SSL everywhere&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config.force_ssl = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;- Secure and HttpOnly cookies
+- Strict-Transport-Security
+Closes a hole in the SSL implementation of websites and tells browser that all communication is supposed to be over SSL.
+- Require password for sensitive actions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Brute Forcing Passwords&lt;/strong&gt; – How many passwords can we guess per second?
+Use bcrypt or scrypt so that guessing a password hash can only be done a small amount of times per second.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Insecure Direct Object Reference&lt;/strong&gt;
+Allows you to construct a URL that can retrieve any data from the server.&lt;/p&gt;
+
+&lt;p&gt;Solutions:
+Use proper scoping&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def show
+  @user = User.find(params[:user_id])
+  @post = @user.posts.find(params[:id])
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Authorization (gems like CanCan)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Mass Assignment&lt;/strong&gt; – Specify the attributes that are allowed to be changed by a user.
+Safe attributes like a username should be allowed for the user to edit, but a user should not be able to set themselves as an admin.&lt;/p&gt;
+
+&lt;p&gt;Solution:
+strong_parameters&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Cross Site Request Forgery&lt;/strong&gt; CSRF&lt;/p&gt;
+
+&lt;p&gt;Solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class ApplicationController &amp;lt; ActionController::Base
+  protect_from_forgery
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure GET requests are safe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. SQL Injection&lt;/strong&gt;
+Make sure you understand the ActiveRecord APIs well.
+Review&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Cross Site Scripting (XSS)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Be extremely careful with &lt;code&gt;raw&lt;/code&gt; and &lt;code&gt;html_safe&lt;/code&gt;.
+&lt;code&gt;link_to&lt;/code&gt; href attributes aren&#39;t escaped.&lt;/p&gt;
+
+&lt;p&gt;Solutions:
+rails_xss feature is on by default in Rails 3 . It escapes everything by default.
+Sanitize user-generated HTML - Use the Loofah gem
+Content Security Policies (CSP)&lt;/p&gt;
+
+&lt;h3&gt;Brakeman&lt;/h3&gt;
+
+&lt;p&gt;Gem for doing static analysis on security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://RailsSecurity.com&quot;&gt;RailsSecurity.com&lt;/a&gt; is going to be a free Ebook about threats and countermeasures for Rails applications.&lt;/p&gt;
+
+&lt;h2&gt;Ruby Groups: Act Locally - Think Globally&lt;/h2&gt;
+
+&lt;p&gt;PJ Hagerty&lt;/p&gt;
+
+&lt;p&gt;Give everyone in your Ruby group a job. Don&#39;t let the leaders do all the work. Communities should collaborate with each other, including other groups. Don&#39;t be too focused, anything that&#39;s interesting should be encouraged. Reach out to larger audiences.&lt;/p&gt;
+
+&lt;h2&gt;Standards&lt;/h2&gt;
+
+&lt;p&gt;Michael Feathers&lt;/p&gt;
+
+&lt;p&gt;Ubiquitous but painful. Standards are great ideas, so we want to follow them. Uniform methods across the system don&#39;t always apply. Coding standards are similar to performance enhancements in that it&#39;s highly contextual.&lt;/p&gt;
+
+&lt;h2&gt;Computer, Program Thyself!&lt;/h2&gt;
+
+&lt;p&gt;Zee Spencer&lt;/p&gt;
+
+&lt;p&gt;Knowledge moves from mystery to algorithm over time. Creativity is how we move along that funnel.&lt;/p&gt;
+
+&lt;h2&gt;More time for Open Source work with the help of the Pomodoro Technique&lt;/h2&gt;
+
+&lt;p&gt;Matthias Günther&lt;/p&gt;
+
+&lt;p&gt;Getting into open source is as simple as picking something you love, working on it, and then talking about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pomodoro Technique&lt;/strong&gt;
+1. Choose a task to work on
+2. Set a timer for 25 minutes
+3. Work without stopping until the timer goes off
+4. Have a 5 minute break&lt;/p&gt;
+
+&lt;h2&gt;Nobody will Train You But You&lt;/h2&gt;
+
+&lt;p&gt;Zachary Briggs&lt;/p&gt;
+
+&lt;p&gt;When you have the answer, it&#39;s easy to say &quot;Oh yeah, I understand it.&quot; On the other hand, when you&#39;re working on something, it&#39;s a lot harder to know the answer.&lt;/p&gt;
+
+&lt;p&gt;The stuff you know is the smallest, the stuff you know you don&#39;t know is larger, and the stuff you don&#39;t know that you don&#39;t know about is the largest group.&lt;/p&gt;
+
+&lt;p&gt;The people are best at something do it because it&#39;s fun.&lt;/p&gt;
+
+&lt;h2&gt;Functional Principals for Object-Oriented Development&lt;/h2&gt;
+
+&lt;p&gt;Jessica Kerr&lt;/p&gt;
+
+&lt;p&gt;Ruby developers have a lot of discipline compared to .Net and Java developers. We choose to impose that on our code and ourselves.&lt;/p&gt;
+
+&lt;p&gt;Our job is not to write software. Our job is to convert data into information.&lt;/p&gt;
+
+&lt;h2&gt;Lightweight Business Intelligence&lt;/h2&gt;
+
+&lt;p&gt;Corey Ehmke&lt;/p&gt;
+
+&lt;p&gt;A naive approach is reporting data from a transactional database because it&#39;s slow and awful.&lt;/p&gt;
+
+&lt;p&gt;Figure out key performance indicators and what sort of questions you&#39;re asking on a daily basis. Learn how to tell a story with your data.&lt;/p&gt;
+
+&lt;p&gt;MongoDB gives you flexible schemas. Use SQL for transactions, NoSQL for reporting. Business logic belongs in your applications, not in your database.&lt;/p&gt;
+
+&lt;h2&gt;The Most Important Optimization: Happiness&lt;/h2&gt;
+
+&lt;p&gt;Ernie Miller&lt;/p&gt;
+
+&lt;p&gt;When you have a certain level of familiarity, you can do some pretty stupid things.&lt;/p&gt;
+
+&lt;p&gt;You should put a lot of time to determine what&#39;s right for you. Job, work, relationships, everything applies to happiness.&lt;/p&gt;
+
+&lt;p&gt;Programming is written communication.&lt;/p&gt;
+
+&lt;h2&gt;Keynote&lt;/h2&gt;
+
+&lt;p&gt;James Edward Gray II&lt;/p&gt;
+
+&lt;p&gt;It&#39;s a great programmer who applies the correct amount of process and architecture design to each situation. There are always times when a &quot;cowboy coder&quot; who gets things done quickly makes more sense than an &quot;architecture astronaut&quot; who spends a lot of time planning.&lt;/p&gt;
+
+&lt;p&gt;You shouldn&#39;t over-engineer something based upon what you think you might need later on. It doesn&#39;t mean you should avoid building flexibility into your code.&lt;/p&gt;
+
+&lt;p&gt;Write a comment to get stuff out of your head, and then rewrite the code to make the comment superfluous.&lt;/p&gt;
+</description>
+                                <pubDate>Fri, 05 Apr 2013 00:00:00 -0500</pubDate>
+                                <link>http://excid3.com//blog/ruby-midwest-2013-notes</link>
+                                <guid isPermaLink="true">http://excid3.com//blog/ruby-midwest-2013-notes</guid>
+                        </item>
+                
         </channel>
 </rss>

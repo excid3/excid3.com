@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/using-zoom-3095-modem-with-debian" class="js-pjax">Using Zoom 3095 Modem with Debian</a></h2>
+              <p class="date">Jun 23, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Home for the summer means coming back home to dialup. I built a desktop computer for work and needed internet connectivity, even though the best I can get is dialup at home. I’ve got a Zoom 3095 USB modem and I am running a dual boot of Debian and Windows XP.</p>
+
+<p>Being the Linux user that I am, working from Windows XP consistently was not much of an option so I set out to get Gnome-PPP installed on Debian. I used <a href="http://keryxproject.org">Keryx</a> to gather the packages for me. The Zoom modem’s USB entry in <code>lsusb</code> was:</p>
+
+<blockquote><p><code>Bus 002 Device 005: ID 0803:3095 Zoom Telephonics, Inc.</code></p></blockquote>
+
+<p>The modem was detected properly with Debian and connected fine.</p>
+
+<p>The problem I’m facing is that the modem’s transfer speeds are very slow. It’s basically a 14.4 kb/s connection at best. Installing the dgcmodem driver from <a href="http://linuxant.com">linuxant.com</a> did nothing to improve the speeds I am getting. Does anyone have a fix? I’m a bit stumped at the moment for what to do.</p>
+
+<p>For now I’ve setup a WinXP VM in Virtualbox and am using the modem through it. Kind of a pain but certainly easier than using two computers for work.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/enabling-usb-in-virtualbox-on-debian" class="js-pjax">Enabling USB in Virtualbox on Debian</a></h2>
+              <p class="date">Jun 23, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Trying to get my USB modem to run in Virtualbox turned out to be more trouble than I suspected. The reason? All the USB devices were grayed out when I went to give the Guest OS the modem. With a bit of Googling I came across the answer.</p>
+
+<p>First, the user must be part of the vboxusers group. You can check this quickly by running <code>cat /etc/group | grep vboxusers</code> and checking to see that your user is in the last section of the resulting string. Here is what mine looked like:</p>
+
+<blockquote><p><code>chris@chris-desktop:~$ cat /etc/group | grep vboxusers
+vboxusers:x:116:chris</code></p></blockquote>
+
+<p>Take note of the 116 here. This is the group id number or gid. We need this to enable usb for that group. For Debian, virtual filesystems (which usb is) is taken care of in <code>/etc/init.d/mountkernfs.sh</code> so we are going to need to edit this file:</p>
+
+<blockquote><p><code>
+chris@chris-desktop:~$ su
+Password:
+chris-desktop:/home/chris# nano /etc/init.d/mountkernfs.sh
+</code></p></blockquote>
+
+<p>Now you’re going to want to go down and find a line that looks like this: <code>domount usbfs usbdevfs /proc/bus/usb usbfs -onodev,noexec,nosuid</code>. All we need to do is to append 2 options to this line: <code>devgid=116,devmode=664</code>. This allows us as members of <code>vboxusers</code> to mount usbfs/usbdevfs inside Virtualbox. Your line should look similar to the following with <code>116</code> replaced with the id number of your <code>vboxusers</code> group:</p>
+
+<blockquote><p><code>domount usbfs usbdevfs /proc/bus/usb usbfs -onodev,noexec,nosuid,devgid=116,devmode=664
+</code></p></blockquote>
+
+<p>There you have it! Give your Debian box a quick reboot and you’re set.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/relative-files-from-a-python-module" class="js-pjax">Relative files from a Python module</a></h2>
+              <p class="date">Jun 15, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Today I took a little break and began layout out the foundation for <a href="http://keryxproject.org">Keryx</a> once again. This time the goal is to be very open and test driven. The first thing on my todo list was make sure that Libkeryx could be imported from anywhere and it would still only use the plugins located in the plugins folder which is inside the libkeryx module. But how do we go about doing this? Relative paths will not work because we would have to be working in the libkeryx directory for files in the folder to be imported properly.</p>
+
+<p>The solution? Use <strong>file</strong> from inside the library. This is a variable that is setup upon importing a module that contains the path to the module. Perfect! Now we can access files relative to the module from inside of the module itself by joining the paths with the <strong>file</strong> variable. Simple as that and kind of an obscure thing to search for but certainly a common task among modules.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 76 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-77" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-75" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

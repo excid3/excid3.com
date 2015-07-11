@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using Reverse SSH Tunneling</title>
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-09e65ed72b4f08933d57dbbe6ee22514.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/prism.js"></script>
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/using-reverse-ssh-tunneling" class="js-pjax">Using Reverse SSH Tunneling</a></h2>
+              <p class="date">Sep 04, 2009</p>
+            </div><!--/.article-head-->
+
+            <div class="article-content">
+              <p>On campus, all our computers are setup behind school networking hardware. This means that we do not have a direct connection to the internet and that all of our ports are stealthed and port forwarding is not possible. What if I forget some work at home and did not remember to toss it in my Dropbox folder?</p>
+
+<p>What you’ve got to do is use reverse ssh. But what does that mean??? Well it’s simply this: You’ve got a server that you can ssh into. For me, I have both a webhost that provides shell accounts as well as friends who are willing to let me use their server for ssh access. The computer that you cannot access remotely will reverse ssh into this server and the computer you are using to access this is going to connect to the server and then to the unaccessible destination host.</p>
+
+<p>So we’ve got a destination, an ssh server, and the client that wants to use the destination. To get started, we simply use ssh with the -R option. This will create a reverse ssh connection which simply means, ssh in and also set a localhost port so that to enable ssh back into the destination machine. We do this from the destination host as such:</p>
+
+<p><code>ssh IP -R 1337:localhost:22</code></p>
+
+<p>Let’s break this down. You’ve got a standard ssh connection to an IP address of the ssh server. Note that you may have to use extra information in order to specify the correct port and login information. Next we have “-R” which means to setup a reverse ssh tunnel. Then we have 1337:localhost:22. This means that if you ssh into localhost:1337 from the server you will be connected to port 22 of the destination host.</p>
+
+<p>From here all you need to do is to simply ssh into the server from your client (typically a laptop that is out roaming around at a coffee shop or campus wifi). So we do that by a normal ssh connection to the server:</p>
+
+<p><code>ssh IP</code></p>
+
+<p>And once we are connected here, we ssh to localhost:1337:</p>
+
+<p><code>ssh localhost -p 1337</code></p>
+
+<p>This will be forwarded to port 22 of the destination host that was previously unreachable. And that’s it, you’re done! You can now access your destination target from anywhere.</p>
+
+<p>For an added bonus, if you use port forwarding on the router the server is sitting behind (if you’ve got a server, you probably have a router <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_razz.gif" alt=":P" /> ) and forward port 1337 to the server, you can skip the step of ssh’ing into the server like normal and instead ssh into the server on port 1337 which will seamlessly be port forwarded to 22 of the destination host. Here’s an example ssh connection provided the server was having port 1337 forwarded to it:</p>
+
+<p><code>ssh IP -p 1337</code></p>
+
+<p>This will skip the step of ssh’ing into localhost for you and it will seem as if you connected directly to the destination. Happy hax0ring!</p>
+
+
+              <p><strong>P.S.</strong> <a href="https://twitter.com/excid3/">You might enjoy following me on Twitter.</a></p>
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
+
+            <div class="blog-navigation">
+              <div class="pull-left">
+                
+                <a href="/blog/simplicity-what-happened-to-it" title="Simplicity. What happened to it?" class="btn btn-gorails btn-gorails-red">&laquo; Simplicity. What happened to it?</a>
+                
+              </div>
+
+              <div class="pull-right">
+                
+                <a href="/blog/python-minideblib" title="Python Minideblib" class="btn btn-gorails btn-gorails-red">Python Minideblib &raquo; </a>
+                
+              </div>
+            </div>
+
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="light-well about">
+              <a href="http://excid3.com">
+                <div class="pull-left">
+                  <img src="http://www.gravatar.com/avatar/ce795239ba5dd2384fc2f88ffaff5451.png" alt="Chris Oliver" />
+                </div>
+                <p>Chris Oliver specializes in web development and user experience design with Ruby on Rails, Javascript, HTML5, and CSS3 in St. Louis, MO</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- SubHub.io -->
+    <script>
+      (function(s,u,b,hh,uu,bb){
+        uu=document.createElement(u);
+        uu.setAttribute('data-subhub',hh);
+        uu.setAttribute('data-panel',true);
+        uu.async=1;uu.src=b;
+        bb=s.getElementsByTagName(u)[0];
+        bb.parentNode.insertBefore(uu,bb);
+      })(document, 'script',
+        'https://assets.subhub.io/v1/subhub.js',
+        'a48820f5-a170-4e4c-97cf-ced8d190679e');
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excid3'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+  </body>
+</html>
+

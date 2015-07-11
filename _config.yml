@@ -1,9 +1,0 @@
-markdown: rdiscount
-paginate: 3
-paginate_path: /blog/page-:num
-permalink: /blog/:title
-pygments: true
-
-name: Chris Oliver
-description: Chris Oliver is a Saint Louis Web Developer specializing in web development with Ruby on Rails, Javascript, HTML5, and CSS3
-url: http://excid3.com

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Tip #5: Rails Time Select Like Google Calendar</title>
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-09e65ed72b4f08933d57dbbe6ee22514.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/prism.js"></script>
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/rails-tip-4-rails-time-select-like-google-calendar" class="js-pjax">Rails Tip #5: Rails Time Select Like Google Calendar</a></h2>
+              <p class="date">Dec 22, 2011</p>
+            </div><!--/.article-head-->
+
+            <div class="article-content">
+              <p>Something that has always bothered me is the way we input dates and times on the web. It’s still not pretty yet. It’s bad. jQuery plugins and large calendar might be alright for dates, but times? They still suck horribly.</p>
+
+<p>Look at what Rails gives us by default for a date and time selector:</p>
+
+<p><img src="http://f.cl.ly/items/3E0g35362y032j1U2b3k/Screen%20Shot%202011-12-23%20at%2012.16.23%20AM.png" title="datetime_select" alt="" /></p>
+
+<p>That is just nasty. It’s a 24 hour time selector and separated into separate fields. The iPhone/iPad have a nice little spinner, but that’s only useful if you have a touch screen. Google Calendar’s time picker so far has been my favorite. I wanted to emulate that and found a nice little <a href="https://github.com/tamoyal/simple_time_select">library</a> that did what I wanted.</p>
+
+<p>It’s not a magical solution, but it works well enough:</p>
+
+<p><img src="http://f.cl.ly/items/1945331M3W1h0f1K3I2v/Screen%20Shot%202011-12-23%20at%2012.08.37%20AM.png" title="time_select" alt="" /></p>
+
+<p>Awesome! But then I realized, nobody really maintained this anymore. And on top of that, there was no good solution for using the value returned. It’s not in the params name that works well the built-in Rails form.</p>
+
+<h3>Announcing combined_time_select</h3>
+
+<p>I spent some time on this because a combined time select field is something I want to use quite often. The following is an example of how you would use the gem in both the view and the controller. It works cleanly with the date_select field on the same attribute.</p>
+
+<p>The parse_time_select converts the params into a Time object so that we can assign it to an attribute easily. It is, of course, not required if you would like to do the time parsing yourself.</p>
+
+<p>Check out <code>combined_time_select</code> on Github: <a href="https://github.com/excid3/combined_time_select">github.com/excid3/combined_time_select</a></p>
+
+<p>Or install it with Bundler:</p>
+
+<pre><code>  gem "combined_time_select", "~&gt; 0.0.1"
+</code></pre>
+
+<p>If you have any questions, comments, or ideas let me know!</p>
+
+
+              <p><strong>P.S.</strong> <a href="https://twitter.com/excid3/">You might enjoy following me on Twitter.</a></p>
+            </div><!--/.article-content-->
+
+            <nav class="share">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="excid3" data-related="excid3">Tweet</a>
+              <div class="g-plusone" data-size="medium"></div>
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-counter="right"></script>
+            </nav>
+
+            <div class="blog-navigation">
+              <div class="pull-left">
+                
+                <a href="/blog/rails-tip-4-seedbed" title="Rails Tip #4: Seedbed" class="btn btn-gorails btn-gorails-red">&laquo; Rails Tip #4: Seedbed</a>
+                
+              </div>
+
+              <div class="pull-right">
+                
+                <a href="/blog/year-in-review-2011" title="Year in Review: 2011" class="btn btn-gorails btn-gorails-red">Year in Review: 2011 &raquo; </a>
+                
+              </div>
+            </div>
+
+            <div id="disqus_thread"></div>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <div class="light-well about">
+              <a href="http://excid3.com">
+                <div class="pull-left">
+                  <img src="http://www.gravatar.com/avatar/ce795239ba5dd2384fc2f88ffaff5451.png" alt="Chris Oliver" />
+                </div>
+                <p>Chris Oliver specializes in web development and user experience design with Ruby on Rails, Javascript, HTML5, and CSS3 in St. Louis, MO</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- SubHub.io -->
+    <script>
+      (function(s,u,b,hh,uu,bb){
+        uu=document.createElement(u);
+        uu.setAttribute('data-subhub',hh);
+        uu.setAttribute('data-panel',true);
+        uu.async=1;uu.src=b;
+        bb=s.getElementsByTagName(u)[0];
+        bb.parentNode.insertBefore(uu,bb);
+      })(document, 'script',
+        'https://assets.subhub.io/v1/subhub.js',
+        'a48820f5-a170-4e4c-97cf-ced8d190679e');
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excid3'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+  </body>
+</html>
+

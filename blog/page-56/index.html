@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/removing-toolbars-from-gvim" class="js-pjax">Removing toolbars from GVim</a></h2>
+              <p class="date">Nov 22, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>One of the things I realized going back to work on Ubuntu recently was GVim’s configuration differences from MacVim. Biggest problem? The toolbars are HUGE!</p>
+
+<p>Here’s how you remove them in your .vimrc:</p>
+
+<pre><code>set guioptions-=m
+set guioptions-=T
+</code></pre>
+
+<p>“m” is for menu and “T” is for toolbar. Simple as that!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/asus-3070-wireless-usb-and-ubuntu" class="js-pjax">Asus 3070 Wireless USB and Ubuntu</a></h2>
+              <p class="date">Nov 19, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>At home, my desktop is far enough away from our wireless routers that I can’t use a wired connection. I meant to pick up a wireless card for it, but apparently forgot (go figure!). Coming home today, I realized my desktop doesn’t have an internet connection anymore because I ganked the wireless router I had setup as a client-bridge for the desktop so that I could use it somewhere else. Whoops! I’ll write up a post on using DD-WRT as a client-bridge for a wireless network if people are interested as well.</p>
+
+<p>Come home, fire up the desktop, no internet. What’s the first thing that comes to mind? Yoink my parent’s wireless card from their desktop. It’s not like they use it right? My usage of the internet has to be far more important than theirs so I’ll just use this for a week. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_razz.gif" alt=":P" /></p>
+
+<p>Well, being an Asus Wireless USB card with the RT3070 chipset, I figured I’d just plug it in and everything would be hunky dory. Of course not. Yeah, maybe if I was using Windows, but if I was using Windows I’d spend 30% of my time scanning for viruses, another 20% of my time cleaning out all these leftover temporary files everywhere, and the rest of the time would be trying to fix the 0×02350 error codes the software I’m trying to get working so I can just turn in my freaking homework. Okay maybe it’s not that bad, but it sure feels like it sometimes. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_razz.gif" alt=":P" /></p>
+
+<p>As for the wireless card, I knew it was one of the most popular on Newegg so a few minutes of googling brought me across the following instructions that lead to a successful wireless connection!</p>
+
+<p><code>vim /etc/udev/rules.d/network_drivers.rules</code>
+Put this line in the file:
+<code>ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0b05", ATTR{idProduct}=="1784", RUN ="/sbin/modprobe -qba rt2870sta"</code>
+Proofread carefully, save and close.</p>
+
+<p><code>sudo vim /etc/modprobe.d/network_drivers.conf</code>
+Put this line in the file:
+<code>install rt2870sta /sbin/modprobe --ignore-install rt2870sta $CMDLINE_OPTS; /bin/echo "0b05 1784" &gt; /sys/bus/usb/drivers/rt2870/new_id</code>
+Reboot!</p>
+
+<p>Simple enough. What can I say, I love the Ubuntu community! Mad propz go out to chili555 and his post over here: <a href="http://ubuntuforums.org/showpost.php?p=9445731&amp;postcount=58">http://ubuntuforums.org/showpost.php?p=9445731&amp;postcount=58</a></p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/open-sourced-python-irc-bot-web-hosting" class="js-pjax">Open Sourced &#8211; Python IRC Bot Web Hosting</a></h2>
+              <p class="date">Nov 07, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>A while ago I had the idea to build a Django web app to serve up IRC bots for people. It’s a pain to have to maintain bots on your own box. Why not provide a web interface for management?</p>
+
+<p>Obviously there wouldn’t be a whole lot of people using something like this. The only reason I attacked this was a challenge to myself. Learn threading, learn dbus, learn Django. After putting some solid time into it, I had a daemon that managed and launched IRC bots from a web interface. I thought it was awesome. Sure enough, life happened, and I totally forgot about it. There is certainly no way I’ll be finishing the application due to time and lost interest in the problem I was trying to solve.</p>
+
+<p>Since I’m never going to do anything with this, there is no reason to keep it in a private repository anymore so I’ve decided to open source it. If you’re interested in Python, Django, DBus, Threading, or IRC and sockets, you might find a good use for this. It’s all GPL’d so go have some fun if you are interested.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 56 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-57" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-55" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

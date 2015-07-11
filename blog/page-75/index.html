@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/asus-m4n78-motherboard-usb-issue" class="js-pjax">Asus M4N78 Motherboard USB Issue</a></h2>
+              <p class="date">Jul 17, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>About 2 months ago I purchased parts for building my own desktop. The goal was to build a powerful desktop workstation for $500 while keeping in mind that this box will become a server in the next couple of years. Dedicated graphics was an unnecessary expense for such a machine. All I need is to power dual monitors smoothly so decent onboard graphics card saved me money there. Turns out this was not a great idea in the long run.</p>
+
+<p>I purchased the <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16813131382">Asus M4N78</a> motherboard with an onboard Nvidia 8300 from newegg. Everything seemed great. Installed Windows, everything is fine. Installed Ubuntu, everything was fine…for a while. After some time, I noticed that my USB mouse would lock up after random periods of time, often when something mildly video intensive was running, VLC for example. The mouse would stop working and lose power, all other USB devices kept working however unplugging them and replugging them in also stopped receiving power.</p>
+
+<p>After some searching I came across <a href="http://ubuntuforums.org/showthread.php?t=1147699">this thread</a>t on the Ubuntu Forums. A <a href="https://bugs.launchpad.net/ubuntu/%20bug/350065">bug</a> had been filed to Ubuntu back in Jaunty Beta discussing the issue as well. No one seemed to have any idea. It seemed graphics related and yet, it wasn’t the graphics driver. It took a good several weeks before anyone found an answer. I’d like to give a BIG thanks to <a href="http://ubuntuforums.org/member.php?u=786669">Chemical Imbalance</a> for coming across <a href="http://www.nvnews.net/vbulletin/showthread.php?t=123583&amp;page=3">this thread</a> that had the answer we were looking for this entire time.</p>
+
+<p>Basically the issue is with the <a href="http://en.wikipedia.org/wiki/Interrupt">interrupts </a>on the motherboard. This affects the M3N78 PRO and M4N78 PRO motherboards as well as probably others. Simply put, one of the USB ports is sharing an interrupt with the onboard graphics card. It is not strictly an Debian or Ubuntu issue (the two OS’s that have problems with it the most) as in Windows XP, I have experienced a blue screen of death caused by the USBHUB.SYS module. This was one of the first tip offs to me that the issue was hardware related and not OS specific. It has only happend the once in Windows, but the fact that it did happen is very meaningful in finding the cause of the issue.</p>
+
+<p>The fix? Just move the mouse to another USB port. You can check which interrupt your nvidia card is using with <code>cat /proc/interrupts</code> in Linux. Take note of the usb hub that is sharing the interface and compare it with the device that is running on the same one that you find in <code>lsusb</code>. For me the top leftmost port was the one causing the problems.</p>
+
+<p>Hope that helps someone! It took so much time to debug and figure out the cause that I don’t want anyone to have to go through that again. Another fix is to just install a dedicated graphics card. That may be an option for the future, but when you’re on a budget, you’ve got to make things count whenever you can.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/random-mac-address-on-start-up-with-ubuntu" class="js-pjax">Random Mac Address on Start Up with Ubuntu</a></h2>
+              <p class="date">Jul 11, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>This is more of just a tutorial on how to run something as root in a start up script for Ubuntu. We will use the application macchanger as our example application that we want to run on boot. What do we have to do? For Ubuntu, we need to create a new script with <code>sudo gedit /etc/init.d/macchanger</code> and use these as the contents:</p>
+
+<pre><code>#!/bin/bash
+
+# Disable the network devices
+ifconfig eth0 down
+ifconfig wlan0 down
+
+# Spoof the mac addresses
+/usr/bin/macchanger -r eth0
+/usr/bin/macchanger -r wlan0
+
+# Re-enable the devices
+ifconfig eth0 up
+ifconfig wlan0 up
+</code></pre>
+
+<p>Now that we have a script created in the /etc/init.d/ directory we need to set executable permissions on it by executing:</p>
+
+<blockquote><p><code>sudo chmod x /etc/init.d/macchanger</code></p></blockquote>
+
+<p>After this we need to enable the boot script with:</p>
+
+<blockquote><p><code>sudo update-rc.d macchanger defaults 10</code></p></blockquote>
+
+<p>Now, if everything went as planned, check your real mac address, reboot and compare to your new random mac on boot! Enjoy!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/cross-platform-version-comparison" class="js-pjax">Cross-Platform Version Comparison</a></h2>
+              <p class="date">Jul 05, 2009</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>For both <a href="http://keryxproject.org">Keryx</a> and <a href="http://excid3.com/blog/projects/winlibre">GSoC 2009′s WinLibre</a>, we were in need of a Python port of dpkg’s version comparison algorithm. Instead of hacking together some new code, I decided to port dpkg’s algorithm straight from C to Python. The end result? A clean and simple algorithm that is capable of comparing quickly and accurately along with returning results in standard Python sorting function format (-1 for less than, 0 for equal, 1 for greater than). This function can be used on a list to sort versions with the [].sort() function. Very handy and being written in pure Python makes it an excellent choice for cross-platform apt tools like <a href="http://keryxproject.org">Keryx</a> as well as apps like WinLibre who use the same versioning system as Debian.</p>
+
+<p>Check out the code here: http://bitbucket.org/excid3/winlibre/src/tip/wpkg/vercmp.py</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 75 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-76" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-74" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

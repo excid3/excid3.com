@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/custom-twitter-bootstrap-button-colors" class="js-pjax">Custom Twitter Bootstrap Button Colors</a></h2>
+              <p class="date">Apr 27, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>A lot of people are using Twitter Bootstrap these days and I can’t say I blame them. It’s incredibly easy to get a decent looking website built in just a few minutes and you can go back later and customize it to your liking. The problem is, a lot of people don’t take that second step and now you see a bunch of websites that all look generally the same.</p>
+
+<p>One of the first and easiest steps you can take is customizing the colors of the Twitter Bootstrap buttons.</p>
+
+<h2>Modifying Existing Twitter Bootstrap Button Colors</h2>
+
+<p>The simplest thing you can do is modify the default bootstrap button colors. Everyone is familiar with those colors and it makes it very easy to pick out a Twitter Bootstrap site because of these buttons.</p>
+
+<p><img src="http://cl.ly/image/3A3v2Y1i292L/Screen%20Shot%202013-04-27%20at%2010.19.10%20AM.png" alt="Screen Shot 2013-04-27 at 10.19.10 AM.pn" /></p>
+
+<p>Twitter Bootstrap uses a common set of naming schemes for the button colors in its LESS source and all we need to do is overwrite the colors like so:</p>
+
+<pre><code>@btnSuccessBackground: #AAD023;
+@btnSuccessBackgroundHighlight: #6CBA2C;
+
+@btnPrimaryBackground: #7dc5ee;
+@btnPrimaryBackgroundHighlight: #008cdd;
+</code></pre>
+
+<p>This will change the <code>btn-success</code> and <code>btn-primary</code> button colors to give them a lighter feel and look like this:
+<img src="http://cl.ly/image/0t2t2P1m0v2g/Screen%20Shot%202013-04-27%20at%2010.18.17%20AM.png" alt="Screen Shot 2013-04-27 at 10.18.17 AM.pn" /></p>
+
+<h2>Creating A New Twitter Bootstrap Button Color</h2>
+
+<p>If you want to add a new button color, it’s incredibly simple for you to take Bootstrap’s internal LESS tools and generate a new class to use. Here we’ll be grabbing some colors from Facebook and creating a <code>btn-facebook</code> class to use. You’ll need to use LESS to compile this down to CSS. I’m using the twitter-bootstrap-rails gem to handle this for me.</p>
+
+<p>The first step is to define your colors as you normally would in LESS. Creating the class is as simple as using the buttonBackground function.</p>
+
+<pre><code>@facebookBlue:              #627aad;
+@facebookBlueDark:          #3b5998;
+.btn-facebook { .buttonBackground(@facebookBlue, @facebookBlueDark); }
+</code></pre>
+
+<p>Your resulting button will look like this, including hover and active states!</p>
+
+<p><img src="http://cl.ly/image/2z06143Q030g/Screen%20Shot%202013-04-27%20at%2010.02.31%20AM.png" alt="Screen Shot 2013-04-27 at 10.02.31 AM.pn" /></p>
+
+<h2>Conclusion</h2>
+
+<p>Twitter Bootstrap button colors are overused, but they are easy to modify. Take some time to spruce up your site and soon enough you’ll end up with a unique site conveniently based on Twitter Bootstrap!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/paul-graham-interview" class="js-pjax">Paul Graham Interview</a></h2>
+              <p class="date">Apr 15, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>This interview with Paul Graham has a bunch of very awesome points he makes. Give it a watch and let me know what you think.</p>
+
+<blockquote><p>“The reason hackers want to get rich is not so they can buy luxury items, it’s because they want freedom.” – Paul Graham</p></blockquote>
+
+<p>This really hit home for me as a developer.</p>
+
+<blockquote><p>“Focus groups can only tell you what they want. Well designed software delivers more than what people know they want.” – Paul Graham</p></blockquote>
+
+<p>Software development is an art on some level, so you have to treat it as such. It’s going to take <a href="http://excid3.com/blog/practice-like-an-athlete/">a lot of practice</a> as well.</p>
+
+<iframe width="770" height="433" src="//www.youtube.com/embed/BDA0t49AaZ4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/practice-like-an-athlete" class="js-pjax">Practice Like An Athlete</a></h2>
+              <p class="date">Apr 12, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>My introduction to programming started in the 7th grade. My dad was cleaning an old bookshelf when he brushed off his old Atari Basic programming book.</p>
+
+<p>He handed it to me and mentioned I might find it interesting. We had an old Magnavox computer running DOS at the time. I took a guess that this book might help me write programs for that computer because we didn’t have an Atari.</p>
+
+<p>I sat down and started digging around. It turned out the computer had GW-Basic installed. Being close enough to Atari Basic, it was possible for me to start writing code, one line number at a time.</p>
+
+<p>Programming quickly became my passion after that, but everything felt unattainable. I loved video games but teaching myself programming in grade school made it hard to understand the most basic of concepts. I didn’t even understand that you could reuse variables because we were just getting into algebra at school.</p>
+
+<p>There was so much I knew I had to learn. It was clear that I needed to practice very hard in order to become a real programmer.</p>
+
+<p>School went on, I went to high school, started programming my TI-84 calculator and eventually went to college. Each year I was approaching the end of my formal education, learning more and more each grade.</p>
+
+<p>When I got my first laptop, I installed Ubuntu linux on it. There was this particular application I used almost every day and it was written by a college student. His software was fantastic and I loved it so much. At that point, the only major goal I had as a college student was to run my own open source project like he did. I wanted to be proud of my software and support a group of happy users.</p>
+
+<p>Every waking our started going into learning how to write software. It was incredible how much time I spent looking back.</p>
+
+<p>I knew I wasn’t good enough which made it easy for me to write bad code. No matter how bad it was, I pushed it out. It was almost always better than my friends’ code, but not anywhere as good as I thought it could be. That’s why I spent 6 hours a day writing programs to do everything from homework to video games.</p>
+
+<p>Looking back on all the time I put in practicing, it feels absolutely ridiculous. I spent 4 years working on Keryx, rewrote it about 12 times, and not only did I learn how to build software, I learned how to support my users, manage my expectations, and plan software properly. It was easily one of the biggest struggles I’ve ever battled through in my life.</p>
+
+<p>What it lead to, though, was like a trail of dominoes. Once I finished a working version, I was brought to tears by some of the thank you emails I received. My experience building software got me into Google Summer of Code 2009. It got me multiple jobs and, to this day, reminds me that in order to do a good job, you really have to care about what you’re doing.</p>
+
+<p>Just like the best athletes, I spent hundreds of hours practicing my craft. Michael Jordan has been known to take 100s of shots a day in practice. Anyone who is exceptional stands out because of the effort they put in.</p>
+
+<p>It’s not the amount of time spent practicing either, it’s also about what you practice. There are so many things in an area to get good at. A basketball player can’t only practice free throws. They have to practice shooting, passing, blocking, stealing, layups, and so on. As developers, we need to be doing the same during our careers. Stretch your legs with a new language, mobile app, or new library.</p>
+
+<p>You career should be a labor of love. At times we hit a wall, but that’s all the more reason to push your boundaries and grow.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 3 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-4" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-2" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

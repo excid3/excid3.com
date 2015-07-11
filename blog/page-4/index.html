@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/ruby-midwest-2013-notes" class="js-pjax">Ruby Midwest 2013 Notes</a></h2>
+              <p class="date">Apr 05, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>The official IRC Channel for Ruby Midwest is #rubymidwest on Freenode.</p>
+
+<h2>Ready To Code: Automate your development environment</h2>
+
+<p>David Kerber</p>
+
+<p>Virtualization Pros
+* Full size Virtual Box images with Ubuntu preconfigured
+* Consistency</p>
+
+<p>Virtualization Cons
+* Upgrades are tricky
+* Difficult to share
+* Lots of disk space
+* Code is in the virtual machine</p>
+
+<p>Vagrant
+* Lightweight, sharable
+* Works with VirtualBox and VMWare
+* Uses very little disk space
+* Cheap and easy to create new environments
+* <strong>Executable documentation of configuration</strong>
+* No context switching while editing</p>
+
+<p>Use Puppet to configure your packages.</p>
+
+<p>Check out the mailcatcher gem.</p>
+
+<h2>Service Oriented Architecture Safari In The Amazon</h2>
+
+<p>Bryan Thompson</p>
+
+<p>PCI Compliance means you have to update all code to the latest version no matter what. All gems need to be reviewed and it’s very time consuming and hard.</p>
+
+<p>Patchinator scrapes CVEs related to all system updates in your production systems.</p>
+
+<p>Deployinator:
+Continuous integration completes successfully and deploys them to production.
+Stage 0 AMI comes from Ubuntu.
+Stage 1 AMI gets security updates, and puppet manifests.
+Stage 2 AMI adds code, runs through CI, and is production ready.</p>
+
+<h2>Object Oriented Programming and Philosophy</h2>
+
+<p>Steve Klabnik</p>
+
+<p>As a child, your understanding of how the world works directly maps to how you write code.</p>
+
+<p>Do bugs come up because we’re trying to model an imperfect world with a perfect representation in code? An hand drawn circle might not be perfect, it might not connect and it might be lopsided, however we can all understand it is a circle because we know the concept of it.</p>
+
+<p>Philosophy in a time of software mailing list: https://groups.google.com/forum/#!forum/philosophy-in-a-time-of-software</p>
+
+<p>There’s no reason for launching your project by tearing down another project. It’s not wrong to criticize, but we should be building new stuff and sharing the joy of open source with each other.</p>
+
+<h2>Failure for Fun and Profit!</h2>
+
+<p>Kerri Miller</p>
+
+<p>If you’re not making mistakes and breaking things on purpose, how can you really know why or how it works? “Experience comes from bad ideas.” Having all the answers means you’re only trying the achievable.</p>
+
+<p>Why is something new stressful? We don’t want to look foolish in front of ourselves or other people. If you want to sharpen a skill or talent, try reducing the risk of failure. Turn failure into just a data point.</p>
+
+<p>If you don’t run into things that you don’t know when you’re practicing, then you’re not really practicing. Learning is the discovery of truth, not the acquisition of knowledge.</p>
+
+<h2>Making Testing Fun With Test Reporters</h2>
+
+<p>Matt Sears</p>
+
+<p>Test Reporters are ways to print out the results from a test suite in a different way. Emoji and nyan cat are two examples of ways you could make the test output a lot more fun.</p>
+
+<h2>Frustration Driven Development</h2>
+
+<p>Evan Light</p>
+
+<p>Test all the f*cking time.
+ActiveRecord callbacks are bad.
+Stop to refactor code, even if you’re in a rush. Extract out code into simple methods with meaningful names. Example “notify_collections_about_overdue_bills” could be extracted from a complicated User method.
+Moving code into modules looks better, but it’s pretty awful. You’re just moving the logic around.
+Use presenters instead of helpers when you have 3 or more methods that you need to extract so that you can take logic out of the helper.
+Monkey patching is bad. It’s better to go participate in open source than open source. Don’t monkey patch a feature when you could extend the open source library instead. You won’t be the only one that it could help.</p>
+
+<p><strong>Law of Demeter</strong>
+You can play with your friends.
+You can play with your privates.
+You shouldn’t play with your friends’ privates.</p>
+
+<p>Predictable and boring is good because it makes code understandable.</p>
+
+<p>Ask yourself “what’s wrong here?” instead of continuing to chug along.</p>
+
+<p><strong>Happiness matters more than anything. It’s determined by the relationships you have and by doing things that you care about.</strong></p>
+
+<h2>Must Have 10 Years People Experience</h2>
+
+<p>Ashe Dryden</p>
+
+<p>Solve actual problems, it’s easier to have excuses.</p>
+
+<p>We forget what it’s like to be a beginner. The answer isn’t always apparent, but assuming we know the correct answer because we see ourselves as an expert is the wrong approach. Don’t offer information unless asked because it allows you to potentially learn things and get a new perspective.</p>
+
+<h2>Rails Application Security in Practice</h2>
+
+<p>Bryan Helmkamp</p>
+
+<p>Github’s public key security vulnerability was a huge security issue, followed by Rubygems.org forcing verification of all the gems hosted on the site.</p>
+
+<h4>7 attacks and countermeasures</h4>
+
+<p><strong>1. Session Hijacking</strong> – Attacker observes the session ID and then makes requests to the server as the user.
+Firesheep lets you easily hijack sessions on popular websites.</p>
+
+<p>Counter measures:
+- Force SSL everywhere</p>
+
+<pre><code>config.force_ssl = true
+</code></pre>
+
+<p>- Secure and HttpOnly cookies
+- Strict-Transport-Security
+Closes a hole in the SSL implementation of websites and tells browser that all communication is supposed to be over SSL.
+- Require password for sensitive actions</p>
+
+<p><strong>2. Brute Forcing Passwords</strong> – How many passwords can we guess per second?
+Use bcrypt or scrypt so that guessing a password hash can only be done a small amount of times per second.</p>
+
+<p><strong>3. Insecure Direct Object Reference</strong>
+Allows you to construct a URL that can retrieve any data from the server.</p>
+
+<p>Solutions:
+Use proper scoping</p>
+
+<pre><code>def show
+  @user = User.find(params[:user_id])
+  @post = @user.posts.find(params[:id])
+end
+</code></pre>
+
+<p>Authorization (gems like CanCan)</p>
+
+<p><strong>4. Mass Assignment</strong> – Specify the attributes that are allowed to be changed by a user.
+Safe attributes like a username should be allowed for the user to edit, but a user should not be able to set themselves as an admin.</p>
+
+<p>Solution:
+strong_parameters</p>
+
+<p><strong>5. Cross Site Request Forgery</strong> CSRF</p>
+
+<p>Solution:</p>
+
+<pre><code>class ApplicationController &lt; ActionController::Base
+  protect_from_forgery
+end
+</code></pre>
+
+<p>Make sure GET requests are safe.</p>
+
+<p><strong>6. SQL Injection</strong>
+Make sure you understand the ActiveRecord APIs well.
+Review</p>
+
+<p><strong>7. Cross Site Scripting (XSS)</strong></p>
+
+<p>Be extremely careful with <code>raw</code> and <code>html_safe</code>.
+<code>link_to</code> href attributes aren't escaped.</p>
+
+<p>Solutions:
+rails_xss feature is on by default in Rails 3 . It escapes everything by default.
+Sanitize user-generated HTML - Use the Loofah gem
+Content Security Policies (CSP)</p>
+
+<h3>Brakeman</h3>
+
+<p>Gem for doing static analysis on security vulnerabilities.</p>
+
+<p><a href="http://RailsSecurity.com">RailsSecurity.com</a> is going to be a free Ebook about threats and countermeasures for Rails applications.</p>
+
+<h2>Ruby Groups: Act Locally - Think Globally</h2>
+
+<p>PJ Hagerty</p>
+
+<p>Give everyone in your Ruby group a job. Don't let the leaders do all the work. Communities should collaborate with each other, including other groups. Don't be too focused, anything that's interesting should be encouraged. Reach out to larger audiences.</p>
+
+<h2>Standards</h2>
+
+<p>Michael Feathers</p>
+
+<p>Ubiquitous but painful. Standards are great ideas, so we want to follow them. Uniform methods across the system don't always apply. Coding standards are similar to performance enhancements in that it's highly contextual.</p>
+
+<h2>Computer, Program Thyself!</h2>
+
+<p>Zee Spencer</p>
+
+<p>Knowledge moves from mystery to algorithm over time. Creativity is how we move along that funnel.</p>
+
+<h2>More time for Open Source work with the help of the Pomodoro Technique</h2>
+
+<p>Matthias Günther</p>
+
+<p>Getting into open source is as simple as picking something you love, working on it, and then talking about it.</p>
+
+<p><strong>Pomodoro Technique</strong>
+1. Choose a task to work on
+2. Set a timer for 25 minutes
+3. Work without stopping until the timer goes off
+4. Have a 5 minute break</p>
+
+<h2>Nobody will Train You But You</h2>
+
+<p>Zachary Briggs</p>
+
+<p>When you have the answer, it's easy to say "Oh yeah, I understand it." On the other hand, when you're working on something, it's a lot harder to know the answer.</p>
+
+<p>The stuff you know is the smallest, the stuff you know you don't know is larger, and the stuff you don't know that you don't know about is the largest group.</p>
+
+<p>The people are best at something do it because it's fun.</p>
+
+<h2>Functional Principals for Object-Oriented Development</h2>
+
+<p>Jessica Kerr</p>
+
+<p>Ruby developers have a lot of discipline compared to .Net and Java developers. We choose to impose that on our code and ourselves.</p>
+
+<p>Our job is not to write software. Our job is to convert data into information.</p>
+
+<h2>Lightweight Business Intelligence</h2>
+
+<p>Corey Ehmke</p>
+
+<p>A naive approach is reporting data from a transactional database because it's slow and awful.</p>
+
+<p>Figure out key performance indicators and what sort of questions you're asking on a daily basis. Learn how to tell a story with your data.</p>
+
+<p>MongoDB gives you flexible schemas. Use SQL for transactions, NoSQL for reporting. Business logic belongs in your applications, not in your database.</p>
+
+<h2>The Most Important Optimization: Happiness</h2>
+
+<p>Ernie Miller</p>
+
+<p>When you have a certain level of familiarity, you can do some pretty stupid things.</p>
+
+<p>You should put a lot of time to determine what's right for you. Job, work, relationships, everything applies to happiness.</p>
+
+<p>Programming is written communication.</p>
+
+<h2>Keynote</h2>
+
+<p>James Edward Gray II</p>
+
+<p>It's a great programmer who applies the correct amount of process and architecture design to each situation. There are always times when a "cowboy coder" who gets things done quickly makes more sense than an "architecture astronaut" who spends a lot of time planning.</p>
+
+<p>You shouldn't over-engineer something based upon what you think you might need later on. It doesn't mean you should avoid building flexibility into your code.</p>
+
+<p>Write a comment to get stuff out of your head, and then rewrite the code to make the comment superfluous.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/pebble-watch-reducing-my-distractions" class="js-pjax">Pebble Watch: Reducing My Distractions</a></h2>
+              <p class="date">Feb 26, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>I’m sure I’m not the only one, but when my phone vibrates in my pocket, I have this insatiable urge to interrupt anything I’m doing, pull my phone out, and check my notifications. It’s pointless, rude, and just an awful habit.</p>
+
+<p>This all stems from the “realtime web” we live in today. We use email expecting responses within a couple of hours, our phones are constantly connected to Twitter, Facebook, and all the other social networks we use. Each and every service is trying to shove more information down our throats 24/7 and it’s hard to escape if you work online.</p>
+
+<p><img src="https://lh3.googleusercontent.com/-O3kiRr-Fx_I/USzd0u-uzaI/AAAAAAAACk0/UDlODSjD7sU/s972/IMG_20130226_095950.jpg" alt="Pebble Watch" /></p>
+
+<p>But that’s something the Pebble watch surprisingly helps with. While a bit distracting at times, I can comfortably glance at my watch when something new comes in and I’m not sitting there distracted by the thought that an important notification like a server outage just hit my phone. I know immediately and can put my mind at ease.</p>
+
+<p>When it isn’t important, I don’t have to go through the motions of: halting what I’m doing, reaching into my pocket, swiping to unlock the screen, opening notifications bar, reading the useless excerpt of the message, clicking on the notification, reading the real message and then finding out it wasn’t important after all.</p>
+
+<p>Reducing distractions and notifications is hard these days and it’s hard to separate the important from the unimportant. This lets me sift through them, find the watch face that fits me, and eventually start building things for it that benefit me personally.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/reframing-goals" class="js-pjax">Reframing Goals</a></h2>
+              <p class="date">Feb 25, 2013</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Back when I was in high school, I had some grand ideas. One of them was to build a system for installing software on offline Linux computers called Keryx. It was ridiculously ambitious and looking back I probably never would have started it if I knew how much work it would be.</p>
+
+<p>My goal was to use Keryx to teach myself to become a real programmer. As a high school kid, I looked up to the college students building software for Ubuntu Linux and that’s exactly what I wanted to be.</p>
+
+<p>Every evening I would get home from school and spend hours on end building this system. Absolutely everything I was doing was new to me. I knew nothing about Linux, Python, GTK, or even building software. It took me 4 years to build a decent version of Keryx but I finished it.</p>
+
+<p>In the end, I probably learned more about the self-improvement process than about building software.</p>
+
+<p><strong>The project was a huge struggle because there was so much I didn’t know and the thing that kept me going was my naivety.</strong></p>
+
+<p>Every time I hit a problem, I reframed my goals. If I spent 8 hours trying to solve an error it didn’t mean I’m stupid, it just meant I’m not looking in the right place. The answer might be a new approach or fixing a typo.</p>
+
+<p>Most of the time when I watch other people work, I see them google the problem, get frustrated when solutions don’t work and ultimately give up. With me, the difference was that I approached solutions with the mindset of learning. I wanted to know <em>why</em> this was a solution and <em>how</em> it worked.</p>
+
+<p>Learning is a mindset you need to stick with because frustration comes quicker the older you are. You look around and people know things you don’t and it’s embarrassing to admit you’re behind.</p>
+
+<p>Kids are always in the mindset of learning, but that changes as you get older because you don’t have as much formal education. Life changes and you get a job doing similar things over and over again. It’s even culturally acceptable to continue doing the same thing for 40 years without learning new things.</p>
+
+<p>The struggle is when you want to make a change in your life; it’s easy to give up. When you take on something new, keep in mind that you’re putting yourself in a learning environment.</p>
+
+<p><strong>Remember that <em>why</em> is often more important than <em>what</em>.</strong></p>
+
+<p><em>Why</em> you want to learn Ruby is more important than <em>what</em> you want to learn about Ruby. <em>Why</em> you want to lose weight, will always drive you further than <em>what</em> weight you want to lose.</p>
+
+<p>So as we approach the end of February, I want you to think about your new year’s resolutions and your goals in life. Are you still chugging along? Are you frustrated with your progress?</p>
+
+<p>Maybe all you need is a nudge in the right direction.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 4 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-5" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-3" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

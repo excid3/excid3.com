@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/building-an-api-vs-building-an-application" class="js-pjax">Building an API vs Building an Application</a></h2>
+              <p class="date">Aug 05, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Going through school, you are taught one thing. How to build small applications with limited input and limited output. This is fine and dandy, and it allows the professors to assign projects to teach a specific topic by example and move on quickly. What they don’t get into is designing full fledged applications and the APIs that those applications might wish to make public.</p>
+
+<p>On one hand you could simply build a plugin loader that would execute a plugin’s initialization to add hooks into the app easy enough. This is what I tried with Keryx 0.92. It was a horrible idea. You’re stuck with having plugins directly manipulate the variables inside of the host app. This is such a horrible idea for many reasons.</p>
+
+<p>For the rest of this article, keep in mind that I reference API calls typically, but this doesn’t only apply to web application APIs, this applies to any library you are building. I learned a lot of this building <a href="http://github.com/excid3/unwrapt">Unwrapt</a> for <a href="http://keryxproject.org">Keryx’s</a> backend. My goal was to build a frontend agnostic library that was capable of working in many differnet applications that may not necessarily be Keryx’s GUI or CLI frontends. We have planned on building Keryx into a web based application which could be another frontend similar to <a href="http://packages.ubuntu.com">packages.ubuntu.com</a>. Honestly the sky is the limit when you are building an API or library. You’re making a general use case tool, so treat it as such. Millions of applications you would have never thought of, so don’t think you are smarter than the people who will be using your library. You’re building it so it is always going to be hard for you to see it from a different use case angle than someone who just read your README looking for a specific tool for their creative new idea.</p>
+
+<p>What you really want is to build a thoughtful list of API calls that return the data and do the manipulations behind the scenes and simply return the results. This would be similar to a builtin class or data structure like a Python dictionary. We don’t care how it is implemented, we just know that these functions do as they say properly, and that’s all we want.</p>
+
+<p>This approach differs significantly in several areas:</p>
+
+<ol>
+<li> #### Error trapping</li>
+</ol>
+
+
+<p>You don’t want to error trap in an API. What? You’re just going to cause havoc and force the other app to deal with it all? Yes, to some extent. You need ot trap the errors that the programmer using your API shouldn’t have to worry about it. These are going to be errors the programmer got because they were using your API wrong. What you need to do as an API designer is to error trap your API, but return custom <strong>helpful</strong> errors to them. Explain what went wrong in the error you return and maybe even suggest the proper input so they can get the expected output. This differs from standard application programing when you basically just want errors to fail silently unless they are fatal.</p>
+
+<ol>
+<li> #### Naming schemes</li>
+</ol>
+
+
+<p>Spend a lot of time thinking about your API call names. Make sure you have everything before you publish. Changing your API is a <strong>very</strong> bad idea. It causes all the applications using your API to break. Do this more than once or twice and your API users are going to get pissed, especially if you don’t notify them far enough ahead of time. When their application breaks because of changes you made, no matter how well intentioned the changes were, you are going to have unhappy users. Keep this thoughtful, discuss with customers and users if you need to. Make sure you do it right the first time around. Content users are the kind of users you want. Solid naming schemes that don’t change also mean that refactoring the backend to work in a completely different manner is silent to the end user. No one using your API knows any better, they just realize that hey, everything is so much faster all of a sudden! This saves everyone from having a lot of headaches in the future.</p>
+
+<ol>
+<li> #### Maintenance</li>
+</ol>
+
+
+<p>Make sure your API is rock solid. You’re having people rely on your code for their application. You need to do thorough testing in order to create a solid API. This goes closely with “Naming schemes” and should almost be considered the same topic. Any interruptions in service, the developer using your API is not always going to be able to view your source code (if you are a company) nor will they always want to dig through your API or library to fix <strong>your</strong> bugs. You’re building a service for others, make sure it works for them.</p>
+
+<p>I’m sure there are more things that I should mention, but hey, I’m still learning too. These are a few of the things I’ve learned on my own that I feel should be taught in universities who are producing students that are expected to excel in their fields of study upon graduation. You can’t do it without learning on your own, so get out there and teach yourself something!</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/the-problem-of-internships" class="js-pjax">The Problem of Internships</a></h2>
+              <p class="date">Jul 31, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Something that has been bothering me throughout highschool and college is the idea of internships. Don’t get me wrong, internships are a wonderful wonderful thing. It gives students real world application to the almost purely conceptual learning they do in school. Rarely do you get a project in school that makes sense in a real environment. This means that internships help to provide the necessary balance between the two to give a truly “well rounded” individual a beautiful set of opportunities upon graduation.</p>
+
+<p>But there is a problem with this. Since the student working the internship must be able to jump into a real environment, it takes some training to get the individual up to speed with the things they will be accomplishing in a few short months, typically over a summer. Training like this takes some time. A business has a defined path which they work in and that needs to be conveyed to the student (or any new hire really). The short amount of time an internship lasts never really lets the student become a fully functional employee because there is so much to take in for them. They have little experience in this area (since they are there to learn it) but then they are given useless mundane projects to work on because they are learning.</p>
+
+<p>This conflicts with what businesses want to hire upon graduation. They expect the level of quality upon graduation to be much higher in the past, but this cannot be taught in school. We end up with a problem where internships don’t teach as much as necessary, school isn’t capable of teaching real world experience, and business are having higher expectations on recent graduate capabilities.</p>
+
+<p>How many work projects on their free time? There are a couple. How many peers even have public repositories on Github or something like that? Very few. How many work projects on their free time? Few How many of my peers have truly shipped and support a product of their own? Extremely few.</p>
+
+<p>But this is the experience businesses are looking for. You think college experience and internships are what are really going to get you a great job out of college? Think again.</p>
+
+<p>Build something cool on your own, develop it, ship it, support it. This shows a level of initiative on your own that so few students have anymore. Sure an internship may show an interviewer something, and it certainly gives you some experience to talk to them about but in the end, it’s something that is becoming a standard part of school. Everyone has internships. Think about the first thing someone will say when you talk about getting an internship: Getting coffee and filing papers for people all day. That’s pretty accurate for most people. They have an “internship” but is it really good experience? Hardly.</p>
+
+<p>Think outside of conventional thinking. Challenge what people tell you. If you want to live an interesting life you can’t sit there and constantly follow what society wants you to think and do. Make a name for yourself, be inspired, and go change the world.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/ubuntu-color-terminal" class="js-pjax">Ubuntu Color Terminal</a></h2>
+              <p class="date">Jul 22, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>So one of the things that might get annoying is Ubuntu’s plain terminal. You see everyone else with these sweet terminals, but when you make the configuration changes, it actually messes up the terminal options for changing colors! There’s actually a really simple configuration change in bashrc that will allow you to have a color terminal but continue using the colors in your profile flawlessly too:</p>
+
+<blockquote><p>gedit ~/.bashrc
+Find this line: “#force_color_prompt=yes” and delete the “#” so it looks like “force_color_prompt=yes”
+Save and close
+Restart terminal</p></blockquote>
+
+<p>Voila! And you get something like this: <img src="http://excid3.com/blog/wp-content/uploads/2010/07/color_terminal.png" title="color_terminal" alt="" /></p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 60 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-61" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-59" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>

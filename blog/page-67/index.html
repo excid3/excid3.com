@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog | Chris Oliver | St. Louis Ruby on Rails Web Developer</title>
+
+    
+    <meta name="author" content="Chris Oliver">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="k8E8tt4Xn45P84zs5M6Z-4cMIGwdbGMJSDSkL6VzvMk" />
+
+    <link rel="alternate" type="application/rss+xml" title="Chris Oliver / excid3.com Feed" href="http://excid3.com/feed.xml"/>
+
+    <!--<link rel="shortcut icon" href="favicon.png">-->
+    <link href='/assets/global-c224c07eca6e857790f0324871c8800e.css' rel='stylesheet' type='text/css' />
+
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <script type="text/javascript" data-cfasync="false">
+      (function() {
+        var config = {
+          kitId: 'voa6eso',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+
+    <link href="https://plus.google.com/106699287110566383664/" rel="author" />
+  </head>
+  <body>
+    <div class="fluid-container header">
+  <div class="container">
+    <nav class="pull-right">
+      <!--<a href="http://gorails.com" class="btn btn-gorails btn-gorails-green">Learn Ruby On Rails</a>-->
+      <!--<a href="/prototype">Prototype</a>
+      <a href="/improve">Improve</a>
+      <a>|</a>-->
+      <a href="http://gorails.com">Learn Ruby on Rails</a>
+      <a>|</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="btn btn-gorails btn-gorails-red">Hire Me</a>
+    </nav>
+    <h1 class="name"><a href="/">Chris Oliver</a></h1>
+  </div>
+</div>
+
+
+    <section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+
+        <p class="archive">Looking for old posts? Visit the <a href="/blog/archive">archive</a>.</p>
+
+        
+          <article class="first">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/python-downloading-and-resuming-with-text-progress-using-urllib" class="js-pjax">Python downloading and resuming with text progress using urllib</a></h2>
+              <p class="date">Mar 22, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>So recently I have been working on download scripts for Keryx once again. Building a script to do this seemed over my head at first. The plethora of classes and functions was a little daunting at first, but realizing how to use them after reading some examples wasn’t so bad. Urlgrabber seems to do the trick, but I have run into some issues. Why not rewrite it from scratch and learn something along the way?</p>
+
+<p>I had two goals in mind. #1 was providing resume support. This is the most important thing we have been missing in Keryx for a while. We were able to do it with urlgrabber but I did not feel like wading through all the code to learn how it worked and make changes. #2 was file progess. This proved to be a problem with urlgrabber such that some of the output would overlap or be skewed improperly.</p>
+
+<p>In the end, this is what I came up with. It’s essentially a modified version of this code example:</p>
+
+<p>I cleaned up some of the variable names to make things a little clearer and even though it is still quite ugly. Beautification is for another night though.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="middle">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/nightly-automatic-backups-over-ssh-with-rsync" class="js-pjax">Nightly Automatic Backups over SSH with Rsync</a></h2>
+              <p class="date">Mar 14, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>It’s been a while since I’ve posted and the reason for posting was none to thrilling. Installing Ubuntu 10.04 on my primary desktop, I only realized after the fact that the partition I chose to format for the new install was my home directory from the previous install. I guess I was just a little bit too anxious. <img src="http://excid3.com/blog/wp-includes/images/smilies/icon_wink.gif" alt=";)" /> Not losing anything too important thanks to Dropbox and my massive media partition, I decided it was important that from now on I keep remote backups of my home directory. Repurposing my old laptop whose video card has been flaky seemed like the perfect choice so I fired up Ubuntu 8.04 desktop on that machine and configured its secondary hard drive to be for backups only. I followed this nifty tutorial here: . The only modifications I had made were in the cron script which I put $LPATH before $RPATH because rsync takes SRC and then DEST as parameters in that order making the script run improperly. Using a static IP for the server laptop on my router guarantees that as long as the box is up and running, I’ll have a nightly backup of everything in my home directory.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          <div class="separater"></div>
+        
+          <article class="last">
+            <div class="article-head">
+              <h2 class="title"><a href="/blog/samba-issue" class="js-pjax">Samba Issue &#8220;testparm&#8221; does not exist</a></h2>
+              <p class="date">Jan 06, 2010</p>
+            </div><!--/.article-head-->
+            <div class="article-content">
+              <p>Tonight I was fiddling around with my LAN and wanted to get samba running on my desktop’s Ubuntu Karmic 64bit installation so that I could watch <a href="http://thisweekinstartups.com/">This Week In Startups</a> (best show ever btw) and listen to music on my laptops without having to copy files over. So, I fire up Keryx 1.0 pre-alpha on my work laptop and start to download the packages for samba. 4 packages, sounded right, exactly what APT wanted too. Installation went without a hitch, but when trying to share my media folder, I got an issue with something called “testparm”. Having no idea what this was, nor how to fix it, I figured I’d take a stab at it before googling. Sure enough, testparm is an application in samba-common-bin that was not installed as part of the required service. Makes a lot of sense right? Not at all. So basically, if you’ve got this issue, just install the samba-common-bin package and you’re good to go. Hopefully that gets added as a dependency soon and the issue wrapped up.</p>
+
+            </div><!--/.article-content-->
+          </article>
+          
+        
+
+        <div class="blog-navigation">
+
+          <!--<span class="page_number ">Page: 67 of 79</span>-->
+
+          <div class="pull-left">
+            
+              <a href="/blog/page-68" class="btn btn-gorails btn-gorails-red next">← Older Posts</a>
+            
+          </div>
+
+          <div class="pull-right">
+            
+              
+                <a href="/blog/page-66" class="btn btn-gorails btn-gorails-red previous">Newer Posts →</a>
+              
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--
+<div id="footer-nav">
+  <ul>
+    <li><a class="home" href="http://excid3.com/blog">home</a></li>
+    <li><a class="rss" href="http://feeds.feedburner.com/excid3">rss feed</a></li>
+    <li><a class="archives" href="http://excid3.com/blog/archives/">archives</a></li>
+    <li><a class="email" href="mailto:chris@excid3.com?subject=hello!">say hello</a></li>
+    <li><a class="twitter" href="http://twitter.com/excid3">twitter</a></li>
+    <li><a class="github" href="http://github.com/excid3">github</a></li>
+  </ul>
+</div>
+-->
+
+
+<footer class="clearfix">
+  <div class="container">
+    <p class="pull-left">Do things that scare you.</p>
+    <p class="pull-right">Learn about <a href="http://gorails.com/st-louis-ruby-on-rails">St. Louis Ruby on Rails</a></p>
+  </div>
+</footer>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8399719-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>
