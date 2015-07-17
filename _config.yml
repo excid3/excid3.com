@@ -1,0 +1,15 @@
+# Site settings
+title: Chris Oliver
+email: chris@excid3.com
+description: > # this means to ignore newlines until "baseurl:"
+  Chris Oliver specializes in web development and user experience design
+  with Ruby on Rails, Javascript, HTML5, and CSS3
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://excid3.com" # the base hostname & protocol for your site
+twitter_username: excid3
+github_username:  excid3
+
+permalink: /blog/:title
+
+# Build settings
+markdown: kramdown
