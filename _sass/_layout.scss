@@ -69,6 +69,37 @@ h2 {
   }
 }
 
+.things-ive-built {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+
+  .built {
+    display: block;
+    float: left;
+    width: 18em;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+
+    &:hover {
+      background: #f7f7fa;
+      text-decoration: none;
+    }
+
+    p {
+      color: #333;
+    }
+  }
+}
+
 .blog-navigation {
   margin: 40px 0px;
   overflow: hidden;
