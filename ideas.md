@@ -4,9 +4,10 @@ title: Ideas
 permalink: /ideas/
 ---
 
-## Ideas I'm Exploring
+# Ideas I'm Exploring
 
-If any of these strike you as deeply interesting, email me.
+If any of these strike you as deeply interesting, <a
+href="mailto:chris@excid3.com">email me</a>.
 
 * What happened to apprenticeships? For hundreds of years people
   apprenticed under masters for an average of 7 years. Why did

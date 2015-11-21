@@ -4,7 +4,7 @@ title: Books
 permalink: /books/
 ---
 
-## Books I've Read
+# Books I've Read
 
 * A Guide To The Good Life by William B. Irvine
 * Abundance by Peter H. Diamandis, Steven Kotler

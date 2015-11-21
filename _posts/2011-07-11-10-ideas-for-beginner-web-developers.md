@@ -55,6 +55,8 @@ Read this in [Serbo-Croatian][7] language by Jovana Milutinovich from [ Web Geek
 
 Read this in <a href="http://translate.coupofy.com/10-ideas-for-beginner-web-developers/">Russian</a> language by Ivanka from <a href="http://www.coupofy.com">Coupofy.com</a>
 
+Read this in <a href="http://www.bildelarstore.se/science/10-idei-pentru-incepator-dezvoltatori-web/">Romanian</a> language.
+
    [1]: http://chrisdomurad.com/
    [2]: https://twitter.com/excid3
    [3]: https://twitter.com/ChrisDomurad/status/86789708742533120
