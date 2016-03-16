@@ -17,6 +17,10 @@ I enjoy building thoughtful software and inspiring people to become better progr
 * MySQL, PostgreSQL, and Redis
 * OS X and Ubuntu Server
 
+## Interviews
+
+* [How I Vim](http://howivim.com/2016/chris-oliver/)
+
 ## Where did the username "excid3" come from?
 
 I was tired coming up with different usernames for every site and wanted
