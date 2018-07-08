@@ -6,29 +6,84 @@ permalink: /books/
 
 # Books I've Read
 
-* A Guide To The Good Life by William B. Irvine
-* Abundance by Peter H. Diamandis, Steven Kotler
-* Antifragile by Nassim Nicholas Taleb
-* Becoming Steve Jobs by Rick Tetzeli, Brent Schlender
-* Bold by Peter H. Diamandis, Steven Kotler
-* Elon Musk by Ashlee Vance
-* Essentialism by Greg McKeown
-* Exponential Organizations by Michael S. Malone, Peter H. Diamandis
-* Hatching Twitter by Nick Bilton
-* How to Measure Anything by Douglas W. Hubbard
-* I Invented The Modern Age by Richard Snow
-* Mastery by Robert Greene
-* Meditations by Marcus Aurelius
-* Rich Dad Poor Dad by Robert T. Kiyosaki
-* The 48 Laws Of Power by Robert Greene
-* The Art of Learning by Josh Waitzkin
-* The Everything Store by Brad Stone
-* The Hard Thing About Hard Things by Ben Horowitz
-* The Organized Mind by Daniel J. Levitin
-* The Personal MBA by Josh Kaufman
-* The Willpower Instinct by Kelly McGonigal, Ph.D.
-* Thinking, Fast and Slow by Daniel Kahneman
-* Titan by Ron Chernow
-* We Learn Nothing by Tim Kreider
-* What I Learned Losing A Million Dollars by Jim Paul
-* Zen and the Art of Motorcycle Maintenance by Robert M. Pirsig
+<a target="_blank"  href="https://www.amazon.com/gp/product/0195374614/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0195374614&linkCode=as2&tag=excid3-20&linkId=14f52689a5f43947f5eb9165d06e0b60"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0195374614&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0195374614" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[A Guide To The Good Life by William B. Irvine](https://www.amazon.com/gp/product/0195374614/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0195374614&linkCode=as2&tag=excid3-20&linkId=9837b16db0a8d784db4975227582ffda)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/145161683X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=145161683X&linkCode=as2&tag=excid3-20&linkId=447833381c25b644510ebaae087d61ac"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=145161683X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=145161683X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Abundance by Peter H. Diamandis, Steven Kotler](https://www.amazon.com/gp/product/145161683X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=145161683X&linkCode=as2&tag=excid3-20&linkId=be5ab282b10493fe9715f8a65b0f4e0a)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0812979680/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0812979680&linkCode=as2&tag=excid3-20&linkId=ef153bea6a40ad8177d0a90e3077bfc8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0812979680&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0812979680" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Antifragile by Nassim Nicholas Taleb](https://www.amazon.com/gp/product/0812979680/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0812979680&linkCode=as2&tag=excid3-20&linkId=143fade8147cadaa3af23bd7d0c21917)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0385347421/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0385347421&linkCode=as2&tag=excid3-20&linkId=072856435aaebfd449c53bc6dd27043c"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0385347421&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0385347421" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Becoming Steve Jobs by Rick Tetzeli, Brent Schlender](https://www.amazon.com/gp/product/0385347421/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0385347421&linkCode=as2&tag=excid3-20&linkId=91fca172c8d43bdb2b52ce8b4d9225aa)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1476709580/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1476709580&linkCode=as2&tag=excid3-20&linkId=5fb903cf437277d03e3694b8b9c488fe"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1476709580&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1476709580" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Bold by Peter H. Diamandis, Steven Kotler](https://amzn.to/2KFtcws)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0062301233/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0062301233&linkCode=as2&tag=excid3-20&linkId=28fc5808d7696dfd2731544bbcc61f5a"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0062301233&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0062301233" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Elon Musk by Ashlee Vance](https://amzn.to/2Nz0vyV)
+
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0804137382/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804137382&linkCode=as2&tag=excid3-20&linkId=431bc76a5be9fdcf4d6cb0ba5446114b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0804137382&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0804137382" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Essentialism by Greg McKeown](https://amzn.to/2zjsWhm)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1626814236/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1626814236&linkCode=as2&tag=excid3-20&linkId=ecc953e022a3686bfb20701c43f2c32c"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1626814236&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1626814236" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Exponential Organizations by Michael S. Malone, Peter H. Diamandis](https://amzn.to/2Nw86OS)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1591847087/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1591847087&linkCode=as2&tag=excid3-20&linkId=9a6ea6c2f2d4655b2f1faa60a06715e4"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1591847087&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1591847087" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Hatching Twitter by Nick Bilton](https://amzn.to/2MYwojk)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1118539273/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1118539273&linkCode=as2&tag=excid3-20&linkId=04da8386ab072f2cff0f32c44b768eaa"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1118539273&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1118539273" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[How to Measure Anything by Douglas W. Hubbard](https://amzn.to/2ufCELQ)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1451645589/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1451645589&linkCode=as2&tag=excid3-20&linkId=a1f1c5b746c2a6e78a0a210fd3c7c942"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1451645589&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1451645589" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[I Invented The Modern Age by Richard Snow](https://amzn.to/2uevsj8)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/014312417X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=014312417X&linkCode=as2&tag=excid3-20&linkId=637745c6570d04a0ecc070949f848991"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=014312417X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=014312417X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Mastery by Robert Greene](https://amzn.to/2NvREhv)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/048629823X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=048629823X&linkCode=as2&tag=excid3-20&linkId=97cc925a81fc0929e99e7065a5f22c60"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=048629823X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=048629823X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Meditations by Marcus Aurelius](https://amzn.to/2KRiu5j)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1612680194/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1612680194&linkCode=as2&tag=excid3-20&linkId=2b30111f3215744701ac655ec33a13bb"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1612680194&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1612680194" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Rich Dad Poor Dad by Robert T. Kiyosaki](https://amzn.to/2J2sF25)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1501135929/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1501135929&linkCode=as2&tag=excid3-20&linkId=a5840acb472a05703d84e8d12be448ce"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1501135929&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1501135929" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Shoe Dog by Phil Knight](https://amzn.to/2J7Crjy)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0140280197/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0140280197&linkCode=as2&tag=excid3-20&linkId=d7d2cc44fc8d0df6d87a12b70a3710fc"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0140280197&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0140280197" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The 48 Laws Of Power by Robert Greene](https://amzn.to/2zjDbST)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0743277465/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0743277465&linkCode=as2&tag=excid3-20&linkId=ea1b6aa7aa6b0a561a009301bdc31098"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0743277465&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0743277465" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Art of Learning by Josh Waitzkin](https://amzn.to/2J2R9bk)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0316219282/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0316219282&linkCode=as2&tag=excid3-20&linkId=56c9c9ce716d70131a2d5f5259e1b373"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0316219282&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0316219282" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Everything Store by Brad Stone](https://amzn.to/2NCn06m)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0062273205/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0062273205&linkCode=as2&tag=excid3-20&linkId=fd3c5cc23361e08124172a1d7305777b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0062273205&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0062273205" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Hard Thing About Hard Things by Ben Horowitz](https://amzn.to/2J3stPW)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0147516315/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0147516315&linkCode=as2&tag=excid3-20&linkId=db3ea340162b5361c79fd354c6068516"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0147516315&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0147516315" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Organized Mind by Daniel J. Levitin](https://amzn.to/2KUZp2b)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1591845572/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1591845572&linkCode=as2&tag=excid3-20&linkId=5ad45bd5e6cdd32359e38bba7c516769"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1591845572&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1591845572" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Personal MBA by Josh Kaufman](https://amzn.to/2zk59Oq)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1583335080/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1583335080&linkCode=as2&tag=excid3-20&linkId=1de91e75b73eee0394ee477578d65785"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1583335080&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1583335080" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[The Willpower Instinct by Kelly McGonigal, Ph.D.](https://amzn.to/2m15Imz)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0374533555/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0374533555&linkCode=as2&tag=excid3-20&linkId=a239aff11862e3fc95beb5b537dac48e"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0374533555&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0374533555" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Thinking, Fast and Slow by Daniel Kahneman](https://amzn.to/2KXLZlQ)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1400077303/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1400077303&linkCode=as2&tag=excid3-20&linkId=bcaf8e99f15e46a4620143e12fec112d"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1400077303&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1400077303" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Titan by Ron Chernow](https://amzn.to/2J0qDzf)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1439198713/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1439198713&linkCode=as2&tag=excid3-20&linkId=8f17dd126d067ecb264fec0c19f9c847"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1439198713&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=1439198713" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[We Learn Nothing by Tim Kreider](https://amzn.to/2J4ZrPV)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0231164688/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0231164688&linkCode=as2&tag=excid3-20&linkId=3ea8e16b2767ef8b7cc42ad3a25777cd"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0231164688&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0231164688" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[What I Learned Losing A Million Dollars by Jim Paul](https://amzn.to/2NxFoND)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0060589469/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0060589469&linkCode=as2&tag=excid3-20&linkId=9f9b1fc2bbfe7c0d523dba742a6d8163"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0060589469&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=excid3-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=excid3-20&l=am2&o=1&a=0060589469" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[Zen and the Art of Motorcycle Maintenance by Robert M. Pirsig](https://amzn.to/2KON3Zv)
