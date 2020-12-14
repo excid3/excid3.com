@@ -17,7 +17,7 @@ Even with a free trial, the barrier to entry can be too much. What if the confir
 
 You don’t want that.
 
-[Fluttrly][1] was pretty much just a personal attempt at learning some Rails 3 features that I was unfamiliar with. I threw it up online and people actually started using it. I got feature requests and people wanting to merge their contributions to the site, all of this was unexpected.
+Fluttrly was pretty much just a personal attempt at learning some Rails 3 features that I was unfamiliar with. I threw it up online and people actually started using it. I got feature requests and people wanting to merge their contributions to the site, all of this was unexpected.
 
 It’s just another todo list. What made the difference was I let people invest their time and when they decided they liked the site, they wanted to save their list privately. Simply ask them to login or sign up then. At that point, they now have an meaningful reason to sign up.
 

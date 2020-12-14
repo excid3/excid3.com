@@ -46,7 +46,7 @@ What is this I don’t even? Okay, well, you need to put this in your .bash_prof
 
 ![][1]
 
-How sweet is that? Here we’ve got a screenshot of my prompt in the [Fluttrly][2] [source][3] directory. (Subtle advertisement here for contributions to Fluttrly)
+How sweet is that? Here we’ve got a screenshot of my prompt in the Fluttrly [source][3] directory. (Subtle advertisement here for contributions to Fluttrly)
 
 Provided you actually use git to a tiny bit of its potential, this is really awesome. If you don’t, well, why don’t you go use Visual Studio, we don’t want you here I guess now is the time to learn. Works on any bash prompt with colors enabled.
 
