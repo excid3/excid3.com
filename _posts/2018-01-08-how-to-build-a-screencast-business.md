@@ -1,6 +1,6 @@
 ---
 title: 'Rails and Revenue: How To Build A Screencast Business'
-author: excid3
+author: Chris Oliver
 layout: post
 categories:
   - General

@@ -1,6 +1,6 @@
 ---
 title: 'Rodney Mullen: Pop an ollie and innovate!'
-author: excid3
+author: Chris Oliver
 layout: post
 categories:
   - General

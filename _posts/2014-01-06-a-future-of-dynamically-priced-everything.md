@@ -1,6 +1,6 @@
 ---
 title: 'A Future Of Dynamically Priced Everything'
-author: excid3
+author: Chris Oliver
 layout: post
 categories:
   - General
