@@ -1,0 +1,4 @@
+# Legacy feed URLs from the WordPress era
+/feed/atom   /feed.xml  301
+/feed/       /feed.xml  301
+/feed        /feed.xml  301
